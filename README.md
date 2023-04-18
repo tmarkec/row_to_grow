@@ -1,108 +1,59 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Row to grow
 
-Welcome USER_NAME,
+Row to grow is a fictional website(for educational purposes) for a rowing community. On this website site user can find and purchase products related to rowing, as well as read recent blog posts. Site user can also subscribe to our newsletter or simply contact us for further questions. Register user can leave comments on blog posts, rate our products and save his profile/delivery information for future purchase.
+ 
+![Am i responsive image]()  
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Click Here To Visit Live Site]()  
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Table Of Contents:
+1. [Design & Planning](#design-&-planning)
+    * [User Stories](#user-stories)
+    * [Wireframes](#wireframes)
+    * [Agile Methodology](#agile-methodology)
+    * [Typography](#typography)
+    * [Colour Scheme](#colour-scheme)
+    * [Database Diagram](#database-diagram)
+   
+2. [Features](#features)
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+3. [Future Features](#future-features)
+4. [Technologies Used](#technologies-used)
+5. [Libraries](#libraries-used)
+6. [Testing](#testing)
+7. [Bugs](#bugs)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
+10. [Acknowledgements](#acknowledgements)
 
-`python3 -m http.server`
+## Design & Planning:
 
-A blue button should appear to click: _Make Public_,
+### User Stories
+#### Site visitor
+- As a site visitor, I want be able to register for the account so that I can get more access to the website content and to store my profile information
+- As a site visitor, I want to be able to view list of the products so that I can select some to purchase
+- As a site visitor I want to be able to sort the list of specific category or product so that I can easily find products of certain price, rating and name
+- As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product
+- As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product
+- As a site visitor I want to be able to chose products and select size and quantity of the product
+- As a site visitor I want to be able to pay for selected products so that I can complete my purchase option
+- As a site visitor, I want be able to view blog posts so that I can get more knowledge about benefits of related selling products on the website
+- As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products
+- As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website
+#### Registered user
+- As a registered user, I want to be able to login and logout from the website
+- As a registered user, I want to be able to recove my password so that I can recover access to my account in case I forget my password
+- As a registered user, I want to be able to update my profile and delivery information
+- As a registered user, I want to be able to leave comments for posts so that I can engage with other users and leave feedback about certain posts
+- As a registered user, I want to be able rate the products so that I can express my satisfaction or disatisfaction of the certain products
+- As a registered user, I want to be able to view my order history on the profile page so that I can have better insight of my previous purchases
+#### Site owner
+- As a site owner, I want to be able to create, update and delete posts so that I can control my website content
+- As a site owner, I want to be able to approve or delete comments so that I can filter out objectionable comments
+- As a site owner, I want to be able to delete users so that I can receive several benefits such as: manage my data, reduce liability & resource optimization
+- As a site owner I want to be able to add, update and delete products directly from the website so I don't have to access admin panel everytime I want to make changes to the products
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Wireframes
+Below are the wireframes for the site that I created using balsamiq.
