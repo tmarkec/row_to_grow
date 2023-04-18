@@ -57,3 +57,42 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 
 ### Wireframes
 Below are the wireframes for the site that I created using balsamiq.
+#### Desktop
+<details><summary>Product page</summary>
+<img src="images/home_page.png">
+</details>
+
+<details><summary>Post page</summary>
+<img src="images/post_page.png">
+</details>
+
+<details><summary>Shooping bag</summary>
+<img src="images/shopping_bag.png">
+</details>
+
+<details><summary>Checkout bag</summary>
+<img src="readme_img/wireframes/bals_sign.png">
+</details>
+
+#### Mobile
+<details><summary>Product page</summary>
+<img src="images/home_m.png">
+</details>
+
+<details><summary>Post page</summary>
+<img src="images/post_m.png">
+</details>
+
+<details><summary>Shooping bag</summary>
+<img src="images/shooping_m.png">
+</details>
+
+<details><summary>Checkout bag</summary>
+<img src="images/checkout_m.png">
+</details>
+
+### Database 
+
+<details><summary>Database</summary>
+<img src="images/database.png">
+</details>
