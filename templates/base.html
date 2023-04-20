@@ -15,6 +15,7 @@
 
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -61,15 +62,15 @@
                 {% if request.user.is_authenticated %}
                       {% if request.user.is_superuser %}
                       <li class="list-inline-item ">
-                      <a href="" class="dropdown-item">Product Management</a></li>
+                      <a href="" class="dropdown-item">Product</a></li>
                       {% endif %}
-                      <li class="list-inline-item ">
+                      <!-- <li class="list-inline-item ">
                         <a class="text-black nav-link" href="#">
                             <div class="text-center">
                                 <p class="my-0">My account</p>
                             </div>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="list-inline-item ">
                       <a class="text-black nav-link btn btn-primary" href="#">
                           <div class="text-center">
@@ -148,13 +149,13 @@
     {% endblock %}
 
     <footer class="w-100 flex-shrink-0 main-footer">
-        <div class="container pt-4">
+        <div class="container pt-1">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-6">
                     <h4 class="mb-3">Row to grow</h4>
                     <p class="small text-muted">Experience our amazing products</p>
                     <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved 2023</p>
-                    <ul class="social_footer_ul my-3 p-0">
+                    <ul class="social_footer_ul mt-3 p-0">
                       <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                       <li><a href=""><i class="fab fa-twitter p-0"></i></a></li>
                       <li><a href=""><i class="fab fa-linkedin p-0"></i></a></li>

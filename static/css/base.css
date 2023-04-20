@@ -3,12 +3,12 @@ html {
 }
 
 body {
-    /* background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    background-size: cover; */
+    background: url('/media/home_page.jpg') no-repeat center center fixed;
+    background-size: cover;
  
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* from Bulma */
@@ -59,6 +59,9 @@ body {
 /* ---------------------------------Footer */
 .main-footer {
     border-top: solid 1px #ccc;
+    background-color: #222;
+    opacity: .8;
+    color: #ffffff;
 }
 .social_footer_ul {
     list-style-type: none;
