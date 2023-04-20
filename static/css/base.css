@@ -56,6 +56,17 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
+/* -------------------------------product page */
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 /* ---------------------------------Footer */
 .main-footer {
     border-top: solid 1px #ccc;
