@@ -56,7 +56,28 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
+/* ---------------------------------Footer */
+.main-footer {
+    border-top: solid 1px #ccc;
+}
+.social_footer_ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .social_footer_ul li a {
+    color: #ccc;
+  
+    padding: 8px;
+  }
+  .social_footer_ul li i {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
