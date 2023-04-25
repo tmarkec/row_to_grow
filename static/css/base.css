@@ -92,6 +92,10 @@ body {
     height: 50px;
     text-align: center;
   }
+  .update-link,
+  .remove-item {
+    cursor: pointer;
+  }
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
