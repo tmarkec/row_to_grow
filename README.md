@@ -96,3 +96,14 @@ Below are the wireframes for the site that I created using balsamiq.
 <details><summary>Database</summary>
 <img src="images/database.png">
 </details>
+
+bug t-shirt product not displaying on the product page
+fix spell correct in tshirt in code
+bug only 4 products displayed on the page
+fix removed divisible counter from walkthrough project for smaller screens and medium screens
+bug webhooks not working locally for stripe payments
+fix share my local workspace
+bug stripe payment was incomplete (locally)
+fix used test information to proceede with payments
+bug order total, delivery and grand total amounts not displaying in admin panel
+fix update signals.py function name, add 'self.save() in update_total function in models
