@@ -1,8 +1,11 @@
-from django.shortcuts import render, get_object_or_404
-from .models import UserProfile
+from django.shortcuts import render, get_object_or_404, redirect
+from django.views import View
+from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
 from django.contrib import messages
 from checkout.models import Order
+from products.models import Product
+
 
 def profile(request):
     """ Display the user's profile information """
@@ -57,4 +60,29 @@ def history(request):
     # Render the template with the list of orders
     template = 'profiles/history.html'
     context = {'orders': orders}
+    return render(request, template, context)
+
+
+def wishlist(request):
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+
+    # Get all the products in the wishlist
+    products = wishlist.products.all()
+
+    context = {
+        'wishlist': wishlist,
+        'products': products,
+    }
+    template = 'profiles/wishlist.html'
+    return render(request, template, context)
+
+
+def add_to_wishlist(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    wishlist.products.add(product)
+    template = 'profiles/personal_info.html'
+    context = {
+    }
+
     return render(request, template, context)

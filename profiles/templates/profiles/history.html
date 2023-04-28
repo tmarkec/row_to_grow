@@ -24,9 +24,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-6">
-            <p class="text-muted">Order History</p>
-            <div class="order-history table-responsive">
+        <div class="col-10">
+            <div class="order-history table-responsive-sm">
                 <table class="table table-sm table-borderless">
                     <thead>
                         <tr>
@@ -41,7 +40,7 @@
                             <tr>
                                 <td>
                                     
-                                        {{ order.order_number }}
+                                        {{ order.order_number|truncatechars:8 }}
                                     
                                 </td>
                                 <td>{{ order.date }}</td>
