@@ -73,7 +73,7 @@
                         </a>
                     </li> -->
                     <li class="list-inline-item ">
-                      <a class="text-black nav-link btn btn-primary" href="#">
+                      <a class="text-black nav-link btn btn-primary" href="{% url 'account_logout' %}">
                           <div class="text-center">
                               <p class="my-0">Logout</p>
                           </div>
@@ -81,14 +81,14 @@
                   </li>
                 {% else %}
                   <li class="list-inline-item ">
-                      <a class="text-black nav-link btn btn-primary" href="#">
+                      <a class="text-black nav-link btn btn-primary" href="{% url 'account_login' %}">
                           <div class="text-center">
                               <p class="my-0">Login</p>
                           </div>
                       </a>
                   </li>
                   <li class="list-inline-item ">
-                    <a class="text-black nav-link btn btn-primary" href="#">
+                    <a class="text-black nav-link btn btn-primary" href="{% url 'account_signup' %}">
                         <div class="text-center">
                             <p class="my-0">Register</p>
                         </div>

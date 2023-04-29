@@ -5,6 +5,11 @@ from .forms import UserProfileForm
 from django.contrib import messages
 from checkout.models import Order
 from products.models import Product
+from django.urls import reverse_lazy
+from django.views.generic.edit import FormView
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
 
 
 def profile(request):
@@ -29,7 +34,7 @@ def profile(request):
 
 def info(request):
     """ Display the user account options """
-    
+
     template = 'profiles/personal_info.html'
     context = {
     }
@@ -86,3 +91,17 @@ def add_to_wishlist(request, product_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def password_change(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # important to update the session
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('info')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'profiles/password_change.html', {'form': form})
