@@ -29,7 +29,7 @@
             {% if products %}
             <div class="row">
                 {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 p-5">
                     <div class="card h-100 border-0">
                         {% if product.image %}
 
@@ -65,10 +65,14 @@
                             </div>
                         </div>
                     </div>
+                    <a href="{% url 'delete_from_wishlist' product.id %}">Remove from Wishlist</a>
                 </div>
                 {% endfor %}
                 {% else %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 p-5">
                 <p>Your wishlist is currently empty.</p>
+                <a href="{% url 'products' %}">Select products</a>
+                </div>
                 {% endif %}
             </div>
         </div>

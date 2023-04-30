@@ -86,11 +86,20 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
+    messages.success(request, 'You add item to wishlist!')
     template = 'profiles/personal_info.html'
     context = {
     }
 
     return render(request, template, context)
+
+
+def delete_from_wishlist(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    wishlist = Wishlist.objects.get(user=request.user)
+    wishlist.products.remove(product)
+    messages.success(request, 'You removed item from wishlist!')
+    return redirect('wishlist')
 
 
 @login_required
