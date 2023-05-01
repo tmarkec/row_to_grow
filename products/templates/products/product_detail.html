@@ -120,12 +120,17 @@
                 {% csrf_token %}
                 <p>Write your review</p>
                 <label for="">Rate this product!</label>
-                <div class="row">
-                <input type="radio" name="rating5" value="5" id="">
-                <input type="radio" name="rating4" value="5" id="">
-                <input type="radio" name="rating3" value="5" id="">
-                <input type="radio" name="rating2" value="5" id="">
-                <input type="radio" name="rating1" value="5" id="">
+                <div class="row rating">
+                    <input type="radio" name="rating1" value="1" id="">
+                    <label for="rating1" title="1"></label>
+                    <input type="radio" name="rating2" value="2" id="">
+                    <label for="rating2" title="2"></label>
+                    <input type="radio" name="rating3" value="3" id="">
+                    <label for="rating3" title="3"></label>
+                    <input type="radio" name="rating4" value="4" id="">
+                    <label for="rating4" title="4"></label>
+                    <input type="radio" name="rating5" value="5" id="">
+                    <label for="rating5" title="5"></label>
                 </div>
                 <div class="row">
                     <textarea name="review" rows="2" class="col-10"></textarea>

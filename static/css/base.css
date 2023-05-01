@@ -165,6 +165,23 @@ body {
 	background: white;
 	z-index: -1;
 }
+.rating > input {
+    display: none;
+}
+
+.rating > label:before {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-family: FontAwesome;
+    content: "\f005";
+    cursor: pointer;
+    padding: 5px;
+}
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+    content: "\f005";
+    color: #db5461;
+}
 
 /* ---------------------------------Footer */
 .main-footer {
