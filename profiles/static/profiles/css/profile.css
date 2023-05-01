@@ -9,3 +9,9 @@
 .profile-box:hover { 
     transform: scale(1.1); 
 }
+.profile-box a {
+    color: black;
+}
+.profile-box a:hover {
+    color: #db5461;
+}

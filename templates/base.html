@@ -73,7 +73,7 @@
                         </a>
                     </li> -->
                     <li class="list-inline-item ">
-                      <a class="text-black nav-link btn test-btn text-uppercase" href="{% url 'account_logout' %}">
+                      <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_logout' %}">
                           <div class="text-center">
                               <p class="my-0">Logout</p>
                           </div>
@@ -81,14 +81,14 @@
                   </li>
                 {% else %}
                   <li class="list-inline-item ">
-                      <a class="text-black nav-link btn btn-primary" href="{% url 'account_login' %}">
+                      <a class=" nav-link btn test-btn text-uppercase" href="{% url 'account_login' %}">
                           <div class="text-center">
                               <p class="my-0">Login</p>
                           </div>
                       </a>
                   </li>
                   <li class="list-inline-item ">
-                    <a class="text-black nav-link btn btn-primary" href="{% url 'account_signup' %}">
+                    <a class=" nav-link btn test-btn text-uppercase" href="{% url 'account_signup' %}">
                         <div class="text-center">
                             <p class="my-0">Register</p>
                         </div>
@@ -178,10 +178,10 @@
                 
                 <div class="col-lg-4 col-md-6">
                     <h4 class="mb-3">Quick links</h4>
-                    <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Shop now</a></li>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About us</a></li>
+                        <li><a href="{% url 'products' %}">Shop now</a></li>
                         <li><a href="#">Privacy policy</a></li>
                     </ul>
                 </div>
@@ -192,7 +192,7 @@
                     <form action="#">
                         <div class="input-group mb-3">
                             <input class="form-control" type="text" placeholder="Email address" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-oposit" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                            <button class="btn test-btn" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </div>

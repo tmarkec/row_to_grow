@@ -1,6 +1,13 @@
 html {
     height: 100%;
 }
+a {
+    list-style: none !important;
+    
+}
+a:hover {
+    text-decoration: none;
+}
 .test-btn {
     background: #fde74c;
     color: black;
@@ -8,12 +15,19 @@ html {
     font-size: 1.1rem;
 }
 .test-btn:hover {
-    background: rgb(161, 181, 216);
-    color: rgb(228, 240, 208);;
+    background: black;
+    color: #fde74c;
 }
-.rap {
+.btn-back {
+    background: black;
+    color: #fde74c;
+}
+.btn-back:hover {
+    background: #fde74c;
+    color: black;
+}
+.test-box {
     background: rgb(253,231,76);
-/* background: linear-gradient(90deg, rgba(253,231,76,1) 0%, rgba(255,255,255,1) 100%); */
     border: 1px solid;
     padding: 10px;
     box-shadow: 5px 5px 15px #ccc;
