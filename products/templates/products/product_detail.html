@@ -19,13 +19,13 @@
         <div class="col-12 col-md-6 col-lg-3 ">
             <div class="image-container my-5">
                 <h2>
-                <a href="{% url 'products' %}" class="btn">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
-            </h2>
+                    <a href="{% url 'products' %}" class="btn">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                </h2>
                 {% if product.image %}
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -99,22 +99,67 @@
                         </div>
 
                         <div class="col{% if s %}-12 mt-1{% endif %}">
-                            
+
                             <input type="submit" class="btn btn-back  text-uppercase mt-5" value="Add to Bag">
-                           
+
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
                     </div>
                 </form>
-                <div class="row mt-1"> 
+                <div class="row mt-1">
                     <a href="{% url 'add_to_wishlist' product.id %}" class=" btn test-btn p-2"> Add to wishlist! <i
-                        class="fas fa-gift"></i></a>
+                            class="fas fa-gift"></i></a>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <h2>Reviews</h2>
+            {% if user.is_authenticated %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                <p>Write your review</p>
+                <label for="">Rate this product!</label>
+                <div class="row">
+                <input type="radio" name="rating5" value="5" id="">
+                <input type="radio" name="rating4" value="5" id="">
+                <input type="radio" name="rating3" value="5" id="">
+                <input type="radio" name="rating2" value="5" id="">
+                <input type="radio" name="rating1" value="5" id="">
+                </div>
+                <div class="row">
+                    <textarea name="review" rows="2" class="col-10"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!-- <p><strong>Posting as:</strong> {{ user.username }}</p> -->
+                    </div>
+                    <div class="col">
+                        <input type="submit" value="Submit review" class="btn">
+                    </div>
+                </div>
+            </form>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-7 mb-4 border-div">
+                    <h3>Reviews:</h3>
+                    <div class="card-body"></div>
+                    {% for review in reviews %}
+                    <div class="comments">
+                        <p><strong>
+                                {{ review.user }},
+                            </strong>
+                            <span class=" text-muted font-weight-normal">
+                                {{ review.created_on }}
+                            </span> wrote:
+                        </p>
+                        {{ review.review_comment | linebreaks }}
+                        <hr>
+                    </div>
+                    <!-- Our for loop ends here -->
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </div>

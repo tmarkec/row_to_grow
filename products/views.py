@@ -47,3 +47,25 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_review(request, product_id):
+    """ A view to add review"""
+    product = get_object_or_404(Product, pk=product_id)
+    user = request.user.userprofile
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+
+        if form.is_valid():
+            rating = form.cleaned_data['rating']
+            review_text = form.cleaned_data['review_text']
+
+            review = Review.objects.create(
+                product=product,
+                user=user,
+                rating=rating,
+                review_text=review_text,
+            )
+
+            messages.success(request, 'Thank you for your review!')
