@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category, Review
 from .forms import ReviewForm
+from checkout.models import OrderLineItem
 
 # Create your views here.
 
@@ -42,9 +43,10 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-
+    reviews = Review.objects.filter(product_id=product.id, approved=True)
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -52,26 +54,7 @@ def product_detail(request, product_id):
 
 def add_review(request, product_id):
     """ A view to add review"""
-    # if request.method == 'POST':
-    #     try:
-    #         reviews = Review.objects.get(user__id=request.user.id, product__id=product_id)
-    #         form = ReviewForm(request.POST, instance=reviews)
-    #         form.save()
-    #         messages.success(request, 'Thank you, you updated your review!')
-    #         return redirect('product_detail')
-    #     except Review.DoesNotExist():
-    #         form = ReviewForm(request.POST)
-    #         if form.is_valid():
-    #             data = Review()
-    #             data.rating = form.cleaned_data['rating']
-    #             data.review_comment = form.cleaned_data['review_comment']
-    #             data.user_id = request.user.id
-    #             data.product_id = product_id
-    #             data.save()
-    #             messages.success(request, 'Thank you, your review was submitted!')
-    #             return redirect('product_detail')
     product = get_object_or_404(Product, pk=product_id)
-
     if request.method == 'POST':
         form = ReviewForm(request.POST)
 
@@ -101,7 +84,7 @@ def add_review(request, product_id):
 
                 messages.success(request, 'Thank you for your review!')
         else:
-            messages.warning(request, 'Form is not valid')
+            messages.warning(request, 'Please rate the product in order to save your review!')
         return redirect('product_detail', product_id=product.id)
 
     context = {
@@ -110,3 +93,4 @@ def add_review(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
