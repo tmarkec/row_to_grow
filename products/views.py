@@ -26,7 +26,7 @@ def all_products(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -94,3 +94,11 @@ def add_review(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
+def del_review(request, review_id):
+    """ A view to delete review """
+    review = get_object_or_404(Review, id=review_id)
+    if review.user == request.user:
+        review.delete()
+        messages.success(request, "Review deleted successfully.")
+    return redirect('product_detail', product_id=review.product.id)

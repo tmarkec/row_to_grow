@@ -2,22 +2,24 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 
     {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -26,132 +28,121 @@
 
     {% block corejs %}
     <script src="https://kit.fontawesome.com/cccdb242ea.js" crossorigin="anonymous"></script>
-        <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="https://js.stripe.com/v3/"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
 
     <title>Row to Grow</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="container-fluid fixed-top">
-      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-              <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                  <h2 class="logo-font text-black my-0"><strong>Row to grow</strong></h2>
-              </a>
-          </div>
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-              <form method="GET" action="{% url 'products' %}">
-                  <div class="input-group w-100">
-                      <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                      <div class="input-group-append">
-                          <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                              <span class="icon">
-                                  <i class="fas fa-search"></i>
-                              </span>
-                          </button>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-              <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                {% if request.user.is_authenticated %}
-                      {% if request.user.is_superuser %}
-                      <li class="list-inline-item ">
-                      <a href="{% url 'products' %}" class="dropdown-item">Product</a></li>
-                      {% endif %}
-                      <!-- <li class="list-inline-item ">
-                        <a class="text-black nav-link" href="#">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex align-items-start">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <h2 class="logo-font text-black my-0"><strong>Row to grow</strong></h2>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                            placeholder="Search our site">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right">
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <li class="list-inline-item ">
+                        <a href="{% url 'products' %}" class="dropdown-item">Product</a></li>
+                    {% endif %}
+                    <li class="list-inline-item ">
+                        <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_logout' %}">
                             <div class="text-center">
-                                <p class="my-0">My account</p>
+                                <p class="my-0">Logout</p>
                             </div>
                         </a>
-                    </li> -->
+                    </li>
+                    {% else %}
                     <li class="list-inline-item ">
-                      <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_logout' %}">
-                          <div class="text-center">
-                              <p class="my-0">Logout</p>
-                          </div>
-                      </a>
-                  </li>
-                {% else %}
-                  <li class="list-inline-item ">
-                      <a class=" nav-link btn test-btn text-uppercase" href="{% url 'account_login' %}">
-                          <div class="text-center">
-                              <p class="my-0">Login</p>
-                          </div>
-                      </a>
-                  </li>
-                  <li class="list-inline-item ">
-                    <a class=" nav-link btn test-btn text-uppercase" href="{% url 'account_signup' %}">
-                        <div class="text-center">
-                            <p class="my-0">Register</p>
-                        </div>
-                    </a>
-                </li>
-                {% endif %}
-                      <!-- <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                          {% if request.user.is_authenticated %}
-                              {% if request.user.is_superuser %}
-                                  <a href="" class="dropdown-item">Product Management</a>
-                              {% endif %}
-                              <a href="" class="dropdown-item">My Profile</a>
-                              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                          {% else %}
-                              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                          {% endif %}
-                      </div>
-                  </li> -->
-                  <li class="list-inline-item">
-                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                          <div class="text-center">
-                              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                              <p class="my-0">
-                                  {% if grand_total %}
-                                      ${{ grand_total|floatformat:2 }}
-                                  {% else %}
-                                      $0.00
-                                  {% endif %}
-                              </p>
-                          </div>
-                      </a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-      <div class="row bg-white">
-        <nav class="navbar navbar-expand-lg navbar-light w-100">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            {% include 'includes/mobile-top-header.html' %}
-            {% include 'includes/main-nav.html' %}
-        </nav>
-    </div>
-  </header>
+                        <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_login' %}">
+                            <div class="text-center">
+                                <p class="my-0">Login</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-inline-item ">
+                        <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_signup' %}">
+                            <div class="text-center">
+                                <p class="my-0">Register</p>
+                            </div>
+                        </a>
+                    </li>
+                    {% endif %}
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="{% url 'view_bag' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                    ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                {% include 'includes/main-nav.html' %}
+            </nav>
+        </div>
+    </header>
 
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
         {% endfor %}
     </div>
     {% endif %}
@@ -169,15 +160,15 @@
                     <p class="small text-muted">Experience our amazing products</p>
                     <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved 2023</p>
                     <ul class="social_footer_ul mt-3 p-0">
-                      <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href=""><i class="fab fa-twitter p-0"></i></a></li>
-                      <li><a href=""><i class="fab fa-linkedin p-0"></i></a></li>
-                      <li><a href=""><i class="fab fa-instagram p-0"></i></a></li>
-                      </ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter p-0"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin p-0"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram p-0"></i></a></li>
+                    </ul>
                 </div>
-               
-                    <hr>
-                
+
+                <hr>
+
                 <div class="col-lg-4 col-md-6">
                     <h4 class="mb-3">Quick links</h4>
                     <ul class="list-unstyled">
@@ -190,16 +181,19 @@
                 <hr class=".d-none .d-sm-block .d-md-none">
                 <div class="col-lg-4 col-md-12">
                     <h4 class="mb-3">Newsletter</h4>
-                    <p class="small text-muted">Sign up for our newsletter and, get best deals and promotions on your email</p>
+                    <p class="small text-muted">Sign up for our newsletter and, get best deals and promotions on your
+                        email</p>
                     <form method="post" action="{% url 'subscribe' %}" class="">
                         {% csrf_token %}
                         <div class="input-group mb-3">
                             <!-- <input class="form-control" type="text" placeholder="Email address" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
-                            <input id="email" name="email" type="email" class="form-control" placeholder="Email address" required>
-                            <button class="btn test-btn" id="button-addon2" type="submit"><i class="fas fa-paper-plane"></i></button>
+                            <input id="email" name="email" type="email" class="form-control" placeholder="Email address"
+                                required>
+                            <button class="btn test-btn" id="button-addon2" type="submit"><i
+                                    class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
-                    
+
                 </div>
             </div>
         </div>
@@ -210,6 +204,7 @@
     </script>
     {% endblock %}
 
-    
-  </body>
+
+</body>
+
 </html>
