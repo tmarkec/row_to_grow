@@ -19,8 +19,8 @@ def subscribe(request):
             subject = "Row to grow subscription"
             message = (
                 "Thank you for subscribing to our newsletter,"
-                + "you will get updates on our new products and deals!"
-                + "Go back https://blog-hike.herokuapp.com/"
+                + " you will get latest updates on our new products and deals!"
+                + "Go back to https://blog-hike.herokuapp.com/"
             )
             from_email = "tmarkec@gmail.com"
             recipient_list = [email]

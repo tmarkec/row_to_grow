@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
+from .models import Product, Category, Review
+from .forms import ReviewForm
 
 # Create your views here.
 
@@ -51,21 +52,61 @@ def product_detail(request, product_id):
 
 def add_review(request, product_id):
     """ A view to add review"""
+    # if request.method == 'POST':
+    #     try:
+    #         reviews = Review.objects.get(user__id=request.user.id, product__id=product_id)
+    #         form = ReviewForm(request.POST, instance=reviews)
+    #         form.save()
+    #         messages.success(request, 'Thank you, you updated your review!')
+    #         return redirect('product_detail')
+    #     except Review.DoesNotExist():
+    #         form = ReviewForm(request.POST)
+    #         if form.is_valid():
+    #             data = Review()
+    #             data.rating = form.cleaned_data['rating']
+    #             data.review_comment = form.cleaned_data['review_comment']
+    #             data.user_id = request.user.id
+    #             data.product_id = product_id
+    #             data.save()
+    #             messages.success(request, 'Thank you, your review was submitted!')
+    #             return redirect('product_detail')
     product = get_object_or_404(Product, pk=product_id)
-    user = request.user.userprofile
 
     if request.method == 'POST':
         form = ReviewForm(request.POST)
 
         if form.is_valid():
             rating = form.cleaned_data['rating']
-            review_text = form.cleaned_data['review_text']
+            review_comment = form.cleaned_data['review_comment']
 
-            review = Review.objects.create(
-                product=product,
-                user=user,
-                rating=rating,
-                review_text=review_text,
-            )
+            if not rating:
+                messages.warning(request, 'Please rate the product before submitting your review.')
+                return redirect('product_detail', product_id=product.id)
 
-            messages.success(request, 'Thank you for your review!')
+            existing_review = Review.objects.filter(product=product, user=request.user).first()
+            if existing_review:
+                review = Review.objects.get(product=product, user=request.user)
+                review.rating = rating
+                review.review_comment = review_comment
+                review.save()
+                messages.success(request, 'You have updated your review!')
+            else:
+                review = Review.objects.create(
+                    product=product,
+                    user=request.user,
+                    rating=rating,
+                    review_comment=review_comment,
+                )
+                review.save()
+
+                messages.success(request, 'Thank you for your review!')
+        else:
+            messages.warning(request, 'Form is not valid')
+        return redirect('product_detail', product_id=product.id)
+
+    context = {
+        'product': product,
+        'form': form,
+    }
+
+    return render(request, 'products/product_detail.html', context)

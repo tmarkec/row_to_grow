@@ -178,9 +178,25 @@ body {
     padding: 5px;
 }
 .rating > label:hover:before,
-.rating > label:hover ~ label:before {
+.rating > input:checked ~ label:before,
+.rating > label:hover ~ label:before,
+.rating > input:checked ~ label ~ label:before {
     content: "\f005";
     color: #db5461;
+}
+
+.rating > label:hover:before,
+.rating > input:checked ~ label:before {
+    text-shadow: 0 0 1px #db5461;
+}
+.rating > input:checked ~ label:hover:before,
+.rating > input:checked ~ label:hover + label:before {
+    color: #a01b28;
+}
+
+/* Different hover color for stars after a checked star */
+.rating > input:checked ~ label:hover ~ label:hover:before {
+    color: #a01523;
 }
 
 /* ---------------------------------Footer */

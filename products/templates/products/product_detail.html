@@ -115,36 +115,41 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <h2>Reviews</h2>
-            {% if user.is_authenticated %}
-            <form action="" method="POST">
+            
+            <form action="{% url 'add_review' product.id %}" method="POST">
                 {% csrf_token %}
                 <p>Write your review</p>
                 <label for="">Rate this product!</label>
                 <div class="row rating">
-                    <input type="radio" name="rating1" value="1" id="">
-                    <label for="rating1" title="1"></label>
-                    <input type="radio" name="rating2" value="2" id="">
-                    <label for="rating2" title="2"></label>
-                    <input type="radio" name="rating3" value="3" id="">
-                    <label for="rating3" title="3"></label>
-                    <input type="radio" name="rating4" value="4" id="">
-                    <label for="rating4" title="4"></label>
-                    <input type="radio" name="rating5" value="5" id="">
+                    <input type="radio" name="rating" value="5" id="rating5">
                     <label for="rating5" title="5"></label>
+                    <input type="radio" name="rating" value="4" id="rating4">
+                    <label for="rating4" title="4"></label>
+                    <input type="radio" name="rating" value="3" id="rating3">
+                    <label for="rating3" title="3"></label>
+                    <input type="radio" name="rating" value="2" id="rating2">
+                    <label for="rating2" title="2"></label>
+                    <input type="radio" name="rating" value="1" id="rating1">
+                    <label for="rating1" title="1"></label>
                 </div>
                 <div class="row">
-                    <textarea name="review" rows="2" class="col-10"></textarea>
+                    <textarea name="review_comment" rows="2" class="col-10"></textarea>
                 </div>
                 <div class="row">
                     <div class="col">
                         <!-- <p><strong>Posting as:</strong> {{ user.username }}</p> -->
                     </div>
+                    {% if user.is_authenticated %}
                     <div class="col">
                         <input type="submit" value="Submit review" class="btn">
                     </div>
+                    {% else %}
+                    <p>Please login to leave your review!</p>
+                    {% endif %}
                 </div>
             </form>
-            {% endif %}
+            
+            
             <div class="row">
                 <div class="col-md-7 mb-4 border-div">
                     <h3>Reviews:</h3>

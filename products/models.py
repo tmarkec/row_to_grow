@@ -42,4 +42,4 @@ class Review(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Review for {self.product.name} by {self.user.user.username}"
+        return f"Review for {self.product.name}"
