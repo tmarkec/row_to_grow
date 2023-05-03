@@ -63,7 +63,6 @@ def add_review(request, product_id):
         if form.is_valid():
             rating = form.cleaned_data['rating']
             review_comment = form.cleaned_data['review_comment']    
-    
             review = Review.objects.create(
                 product=product,
                 user=request.user,
