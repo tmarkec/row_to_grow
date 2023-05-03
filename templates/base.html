@@ -74,7 +74,7 @@
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                     <li class="list-inline-item ">
-                        <a href="{% url 'products' %}" class="dropdown-item">Product</a></li>
+                        <a href="{% url 'add_product' %}" class="dropdown-item">Add product</a></li>
                     {% endif %}
                     <li class="list-inline-item ">
                         <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_logout' %}">
