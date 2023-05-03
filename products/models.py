@@ -40,7 +40,7 @@ class Review(models.Model):
     rating = models.IntegerField()
     review_comment = models.TextField(max_length=120)
     created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
+    updated_on = models.DateTimeField(null=True, blank=True)
     approved = models.BooleanField(default=False)
 
     def __str__(self):

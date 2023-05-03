@@ -160,11 +160,12 @@
                                 {{ review.user }},
                             </strong>
                             <span class=" text-muted font-weight-normal">
-                                {% if review.created_on %}
-                                {{ review.created_on }}
-                                {% else %}
+                             {% if review.updated_on %}
                                 {{ review.updated_on }}
+                                {% else %}
+                                {{ review.created_on }}
                                 {% endif %}
+                               
                             </span> wrote:
                         </p>
                         {{ review.rating }}

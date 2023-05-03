@@ -4,6 +4,8 @@ from django.db.models import Q
 from .models import Product, Category, Review
 from .forms import ReviewForm
 from checkout.models import OrderLineItem
+from django.utils import timezone
+from django.utils.timezone import now
 
 # Create your views here.
 
@@ -97,7 +99,10 @@ def update_review(request, review_id):
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
-            form.save()
+            review = form.save(commit=False)
+            review.approved = False
+            review.updated_on = timezone.now()
+            review.save()
             messages.success(request, 'Your review has been updated.')
             return redirect('product_detail', product_id=review.product.id)
     else:

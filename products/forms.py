@@ -7,8 +7,6 @@ class ReviewForm(forms.ModelForm):
     Form for creating comments
     """
     class Meta:
-        # model = Review
-        # fields = ['review_comment', 'rating']
         model = Review
         fields = ['review_comment', 'rating',]
         widgets = {
