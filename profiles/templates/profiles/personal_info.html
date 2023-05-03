@@ -23,35 +23,59 @@
             <hr>
         </div>
     </div>
-    <div class="row justify-content-around p-5">
-        <div class="col-sm-8 col-md-5 text-center profile-box m-4">
+    <div class="row justify-content-around p-4">
+        <div class="col-sm-12 col-md-6 col-lg-5 text-center profile-box m-2">
             <a href="{% url 'history' %}" class="profile-link">
-                <i class="fas fa-history fa-lg pt-3"></i>
-                <h2>Order history</h2>
-                <p> Track your order history</p>
+                <div class="row align-items-center p-3">
+                    <div class="col-4 ico">
+                        <i class="fas fa-history fa-lg"></i>
+                    </div>
+                    <div class="col-8 mx-auto">
+                        <h2>Order history</h2>
+                        <p> Track your previous orderss</p>
+                    </div>
+                </div>
             </a>
         </div>
-        <div class="col-sm-8 col-md-5  text-center profile-box m-4">
-            <a href="{% url 'password_change' %}" class="">
-                <i class="fas fa-shield-alt fa-lg pt-3"></i>
-                <h2>Login & Security</h2>
-                <p> Change your login password</p>
+        <div class="col-sm-12 col-md-6 col-lg-5 text-center profile-box m-2">
+            <a href="{% url 'password_change' %}" class="profile-link">
+                <div class="row align-items-center p-3">
+                    <div class="col-4 ico">
+                        <i class="fas fa-shield-alt fa-lg"></i>
+                    </div>
+                    <div class="col-8 mx-auto">
+                        <h2>Security</h2>
+                        <p> Change your login password</p>
+                    </div>
+                </div>
             </a>
         </div>
-        <div class="col-sm-8 col-md-5  text-center profile-box m-4">
-            <a href="{% url 'profile' %}" class=" ">
-                <i class="fas fa-shipping-fast fa-lg pt-3"></i>
-                <h2>Profile info</h2>
-                <p>Change your delivery information</p>
+        <div class="col-sm-12 col-md-6 col-lg-5 text-center profile-box m-2">
+            <a href="{% url 'profile' %}" class="profile-link">
+                <div class="row align-items-center p-3">
+                    <div class="col-4 ico">
+                        <i class="fas fa-shipping-fast fa-lg"></i>
+                    </div>
+                    <div class="col-8 mx-auto">
+                        <h2>Profile info</h2>
+                        <p>Change your delivery information</p>
+                    </div>
+                </div>
             </a>
         </div>
-        <div class="col-sm-8 col-md-5  text-center profile-box m-4">
+        <div class="col-sm-12 col-md-6 col-lg-5 text-center profile-box m-2">
             <a href="{% url 'wishlist' %}" class="profile-link">
-                <i class="fas fa-save fa-lg pt-3"></i>
-                <h2>Wishlist</h2>
-                <p>Check your saved products</p>
+                <div class="row align-items-center p-3">
+                    <div class="col-4 ico">
+                        <i class="fas fa-save fa-lg"></i></div>
+                    <div class="col-8 mx-auto">
+                        <h2>Wishlist</h2>
+                        <p>Check your saved products</p>
+                    </div>
+                </div>
             </a>
         </div>
     </div>
+    <div class="row h-10 p-4"></div>
 </div>
 {% endblock %}

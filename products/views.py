@@ -60,31 +60,18 @@ def add_review(request, product_id):
 
         if form.is_valid():
             rating = form.cleaned_data['rating']
-            review_comment = form.cleaned_data['review_comment']
-
-            if not rating:
-                messages.warning(request, 'Please rate the product before submitting your review.')
-                return redirect('product_detail', product_id=product.id)
-
-            existing_review = Review.objects.filter(product=product, user=request.user).first()
-            if existing_review:
-                review = Review.objects.get(product=product, user=request.user)
-                review.rating = rating
-                review.review_comment = review_comment
-                review.save()
-                messages.success(request, 'You have updated your review!')
-            else:
-                review = Review.objects.create(
-                    product=product,
-                    user=request.user,
-                    rating=rating,
-                    review_comment=review_comment,
+            review_comment = form.cleaned_data['review_comment']    
+    
+            review = Review.objects.create(
+                product=product,
+                user=request.user,
+                rating=rating,
+                review_comment=review_comment,
                 )
-                review.save()
-
-                messages.success(request, 'Thank you for your review!')
+            review.save()
+            messages.success(request, 'Thank you for your review!')
         else:
-            messages.warning(request, 'Please rate the product in order to save your review!')
+            messages.warning(request, 'You must rate and review the product!')
         return redirect('product_detail', product_id=product.id)
 
     context = {
@@ -102,3 +89,21 @@ def del_review(request, review_id):
         review.delete()
         messages.success(request, "Review deleted successfully.")
     return redirect('product_detail', product_id=review.product.id)
+
+
+def update_review(request, review_id):
+    """A view to update user review"""
+    review = get_object_or_404(Review, id=review_id)
+    if request.method == "POST":
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your review has been updated.')
+            return redirect('product_detail', product_id=review.product.id)
+    else:
+        form = ReviewForm(instance=review)
+    return render(request,
+                  "products/update_review.html", {"form": form})
+
+
+

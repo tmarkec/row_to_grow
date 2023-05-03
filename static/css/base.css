@@ -59,7 +59,10 @@ body {
 }
 .one {
     background-color: white;
-    opacity: .98;
+    /* opacity: .98; */
+    background: rgba(255, 255, 255, 0.98);
+    min-height: 63vh;
+    
 }
 .main-logo-link {
     width: fit-content;
@@ -209,6 +212,8 @@ body {
 .main-footer {
     border-top: solid 1px #ccc;
     background-color: #fde74c ;
+    position: -webkit-sticky;
+    position: sticky;
 
 }
 .social_footer_ul {

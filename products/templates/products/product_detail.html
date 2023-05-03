@@ -14,7 +14,7 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container">
+<div class="container one">
     <div class="row">
         <div class="col">
             <hr>
@@ -106,10 +106,14 @@
                     </div>
                 </form>
                 <div class="row mt-3">
+                {% if user.is_authenticated%}
                     <div class="col-12">
                         <a href="{% url 'add_to_wishlist' product.id %}" class="btn test-btn p-2 text-uppercase"> Add to wishlist! <i
                                 class="fas fa-gift"></i></a>
                     </div>
+                {% else %}
+                <p>You must <a href="{% url 'account_login' %}">login</a> in orded to add this product to the wihslist!</p>
+                {% endif %}
                 </div>
             </div>
         </div>
@@ -142,7 +146,7 @@
                         <input type="submit" value="Submit review" class="btn btn-back my-3">
                     </div>
                     {% else %}
-                    <p>Please login to leave your review!</p>
+                    <p>You must <a href="{% url 'account_login' %}">login</a> in orded to review this product!</p>
                     {% endif %}
                 </div>
             </form>
@@ -156,7 +160,11 @@
                                 {{ review.user }},
                             </strong>
                             <span class=" text-muted font-weight-normal">
+                                {% if review.created_on %}
                                 {{ review.created_on }}
+                                {% else %}
+                                {{ review.updated_on }}
+                                {% endif %}
                             </span> wrote:
                         </p>
                         {{ review.rating }}
@@ -182,10 +190,12 @@
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a href="{% url 'del_review' review_id=review.id %}" class="btn btn-danger">Delete Review</a>                                </div>
+                                  <a href="{% url 'del_review' review_id=review.id %}" class="btn btn-danger-sm">Delete Review</a>
+                                </div>
                               </div>
                             </div>
                           </div>
+                          <a href="{% url 'update_review' review_id=review.id %}">Update Review</a>
                           {% endif %}
                         <hr>
                     </div>

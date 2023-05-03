@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="header-container container one">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container one">
+    <div class="row h-100">
+        <div class="col-10">
+            <hr>
+            <h2 class="logo-font">Update review</h2>
+            <hr>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <label for="">Rate this product!</label>
+                <div class="row rating">
+                    <input type="radio" name="rating" value="1" id="rating1">
+                    <label for="rating1" title="1"></label>
+                    <input type="radio" name="rating" value="2" id="rating2">
+                    <label for="rating2" title="2"></label>
+                    <input type="radio" name="rating" value="3" id="rating3">
+                    <label for="rating3" title="3"></label>
+                    <input type="radio" name="rating" value="4" id="rating4">
+                    <label for="rating4" title="4"></label>
+                    <input type="radio" name="rating" value="5" id="rating5">
+                    <label for="rating5" title="5"></label>
+                </div>
+                <div class="row">
+                    <textarea name="review_comment" rows="2" class="col-10"
+                        placeholder="Write your review here"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="submit" value="Submit review" class="btn btn-back my-3">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

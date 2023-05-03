@@ -10,7 +10,7 @@ class ReviewForm(forms.ModelForm):
         # model = Review
         # fields = ['review_comment', 'rating']
         model = Review
-        fields = ['review_comment', 'rating']
+        fields = ['review_comment', 'rating',]
         widgets = {
             'review_comment': forms.Textarea(attrs={'rows': 3}),
         }
