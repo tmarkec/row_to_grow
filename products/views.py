@@ -6,6 +6,7 @@ from .forms import ReviewForm, ProductForm
 from checkout.models import OrderLineItem
 from django.utils import timezone
 from django.utils.timezone import now
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -54,14 +55,19 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product(request):
     """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.warning(request, 'Only admin can access it!')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
@@ -75,8 +81,12 @@ def add_product(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.warning(request, 'Only admin can access it!')
+        return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -99,6 +109,19 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login_required
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.warning(request, 'Only admin can access it!')
+        return redirect(reverse('home'))
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
+
+
+@login_required
 def add_review(request, product_id):
     """ A view to add review"""
     product = get_object_or_404(Product, pk=product_id)
@@ -128,6 +151,7 @@ def add_review(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def del_review(request, review_id):
     """ A view to delete review """
     review = get_object_or_404(Review, id=review_id)
@@ -137,6 +161,7 @@ def del_review(request, review_id):
     return redirect('product_detail', product_id=review.product.id)
 
 
+@login_required
 def update_review(request, review_id):
     """A view to update user review"""
     review = get_object_or_404(Review, id=review_id)
@@ -153,6 +178,4 @@ def update_review(request, review_id):
         form = ReviewForm(instance=review)
     return render(request,
                   "products/update_review.html", {"form": form})
-
-
 

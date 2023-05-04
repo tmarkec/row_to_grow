@@ -98,22 +98,23 @@
                         </div>
 
                         <div class="col{% if s %}-12 mt-1{% endif %}">
-                            
+
                             <input type="submit" class="btn btn-back text-uppercase" value="Add to Bag">
                         </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
                     </div>
                 </form>
                 <div class="row mt-3">
-                {% if user.is_authenticated%}
+                    {% if user.is_authenticated%}
                     <div class="col-12">
-                        <a href="{% url 'add_to_wishlist' product.id %}" class="btn test-btn p-2 text-uppercase"> Add to wishlist! <i
-                                class="fas fa-gift"></i></a>
+                        <a href="{% url 'add_to_wishlist' product.id %}" class="btn test-btn p-2 text-uppercase"> Add to
+                            wishlist! <i class="fas fa-gift"></i></a>
                     </div>
-                {% else %}
-                <p>You must <a href="{% url 'account_login' %}">login</a> in orded to add this product to the wihslist!</p>
-                {% endif %}
+                    {% else %}
+                    <p>You must <a href="{% url 'account_login' %}">login</a> in orded to add this product to the
+                        wihslist!</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -138,7 +139,8 @@
                     <label for="rating5" title="5"></label>
                 </div>
                 <div class="row">
-                    <textarea name="review_comment" rows="2" class="col-10" placeholder="Write your review here"></textarea>
+                    <textarea name="review_comment" rows="2" class="col-10"
+                        placeholder="Write your review here"></textarea>
                 </div>
                 <div class="row">
                     {% if user.is_authenticated %}
@@ -150,6 +152,12 @@
                     {% endif %}
                 </div>
             </form>
+            {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                    {% endif %}
             <div class="row">
                 <div class="col-12">
                     <hr class="w-100">
@@ -160,12 +168,12 @@
                                 {{ review.user }},
                             </strong>
                             <span class=" text-muted font-weight-normal">
-                             {% if review.updated_on %}
+                                {% if review.updated_on %}
                                 {{ review.updated_on }}
                                 {% else %}
                                 {{ review.created_on }}
                                 {% endif %}
-                               
+
                             </span> wrote:
                         </p>
                         {{ review.rating }}
@@ -174,30 +182,34 @@
                         </div>
                         {{ review.review_comment | linebreaks }}
                         {% if review.user == request.user %}
-                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#exampleModal">
                             Delete review
-                          </button>
-                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="exampleModalLabel">Delete review</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Delete review</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete review?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <a href="{% url 'del_review' review_id=review.id %}"
+                                            class="btn btn-danger-sm">Delete Review</a>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                  Are you sure you want to delete review?
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <a href="{% url 'del_review' review_id=review.id %}" class="btn btn-danger-sm">Delete Review</a>
-                                </div>
-                              </div>
                             </div>
-                          </div>
-                          <a href="{% url 'update_review' review_id=review.id %}">Update Review</a>
-                          {% endif %}
+                        </div>
+                        <a href="{% url 'update_review' review_id=review.id %}">Update Review</a>
+                        {% endif %}
                         <hr>
                     </div>
                     <!-- Our for loop ends here -->
