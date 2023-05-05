@@ -12,7 +12,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 
-@login_required()
+
+@login_required
 def profile(request):
     """ Display the user's profile information """
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -35,7 +36,7 @@ def profile(request):
 
     return render(request, template, context)
 
-
+@login_required
 def info(request):
     """ Display the user account options """
 
@@ -57,6 +58,7 @@ def info(request):
 #     }
 
 #     return render(request, template, context)
+@login_required
 def history(request):
     """Display the user's previous orders"""
 
@@ -71,7 +73,7 @@ def history(request):
     context = {'orders': orders}
     return render(request, template, context)
 
-
+@login_required
 def wishlist(request):
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 
@@ -85,7 +87,7 @@ def wishlist(request):
     template = 'profiles/wishlist.html'
     return render(request, template, context)
 
-
+@login_required
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
@@ -97,7 +99,7 @@ def add_to_wishlist(request, product_id):
 
     return render(request, template, context)
 
-
+@login_required
 def delete_from_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     wishlist = Wishlist.objects.get(user=request.user)

@@ -1,14 +1,17 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=accesories,education,rowing_jackets,leggings,t_shirt" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=accesories,education,rowing_jackets,leggings,t_shirt"
+                    class="dropdown-item">All Products</a>
                 <a href="{% url 'products' %}?category=accesories" class="dropdown-item">Accesories</a>
                 <a href="{% url 'products' %}?category=education" class="dropdown-item ">Education</a>
-                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownSubmenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownSubmenu" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Apperal
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownSubmenu">
@@ -16,12 +19,13 @@
                     <a class="dropdown-item" href="{% url 'products' %}?category=leggings">Leggings</a>
                     <a class="dropdown-item" href="{% url 'products' %}?category=t_shirt">T-shirts</a>
                 </ul>
-            
-                
+
+
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
@@ -43,7 +47,44 @@
             </a>
         </li>
         {% endif %}
+        {% if request.user.is_superuser %}
+        <li class="nav-item"><a class="logo-font font-weight-bold nav-link text-black mr-5"
+                href="{% url 'admin:index' %}">Admin panel</a></li>
+        {% endif %}
+        <li class="nav-item login left">
+        <ul class="list-inline list-unstyled text-center text-lg-right">
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <li class="list-inline-item ">
+                <a href="{% url 'add_product' %}" class="dropdown-item">Add product</a></li>
+            {% endif %}
+            <li class="list-inline-item ">
+                <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_logout' %}">
+                    <div class="text-center">
+                        <p class="my-0">Logout</p>
+                    </div>
+                </a>
+            </li>
+            {% else %}
+            <li class="list-inline-item ">
+                <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_login' %}">
+                    <div class="text-center">
+                        <p class="my-0">Login</p>
+                    </div>
+                </a>
+            </li>
+            <li class="list-inline-item ">
+                <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_signup' %}">
+                    <div class="text-center">
+                        <p class="my-0">Register</p>
+                    </div>
+                </a>
+            </li>
+            {% endif %}
 
-        
-    </ul>
+        </ul>
+        </li>
+</div>
+
+</ul>
 </div>
