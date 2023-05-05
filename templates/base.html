@@ -72,10 +72,7 @@
             <div class="col-4">
                 <ul class="list-inline list-unstyled text-center text-lg-right">
                     {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <li class="list-inline-item ">
-                        <a href="{% url 'add_product' %}" class="dropdown-item">Add product</a></li>
-                    {% endif %}
+                   
                     <li class="list-inline-item ">
                         <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_logout' %}">
                             <div class="text-center">

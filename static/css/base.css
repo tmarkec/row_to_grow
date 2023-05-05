@@ -8,6 +8,21 @@ a {
 a:hover {
     text-decoration: none;
 }
+.dropdown-menu-right {
+    right: auto;
+    left: 100%;
+    top: 100px;
+    transform: translateX(5px);
+  }
+.dropdown-item.dropdown-toggle::after {
+    content: "";
+    display: inline-block;
+    margin-left: 5px;
+    border: solid black;
+    border-width: 0.15em 0.15em 0 0;
+    padding: 0.15em;
+    transform: rotate(45deg);
+  }
 .search-box {
     position: relative;
     width: 70px;
