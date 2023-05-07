@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.http import HttpResponse
 from io import BytesIO
+from django.template import Context
 from reportlab.pdfgen import canvas
 from django.views import View
 from .models import UserProfile, Wishlist
@@ -14,6 +15,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+from django.template.loader import get_template
 
 
 @login_required
@@ -62,23 +64,62 @@ def history(request):
     return render(request, template, context)
 
 
-@login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
-    
-    messages.info(request, (
-        f'This is a past confirmation for order number {order_number}. '
-        'A confirmation email was sent on the order date.'
-    ))
 
-    template = 'profiles/order_history.html'
     context = {
         'order': order,
         'from_profile': True,
     }
 
-    return render(request, template, context)
+    if request.GET.get('download_pdf'):
+        # Generate and download the PDF file
+        response = download_order_pdf(request, order_number)
+        return response
 
+    return render(request, 'profiles/order_history.html', context)
+
+
+def generate_pdf(order):
+    buffer = BytesIO()
+    p = canvas.Canvas(buffer)
+    p.setFont('Helvetica-Bold', 24)
+    p.drawCentredString(300, 790, "Row to grow PDF receipt")
+    p.setFont('Helvetica', 16)
+    p.drawCentredString(300, 760, "Order History")
+    p.drawString(50, 720, f"Order Number: {order.order_number}")
+    p.drawString(50, 690, f"Order Date: {order.date.strftime('%Y-%m-%d %H:%M:%S')}")
+    p.drawString(50, 660, f"Full name: {order.full_name}")
+    p.drawString(50, 630, f"Email: {order.email}")
+    p.drawString(50, 600, f"Address: {order.street_address1},")
+    p.drawString(120, 570, f"{order.county},")
+    p.drawString(120, 540, f"{order.country}")
+   
+    p.drawString(50, 480, "Order Items:")
+    y = 450
+    for item in order.lineitems.all():
+        p.drawString(50, y, f"{item.product.name} x {item.quantity}")
+        y -= 0
+ 
+    p.showPage()
+    p.save()
+
+    buffer.seek(0)
+    return HttpResponse(buffer, content_type='application/pdf')
+
+
+def download_order_pdf(request, order_number):
+    # Retrieve the order object from the database
+    order = get_object_or_404(Order, order_number=order_number)
+
+    # Generate the PDF
+    pdf = generate_pdf(order)
+
+    # Create the HTTP response with PDF file
+    response = HttpResponse(pdf, content_type='application/pdf')
+    response['Content-Disposition'] = f'attachment; filename=order_{order.order_number}.pdf'
+
+    return response
 
 @login_required
 def wishlist(request):
