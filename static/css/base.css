@@ -2,9 +2,8 @@ html {
     height: 100%;
 }
 a {
-    list-style: none !important;
-    
-}
+    list-style: none !important;}
+
 a:hover {
     text-decoration: none;
 }
@@ -14,6 +13,7 @@ a:hover {
     top: 100px;
     transform: translateX(5px);
   }
+  
 .dropdown-item.dropdown-toggle::after {
     content: "";
     display: inline-block;
@@ -23,6 +23,44 @@ a:hover {
     padding: 0.15em;
     transform: rotate(45deg);
   }
+  /* .search-box {
+    position: relative;
+    width: 20%;
+    max-width: 200px;
+    border-bottom: 2px solid #000;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .search-box:hover,
+  .search-box:focus-within {
+    width: 100%;
+  }
+  
+  .search-box input[type="text"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  
+  .search-box button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: transparent;
+    color: #444;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+  }
+  
+  .search-box button:hover {
+    color: #000;
+  } */
 .search-box {
     position: relative;
     width: 70px;
