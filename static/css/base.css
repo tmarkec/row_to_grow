@@ -229,25 +229,76 @@ body {
     opacity: .9;
 	z-index: -1;
 }
+
+/* .rating > label:hover:before,
+.rating > input:checked ~ label:before,
+.rating > label:hover ~ label:before,
+.rating > input:checked ~ label ~ label:before {
+    content: "\f005";
+    color: white;
+    background-color: #db5461;
+} */
+/* display rating */
+.display-rating {
+    display: flex; /* Set the display property to flex */
+    flex-direction: row-reverse; /* Reverse the direction of the flex items */
+    justify-content: flex-end;
+  }
+.display-rating > input {
+    display: none;
+}
+
+.display-rating > label:before {
+    display: inline-block;
+    font-size: .5rem;
+    font-family: FontAwesome;
+    content: "\f005";
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+.display-rating > input:checked ~ label:before,
+  .display-rating > input:checked ~ label:before {
+    content: "\f005";
+    color: white;
+    background-color: #db5461;
+  }
+/* rating */
+.rating {
+    display: flex; /* Set the display property to flex */
+    flex-direction: row-reverse; /* Reverse the direction of the flex items */
+    justify-content: flex-end;
+  }
 .rating > input {
     display: none;
 }
 
 .rating > label:before {
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-family: FontAwesome;
     content: "\f005";
     cursor: pointer;
-    padding: 5px;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid red;
+    border-radius: 3px;
 }
-.rating > label:hover:before,
-.rating > input:checked ~ label:before,
-.rating > label:hover ~ label:before,
-.rating > input:checked ~ label ~ label:before {
+  
+  /* .rating > label {
+    order: -1; 
+  } */
+  
+  .rating > input:checked ~ label:before,
+  .rating > label:hover ~ label:before,
+  .rating > input:checked ~ label:before,
+  .rating > label:hover:before {
     content: "\f005";
-    color: #db5461;
-}
+    color: white;
+    background-color: #db5461;
+  }
+  
 
 .rating > label:hover:before,
 .rating > input:checked ~ label:before {
@@ -262,6 +313,8 @@ body {
 .rating > input:checked ~ label:hover ~ label:hover:before {
     color: #a01523;
 }
+/* ------------------ */
+
 /* Product Form */
 
 .btn-file {

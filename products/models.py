@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models import Avg
 
 # Create your models here.
 
@@ -32,6 +33,13 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def averageReview(self):
+        reviews = Review.objects.filter(product=self, approved=True).aggregate(average=Avg('rating'))
+        avg = 0
+        if reviews['average'] is not None:
+            avg = int(reviews['average'])
+        return avg
 
 
 class Review(models.Model):
