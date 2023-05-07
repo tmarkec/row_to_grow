@@ -1,4 +1,7 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.http import HttpResponse
+from io import BytesIO
+from reportlab.pdfgen import canvas
 from django.views import View
 from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
@@ -36,6 +39,7 @@ def profile(request):
 
     return render(request, template, context)
 
+
 @login_required
 def info(request):
     """ Display the user account options """
@@ -47,39 +51,39 @@ def info(request):
     return render(request, template, context)
 
 
-# def history(request):
-#     """ Display the user previous orders """
-
-#     orders = profile.orders.all()
-#     template = 'profile/history.html'
-#     context = {
-#         'orders': orders,
-      
-#     }
-
-#     return render(request, template, context)
 @login_required
 def history(request):
     """Display the user's previous orders"""
 
-    # Retrieve the current user's profile
     profile = get_object_or_404(UserProfile, user=request.user)
-
-    # Retrieve all orders associated with the user's profile
     orders = Order.objects.filter(user_profile=profile).order_by('-date')
-
-    # Render the template with the list of orders
     template = 'profiles/history.html'
     context = {'orders': orders}
     return render(request, template, context)
 
+
+@login_required
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+    
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}. '
+        'A confirmation email was sent on the order date.'
+    ))
+
+    template = 'profiles/order_history.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)
+
+
 @login_required
 def wishlist(request):
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
-
-    # Get all the products in the wishlist
     products = wishlist.products.all()
-
     context = {
         'wishlist': wishlist,
         'products': products,
@@ -87,17 +91,20 @@ def wishlist(request):
     template = 'profiles/wishlist.html'
     return render(request, template, context)
 
+
 @login_required
 def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
-    messages.success(request, 'You add item to wishlist!')
-    template = 'profiles/personal_info.html'
-    context = {
-    }
+    messages.success(request, 'You added item to wishlist!')
+    return redirect('wishlist')
+    # template = 'profiles/wishlist.html'
+    # context = {
+    # }
 
-    return render(request, template, context)
+    # return render(request, template, context)
+
 
 @login_required
 def delete_from_wishlist(request, product_id):

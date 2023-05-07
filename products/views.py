@@ -138,7 +138,7 @@ def add_review(request, product_id):
                 review_comment=review_comment,
                 )
             review.save()
-            messages.success(request, 'Thank you for your review!')
+            messages.success(request, 'Thank you for your review, it is waiting for the approval!')
         else:
             messages.warning(request, 'You must rate and review the product!')
         return redirect('product_detail', product_id=product.id)
@@ -172,10 +172,9 @@ def update_review(request, review_id):
             review.approved = False
             review.updated_on = timezone.now()
             review.save()
-            messages.success(request, 'Your review has been updated.')
+            messages.success(request, 'Your review has been updated, wait for the approval.')
             return redirect('product_detail', product_id=review.product.id)
     else:
         form = ReviewForm(instance=review)
     return render(request,
                   "products/update_review.html", {"form": form})
-

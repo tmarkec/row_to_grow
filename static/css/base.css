@@ -266,8 +266,8 @@ body {
   }
 /* rating */
 .rating {
-    display: flex; /* Set the display property to flex */
-    flex-direction: row-reverse; /* Reverse the direction of the flex items */
+    display: flex; 
+    flex-direction: row-reverse; 
     justify-content: flex-end;
   }
 .rating > input {
@@ -286,9 +286,9 @@ body {
     border-radius: 3px;
 }
   
-  /* .rating > label {
+  .rating > label {
     order: -1; 
-  } */
+  }
   
   .rating > input:checked ~ label:before,
   .rating > label:hover ~ label:before,
@@ -313,6 +313,7 @@ body {
 .rating > input:checked ~ label:hover ~ label:hover:before {
     color: #a01523;
 }
+
 /* ------------------ */
 
 /* Product Form */
