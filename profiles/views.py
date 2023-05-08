@@ -124,6 +124,7 @@ def download_order_pdf(request, order_number):
 
     return response
 
+
 @login_required
 def wishlist(request):
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
