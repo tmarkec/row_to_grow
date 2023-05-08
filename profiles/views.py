@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.http import HttpResponse
 from io import BytesIO
+from django.template.loader import render_to_string, get_template
 from django.template import Context
 from reportlab.pdfgen import canvas
 from django.views import View
@@ -14,8 +15,6 @@ from django.views.generic.edit import FormView
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
-from django.contrib.auth.decorators import login_required
-from django.template.loader import get_template
 
 
 @login_required
@@ -66,14 +65,11 @@ def history(request):
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
-
     context = {
         'order': order,
         'from_profile': True,
     }
-
     if request.GET.get('download_pdf'):
-        # Generate and download the PDF file
         response = download_order_pdf(request, order_number)
         return response
 
@@ -81,6 +77,7 @@ def order_history(request, order_number):
 
 
 def generate_pdf(order):
+    
     buffer = BytesIO()
     p = canvas.Canvas(buffer)
     p.setFont('Helvetica-Bold', 24)
@@ -95,7 +92,7 @@ def generate_pdf(order):
     p.drawString(120, 570, f"{order.county},")
     p.drawString(120, 540, f"{order.country}")
     p.setFont('Helvetica-Bold', 16)
-    p.drawString(50, 500, f"Total: {order.grand_total}")
+    p.drawString(50, 500, f"Total: €{order.grand_total}")
     p.setFont('Helvetica', 16)
     p.drawString(50, 450, "Order Items:")
     y = 430
@@ -112,7 +109,6 @@ def generate_pdf(order):
 
 
 def download_order_pdf(request, order_number):
-    # Retrieve the order object from the database
     order = get_object_or_404(Order, order_number=order_number)
 
     # Generate the PDF

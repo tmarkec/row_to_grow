@@ -7,6 +7,17 @@ a {
 a:hover {
     text-decoration: none;
 }
+/* navigation */
+.navi {
+    background-color: #564592
+}
+
+.logo-font:hover {
+    color: white !important;
+}
+.navbar {
+    padding: 0;
+}
 /* boxes login etc */
 .boxes {
     background-color: #fde74c;
