@@ -54,7 +54,7 @@
                     <h2 class="logo-font text-black my-0"><strong>Row to grow</strong></h2>
                 </a>
             </div>   
-            <!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="d-flex flex-row">
                         <input class="form-control border-0 search-box" type="text" name="q"
@@ -68,8 +68,8 @@
                         </div>
                     </div>
                 </form>
-            </div>  -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            </div> 
+            <!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="search-box ">
                         <input class="form-control border-0" type="text" name="q"
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </form>
-            </div> 
+            </div>  -->
             <div class="col-4">
                 <ul class="list-inline list-unstyled text-center text-lg-right">
                     {% if request.user.is_authenticated %}
@@ -171,15 +171,13 @@
                     <p class="small text-muted">Experience our amazing products</p>
                     <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved 2023</p>
                     <ul class="social_footer_ul mt-3 p-0">
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter p-0"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin p-0"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram p-0"></i></a></li>
+                        <li><a href="https://www.facebook.com/" target="blank" rel="noopener" aria-label="Visit our facebook page"><i class="fab fa-facebook-f" ></i></a></li>
+                        <li><a href="https://www.twitter.com/" target="blank" rel="noopener" aria-label="Visit our twitter page"><i class="fab fa-twitter p-0"></i></a></li>
+                        <li><a href="https://www.linkedin.com/" target="blank" rel="noopener" aria-label="Visit our linkedin page"><i class="fab fa-linkedin p-0"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="blank" rel="noopener" aria-label="Visit our instagram page"><i class="fab fa-instagram p-0"></i></a></li>
                     </ul>
                 </div>
-
                 <hr>
-
                 <div class="col-lg-4 col-md-6">
                     <h4 class="mb-3">Quick links</h4>
                     <ul class="list-unstyled">
@@ -197,14 +195,12 @@
                     <form method="post" action="{% url 'subscribe' %}" class="">
                         {% csrf_token %}
                         <div class="input-group mb-3">
-                            <!-- <input class="form-control" type="text" placeholder="Email address" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
                             <input id="email" name="email" type="email" class="form-control" placeholder="Email address"
                                 required>
                             <button class="btn test-btn" id="button-addon2" type="submit"><i
                                     class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
@@ -214,8 +210,5 @@
         $('.toast').toast('show');
     </script>
     {% endblock %}
-
-
 </body>
-
 </html>

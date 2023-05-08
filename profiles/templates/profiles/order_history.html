@@ -25,8 +25,8 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12 col-lg-7">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-lg-8">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
@@ -190,16 +190,18 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
-					<span class="icon mr-2">
+        <div class="row justify-content-md-center">
+			<div class="col-12 col-lg-6 my-3">
+				<a href="{% url 'products' %}" class="btn ">
+					<span class="icon">
 						<i class="fas fa-gifts"></i>
 					</span>
-					<span class="text-uppercase">Now check out the latest deals!</span>
+					<span class="text-uppercase">Keep shooping!</span>
 				</a>
-                <a href="{% url 'order_history' order.order_number %}?download_pdf=1">Download PDF</a>
-			</div>
+                <small>
+                <a href="{% url 'order_history' order.order_number %}?download_pdf=1" class="px-3"><i class="fas fa-download"></i>Download PDF</a>
+                </small>
+            </div>
 		</div>
     </div>
 {% endblock %}

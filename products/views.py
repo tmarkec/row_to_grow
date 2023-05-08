@@ -154,7 +154,8 @@ def add_review(request, product_id):
 @login_required
 def del_review(request, review_id):
     """ A view to delete review """
-    review = get_object_or_404(Review, id=review_id)
+    user = request.user
+    review = get_object_or_404(Review, id=review_id, user=user)
     if review.user == request.user:
         review.delete()
         messages.success(request, "Review deleted successfully.")
@@ -164,7 +165,8 @@ def del_review(request, review_id):
 @login_required
 def update_review(request, review_id):
     """A view to update user review"""
-    review = get_object_or_404(Review, id=review_id)
+    user = request.user
+    review = get_object_or_404(Review, id=review_id, user=user)
     if request.method == "POST":
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():

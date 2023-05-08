@@ -7,6 +7,13 @@ a {
 a:hover {
     text-decoration: none;
 }
+/* boxes login etc */
+.boxes {
+    background-color: #fde74c;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+}
 .dropdown-menu-right {
     right: auto;
     left: 100%;
@@ -23,10 +30,10 @@ a:hover {
     padding: 0.15em;
     transform: rotate(45deg);
   }
-  /* .search-box {
+  .search-box {
     position: relative;
     width: 20%;
-    max-width: 200px;
+    max-width: 100%;
     border-bottom: 2px solid #000;
     transition: width 0.5s ease-in-out;
   }
@@ -60,8 +67,8 @@ a:hover {
   
   .search-box button:hover {
     color: #000;
-  } */
-.search-box {
+  }
+/* .search-box {
     position: relative;
     width: 70px;
     border-bottom: 2px solid #000;
@@ -97,7 +104,7 @@ a:hover {
   .search-box button:hover {
     color: #000;
   }
- 
+  */
 .login {
     display: none;
 }
@@ -268,18 +275,13 @@ body {
 	z-index: -1;
 }
 
-/* .rating > label:hover:before,
-.rating > input:checked ~ label:before,
-.rating > label:hover ~ label:before,
-.rating > input:checked ~ label ~ label:before {
-    content: "\f005";
-    color: white;
-    background-color: #db5461;
-} */
-/* display rating */
+.delete {
+    background-color: white;
+    border: none;
+}
 .display-rating {
-    display: flex; /* Set the display property to flex */
-    flex-direction: row-reverse; /* Reverse the direction of the flex items */
+    display: flex; 
+    flex-direction: row-reverse; 
     justify-content: flex-end;
   }
 .display-rating > input {

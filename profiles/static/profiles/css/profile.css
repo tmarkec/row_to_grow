@@ -23,3 +23,11 @@
 .profile-link > h2:hover {
     color: #135868;
 }
+@media (max-width: 551px) {
+   .ico {
+    font-size: 2rem;
+   }
+   .box-title {
+    font-size: 1.6rem;
+   }
+}
