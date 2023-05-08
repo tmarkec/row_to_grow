@@ -94,13 +94,16 @@ def generate_pdf(order):
     p.drawString(50, 600, f"Address: {order.street_address1},")
     p.drawString(120, 570, f"{order.county},")
     p.drawString(120, 540, f"{order.country}")
-   
-    p.drawString(50, 480, "Order Items:")
-    y = 450
+    p.setFont('Helvetica-Bold', 16)
+    p.drawString(50, 500, f"Total: {order.grand_total}")
+    p.setFont('Helvetica', 16)
+    p.drawString(50, 450, "Order Items:")
+    y = 430
     for item in order.lineitems.all():
-        p.drawString(50, y, f"{item.product.name} x {item.quantity}")
-        y -= 0
- 
+        p.setFont('Helvetica', 12)
+        p.drawString(50, y, f"{item.product.name} x {item.quantity} @ {item.product.price}")
+        y -= 15
+    
     p.showPage()
     p.save()
 

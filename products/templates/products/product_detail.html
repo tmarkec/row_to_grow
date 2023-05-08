@@ -37,10 +37,9 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-6">
-
             <div class="product-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ product.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                <p class="mb-0"><strong>{{ product.name }}</strong></p>
+                <p class="lead mb-0 text-left">€{{ product.price }}</p>
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -48,7 +47,6 @@
                     </a>
                 </p>
                 {% endif %}
-
                 <span class="text-muted">Average review</span>
                 {% with rating=product.averageReview|floatformat %}
                 <div class=" display-rating">
@@ -59,7 +57,6 @@
                     {% endfor %}
                 </div>
                 {% endwith %}
-
                 <p class="mt-3">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
@@ -99,17 +96,14 @@
                                             </span>
                                         </button>
                                     </div>
-                                    <!-- <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}"> -->
                                 </div>
                             </div>
+                            <div class="col{% if s %}-12 mt-1{% endif %}">
+                                <input type="submit" class="btn btn-back text-uppercase" value="Add to Bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
-
-                        <div class="col{% if s %}-12 mt-1{% endif %}">
-
-                            <input type="submit" class="btn btn-back text-uppercase" value="Add to Bag">
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        {% endwith %}
                     </div>
                 </form>
                 <div class="row mt-3">
@@ -119,7 +113,7 @@
                             wishlist! <i class="fas fa-gift"></i></a>
                     </div>
                     {% else %}
-                    <p>You must <a href="{% url 'account_login' %}">login</a> in orded to add this product to the
+                    <p><a href="{% url 'account_login' %}">Login</a> to add this product to your
                         wihslist!</p>
                     {% endif %}
                     {% if request.user.is_superuser %}
@@ -164,9 +158,8 @@
             <hr class="w-100">
             <form action="{% url 'add_review' product.id %}" method="POST">
                 {% csrf_token %}
-                {{ product.averageReview }}
-
                 <label for="">Rate this product!</label>
+                {% if user.is_authenticated %}
                 <div class="row rating">
                     <input type="radio" name="rating" value="5" id="rating5">
                     <label for="rating5" title="5"></label>
@@ -183,16 +176,15 @@
                     <textarea name="review_comment" rows="2" class="col-10"
                         placeholder="Write your review here"></textarea>
                 </div>
-                <div class="row">
-                    {% if user.is_authenticated %}
+                <div class="row">            
                     <div class="col-12">
                         <input type="submit" value="Submit review" class="btn btn-back my-3">
                     </div>
-                    {% else %}
-                    <p>You must <a href="{% url 'account_login' %}">login</a> in orded to review this product!</p>
-                    {% endif %}
                 </div>
             </form>
+            {% else %}
+                    <p>You must <a href="{% url 'account_login' %}">login</a> in orded to review this product!</p>
+                    {% endif %}
             <div class="row">
                 <div class="col-12">
                     <hr class="w-100">
@@ -248,7 +240,6 @@
                         {% endif %}
                         <hr>
                     </div>
-                    <!-- Our for loop ends here -->
                     {% endfor %}
                 </div>
             </div>
