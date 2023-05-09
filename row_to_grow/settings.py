@@ -177,11 +177,6 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_URL = '/static/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -201,7 +196,7 @@ if 'USE_AWS' in os.environ:
     }
     # bucket config
     AWS_STORAGE_BUCKET_NAME = 'row-to-grow'
-    AWS_S5_REGION_NAME = 'EU (Ireland) eu-west-1'
+    AWS_S3_REGION_NAME = 'EU (Ireland) eu-west-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
