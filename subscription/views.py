@@ -20,7 +20,7 @@ def subscribe(request):
             message = (
                 "Thank you for subscribing to our newsletter,"
                 + " you will get latest updates on our new products and deals!"
-                + "Go back to https://blog-hike.herokuapp.com/"
+                + "Go back to ...."
             )
             from_email = "tmarkec@gmail.com"
             recipient_list = [email]
