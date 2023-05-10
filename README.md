@@ -107,3 +107,348 @@ bug stripe payment was incomplete (locally)
 fix used test information to proceede with payments
 bug order total, delivery and grand total amounts not displaying in admin panel
 fix update signals.py function name, add 'self.save() in update_total function in models
+
+# Deployment
+## Create an external database
+
+Sign in or create an account with [ElephantSQL](https://www.elephantsql.com/).
+
+If you don't have an ElephantSql account follow the below steps:
+
+1.  On the [Home Page](https://www.elephantsql.com/) click "Get a managed database today"
+2.  Select "Try now for FREE" within the TINY TURTLE database plan
+3.  Select "Log in with GitHub", select your GitHub account and click "Authorize ElephantSQL"
+4.  Add your email address and click "Create team". This will crteate your ElephantSQL account.
+
+You can now create the database for the project.
+
+- In the ElephantSql dashboard select the "+ Create New Instance" button
+- Give the instance a name and select region that is closest to your location.
+- Click review button and make sure everything is inputed correctly
+- Back in the ElephantSQL dashboard click the databse name you just created and copy URL
+
+
+## Create an app on Heroku
+
+Sign in or create an account with [Heroku](https://www.heroku.com/)
+
+- In the Heroku dashboard use the New tab to create a new app.
+
+- Name the app and choose a region.
+
+- Click on the settings tab and select "Reveal Congig Vars".
+
+  - Add DATABASE_URL with the value of the database URL copied from ElephantSQL
+
+- Enter the following command in to your terminal to install dj_database and psycopg2. These are needed to connect to the database.
+
+```pip3 install dj_database_url==0.5.0 psycopg2```
+
+Followed by ```pip freeze > requirements.txt``` to update requirements.txt.
+
+Add ``` import dj_database_url``` below import os in settings.py
+
+In the DATABASES section of the settings comment out the initial settings and place the following underneath:
+
+```
+DATABASES = {
+     'default': dj_database_url.parse('your-database-url-here')
+ }
+```
+
+Migrate the models to the database using
+```
+ python3 manage.py migrate
+```
+
+Create a superuser and supply a username and password:
+```
+ python3 manage.py createsuperuser
+```
+
+Within the Django admin confirm the email address
+
+Change the DATABSE settings to the following:
+
+```
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+    }
+```
+
+Install [Gunicorn](https://gunicorn.org/) webserver:
+
+```
+pip3 install gunicorn
+```
+
+Create a file named Procfile in the root of the project and add:
+```
+web: gunicorn 'name-of-your-project'.wsgi:application
+```
+
+Add the required dependencies to requirements.tc with:
+```
+pip3 feeze > requirements
+```
+
+Add the following to settings:
+```
+ALLOWED_HOSTS = ["'name-of-the-website'.herokuapp.com", "localhost"]
+```
+
+Add changes, commit and push to GitHub and Heroku
+```
+git add . 
+git commit -m "Deployment"
+git push
+git push heroku main
+```
+
+
+## Set up hosting of static and media files with AWS
+
+1.  Sign in or create an account with [Amazon Web Server](https://aws.amazon.com/)
+
+2.  Navigate to the AWS Console home
+
+3.  Search for "s3" in the search bar
+
+4.  Click on "Create bucket"
+
+5.  In the Create bucket page add the following information:
+
+- A name for the bucket. It is recomeneded to use the same name you gave your Heroku app.
+
+- A region closest to you.
+
+- Select ACLs enabled
+
+- Uncheck the "Block all public access" checkbox
+
+- Check the box beside "I acknowledge that the current settings might result in this bucket and the objects within becoming public."
+
+Scroll to the bottom of the page and select "Create bucket"
+
+6.  Click on the new bucket you just created.
+
+7.  In the "Properties" tab scroll to the bottom of the page and in Static website hosting
+click "Edit".
+
+8.  Select "Enable" and paste the following in the the "Redirection rules – optional" at
+the bottom of the page:
+
+```
+[
+    {
+        "AllowedHeaders": [
+            "Authorization"
+    ],
+    "AllowedMethods": [
+        "GET"
+    ],
+    "AllowedOrigins": [
+        "*"
+    ],
+        "ExposeHeaders": []
+    }
+]
+```
+
+9.  In the "Permissions" tab click on the "Edit" button underneath Bucket policy
+
+10.  Copy the "Bucket ARN" and click on "Policy generator"
+
+11.  On the next page:
+
+- Select "S3 Bucket Policy"
+
+- Add * (an asterik) as the "Principal" value
+
+- Select "GetObject" in the "Actions" dropdown
+
+- Paste the "Bucket ARN" (from step 10 above) as the Amazon Resource Name (ARN)
+
+- Click "Add Statement" then "Generate Policy"
+
+- Copy the policy shown in the pop-up box
+
+12.  Back in the AWS "Edit bucket policy" paste the policy just copied.
+
+13.  At the end of the resource key but before the closing quotation mark add: 
+```
+/*
+```
+
+and click "Save"
+
+14. On the next page click "Edit" in the "Access control list (ACL)" section.
+
+- Enable "List" for "Everyone (public access)"
+
+- Accept the warning
+
+# Back in AWS services menu
+
+1. Select "IAM" from the AWS menu and then "User groups" from the menu on the left 
+hand side.
+
+2.  Click the "Create group" button
+
+3.  Give the group a name and click "Next step", then on the next page "Next step" agin.
+
+4.  Click the "Create group" button
+
+5.  Select "Polices" from the menu, then "Create policy" button.
+
+6.  In the JSON tab select "Import managed policy" link
+
+7.  Add "s3" into the search bar, select "AmazonS3FullAccess" and click "Import"
+
+8.  Paste in the Bucket ARN and the Bucket ARN followed by /* as the Resource values
+
+9.  Click "Review policy" and add a name and description and click "Create policy"
+
+10.  Select "Groups" from the menu and select the group you made in Step 3.
+
+11.  Click "Attach policy", search and select the policy just created.
+
+12.  Click "Attach policy"
+
+# Add a user to the group
+
+1.  Select "Users" in the menu, then click "Add user"
+
+2.  Add a user name and check the "Programatic access" checkbox for Access type
+
+3.  Select "Next: Permissions"
+
+4.  On the following page check the name of your added user group
+
+5.  Click through the next pages until you can click the "Create user" button
+
+6.  Navigate on user page to 'security credentials'
+
+7. Click on 'Create access key'
+
+8. After they are created click on 'download.csv' file
+
+
+# Connect Django
+
+1. Install boto3 and django-storages:
+
+```
+pip3 install boto3
+pip3 install django-storages
+```
+
+2.  Add above to requirements.tct:
+```
+pip3 freeze > requirenets.txt
+```
+
+3.  Add "storages", to INSTALLED_APPS in seetings.py
+
+4.  Paste the following in settings.py:
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    # bucket config
+    AWS_STORAGE_BUCKET_NAME = 'row-to-grow'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
+
+5.  Paste the following in settings.py:
+```
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
+```
+
+# Back in Heroku
+
+1.  Select "Reveal Config Vars" in the "Settings" tab
+
+2.  Add the variables "AWS_ACCESS_KEY_ID" and "AWS_SECRET_ACCESS_KEY" with the 
+values from the credentails.csv file from Step 6 in Add a user to the group above
+
+3.  Add an additioanl "USE_AWS" variable with the key of "True"
+
+# In the root directory of the project
+
+1.  Create a file named "custom_storages.py"
+
+2.  Paste in the following:
+```
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+
+3.  Add and commit then push the project to GitHub. If you haven't set up automatic deployment
+to Heroku, also deploy to Heroku.
+
+ # In AWS
+
+ 1.  Add a folder named "media" in the S3 bucket page
+
+ 2.  Click "Upload" in the media folder
+
+ 3.  Select the images used on the site and click "Next"
+
+ 4.  Select "Grant public read access to this object(s)" under Manage public permissions,
+ click "Next" then "Next" again
+
+ 5.   Click "Upload"
+
+# Stripe
+
+1.  Sign in or create an account with [Stripe](https://stripe.com/gb)
+
+2.  Click "Developers" from the menu on the left hand side and then "API keys"
+
+3.  Copy the "Publishable key" and "Secret key"
+
+4.  Add these to Heroku Config Vars as STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY respectivaely.
+
+5.  Click "Webhooks" from the Developers tab and then "+ Add endpoint"
+
+6.  Enter the following as the "Endpoint URL":
+```
+https://ecomm-gw.herokuapp.com/checkout/wh/
+```
+
+7.  Select "Recieve all events" and then "Add endpoint"
+
+8.  Copy the "Signing secret"
+
+9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
