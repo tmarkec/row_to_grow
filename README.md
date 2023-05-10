@@ -8,6 +8,9 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 
 ## Table Of Contents:
 1. [Design & Planning](#design-&-planning)
+    * [Business model](#business-model)
+	* [Marketing strategies](#user-stories)
+    * [SEO](#seo)
     * [User Stories](#user-stories)
     * [Wireframes](#wireframes)
     * [Agile Methodology](#agile-methodology)
@@ -28,7 +31,28 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 10. [Acknowledgements](#acknowledgements)
 
 ## Design & Planning:
+### Business model
+- Row to Grow is an e-commerce website that specializes in rowing-related products, such as clothing, accessories, and education section. Our business model is centered around providing high-quality products at affordable prices, with a focus on serving the local rowing community. We believe that by focusing on the needs of our customers and providing excellent customer service, we can establish ourselves as a trusted and respected brand in the rowing community.
+ - To achieve our business goals, we have established partnerships with local suppliers to ensure that we can offer a wide range of high-quality products. We carefully select our suppliers based on the quality of their products, their reputation in the industry, and their commitment to sustainable and ethical practices. By prioritizing customer satisfaction, we believe that we can build long-term relationships with our customers and establish ourselves as a leading provider of rowing-related products.
 
+### Marketing strategies
+- At Row to Grow, we understand the importance of effective marketing strategies to drive traffic to our website and increase sales. Our current marketing strategies include:
+
+- Social Media: We have created a [Facebook](https://www.facebook.com/profile.php?id=100092653627209) and [Instagram](https://www.instagram.com/rowto_grow/?fbclid=IwAR1LHVbMfc3Ypo-tBhXvJH1TNpzzMbn2iyowSml0UgkYor25RQ4zspwrwGU) page for our business to reach out to potential customers and promote our products. By regularly posting engaging content and interacting with our followers, we aim to build a strong online presence and increase brand awareness. We also plan to share the page with our friends and family and encourage them to like and share it with their wider circle. Our both pages are live and active but in case they becomes inactive or deactivated I have taken screenshots to display here as well
+
+
+- Newsletter: We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business.
+
+- Partnerships: We have established partnerships with local rowing clubs and organizations to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.
+
+SEO: We understand the importance of effective SEO strategies to increase our website's visibility in search engines like Google which will be explained more in next section.
+
+### SEO
+- When planning the SEO strategy for Row to Grow, our e-commerce website focused on rowing-related products, we began by conducting thorough keyword research. We utilized semrush.com and wordtracker.com to identify short tail and long tail keywords that we could use to improve our search engine rankings.
+
+- Our short-tail keywords include terms such as "rowing" "rowing products, rowing, rowing clothing, rowing accessories, rowing equipment, oars" while our long-tail keywords are more specific and include phrases like "rowing clothing for women, rowing clothing for man, rowing gear for rowers, rowing products for boats" By analyzing the results from Google Trends and related search queries, we were able to generate a comprehensive list of targeted keywords.
+
+- We strategically placed these keywords throughout our website, ensuring that they were included in important on-page elements such as headings, descriptions, and URLs. We also made use of the Strong tag where necessary to highlight key phrases and improve our website's overall searchability.
 ### User Stories
 #### Site visitor
 - As a site visitor, I want be able to register for the account so that I can get more access to the website content and to store my profile information
@@ -56,39 +80,54 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 
 
 ### Wireframes
-Below are the wireframes for the site that I created using balsamiq.
-#### Desktop
-<details><summary>Product page</summary>
-<img src="images/home_page.png">
+Below are the wireframes for the site that I created using balsamiq. As I was developing my website I was using agile approach and adding/updating my website/elements so for that reason some wireframes are not matching my final product.
+
+<details><summary>Home page</summary>
+<img src=readme_img/wireframes/index-page.png>
 </details>
 
-<details><summary>Post page</summary>
-<img src="images/post_page.png">
+<details><summary>All products</summary>
+<img src="readme_img/wireframes/all product.png">
+</details>
+
+<details><summary>Contact</summary>
+<img src="readme_img/wireframes/Contact.png">
+</details>
+
+<details><summary>Product detail</summary>
+<img src="readme_img/wireframes/product-detail.png">
+</details>
+
+<details><summary>Checkout</summary>
+<img src="readme_img/wireframes/Checkout.png">
+</details>
+
+<details><summary>Account</summary>
+<img src="readme_img/wireframes/account.png">
+</details>
+
+<details><summary>Wishlist</summary>
+<img src="readme_img/wireframes/wishlist.png">
+</details>
+
+<details><summary>Order history</summary>
+<img src="readme_img/wireframes/order-history.png">
+</details>
+
+<details><summary>Delivery information</summary>
+<img src="readme_img/wireframes/Delivery-info.png">
+</details>
+
+<details><summary>Purchase conformation</summary>
+<img src="readme_img/wireframes/Purchase-history.png">
 </details>
 
 <details><summary>Shooping bag</summary>
-<img src="images/shopping_bag.png">
+<img src="readme_img/wireframes/Shooping-bag.png">
 </details>
 
-<details><summary>Checkout bag</summary>
-<img src="readme_img/wireframes/bals_sign.png">
-</details>
-
-#### Mobile
-<details><summary>Product page</summary>
-<img src="images/home_m.png">
-</details>
-
-<details><summary>Post page</summary>
-<img src="images/post_m.png">
-</details>
-
-<details><summary>Shooping bag</summary>
-<img src="images/shooping_m.png">
-</details>
-
-<details><summary>Checkout bag</summary>
-<img src="images/checkout_m.png">
+<details><summary>About us</summary>
+<img src="readme_img/wireframes/About-us.png">
 </details>
 
 ### Database 
