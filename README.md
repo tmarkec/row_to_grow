@@ -153,7 +153,21 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 <img src="readme_img/wireframes/About-us.png">
 </details>
 
-### Agile methodoligy
+### Agile Methodology
+During the development of this project, I implemented Agile development practices to ensure a flexible and iterative approach to the project's progress. The Agile methodology enabled me to adapt to changing requirements and efficiently manage the development process of this project. It is still learning process for me as this was only second time doing it so I found that quite bit challenging and time consuming. I've created Kanban board to manage and visualise workflow. 
+ - Project board was divided into 3 sections:
+   - To-Do- (all user stories were initially entered in the 'To Do' column)
+   - In Progress- (then during development phase and iomplementing functionality stories were moved into the 'In Progress' column)
+   - Done- (and then finally they get moved into 'Done' once the development completes and functionality is implemented to cover that user story)
+
+- I've planned 3 itterations for this project. Two were completed as planned and third one is for future development of the webiste, which is described more in feature features in this document
+
+- Each milestone consist of user stories, which are displayed either open or closed depends on the progress. Each user story is labeled either as 'must-have', 'should-have' or 'could-have'depending of the needs of the project with estimated story points attached to it.
+
+- Each user story have acceptance criteria and tasks that needed to be done to accomplish that criteria
+
+I do realize importance of the agile aproach and documenting all steps and procedures, but it is quite challenging when you are just team of 1 and you have to write adn do everything like there are multiple people working on this project. I do think with time and practice better implementation of the methodology can be achived.
+
 
 ### Typography
 
@@ -180,6 +194,7 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for interactiveness.
 - [Gitpod](https://www.gitpod.io/about) was used to create this site and then push everything to github.
 - [Heroku](https://en.wikipedia.org/wiki/Heroku) is used to host this site.
+- [Heroku PostgreSQL](https://en.wikipedia.org/wiki/Heroku) was used as a database for this project during development
 - [Github](https://en.wikipedia.org/wiki/GitHub) was used to store the code.
 - [Git](https://en.wikipedia.org/wiki/Git) was used for version control.
 - [AWS S3 and IAM](https://eu-north-1.console.aws.amazon.com/) was used to host static and media files for this project and IAM for the permissions based roles for accessing the S3 buckets.
