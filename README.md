@@ -32,14 +32,35 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 
 ## Design & Planning:
 ### Business model
-- Row to Grow is an e-commerce website that specializes in rowing-related products, such as clothing, accessories, and education section. Our business model is centered around providing high-quality products at affordable prices, with a focus on serving the local rowing community. We believe that by focusing on the needs of our customers and providing excellent customer service, we can establish ourselves as a trusted and respected brand in the rowing community.
- - To achieve our business goals, we have established partnerships with local suppliers to ensure that we can offer a wide range of high-quality products. We carefully select our suppliers based on the quality of their products, their reputation in the industry, and their commitment to sustainable and ethical practices. By prioritizing customer satisfaction, we believe that we can build long-term relationships with our customers and establish ourselves as a leading provider of rowing-related products.
+- Row to Grow is an e-commerce website that specializes in rowing-related products, such as clothing, accessories, and education. Our business model is centered around providing high-quality products at affordable prices, with a focus on serving the local rowing community. We believe that by focusing on the needs of our customers and providing excellent customer service, we can establish ourselves as a trusted and respected brand in the rowing community.
+ - To achieve our business goals, we have established partnerships with local suppliers to ensure that we can offer a wide range of high-quality products. We carefully select our suppliers based on the quality of their products, their reputation in the industry, and their commitment to sustainable and ethical practices. 
+ - To support our business model, we have implemented a range of operational strategies to ensure that we can deliver the best possible customer experience. We offer fast and reliable shipping, easy returns and exchanges, and a customer support team that is available to answer any questions or concerns.By prioritizing customer satisfaction, we believe that we can build long-term relationships with our customers and establish ourselves as a leading provider of rowing-related products.
 
 ### Marketing strategies
 - At Row to Grow, we understand the importance of effective marketing strategies to drive traffic to our website and increase sales. Our current marketing strategies include:
 
 - Social Media: We have created a [Facebook](https://www.facebook.com/profile.php?id=100092653627209) and [Instagram](https://www.instagram.com/rowto_grow/?fbclid=IwAR1LHVbMfc3Ypo-tBhXvJH1TNpzzMbn2iyowSml0UgkYor25RQ4zspwrwGU) page for our business to reach out to potential customers and promote our products. By regularly posting engaging content and interacting with our followers, we aim to build a strong online presence and increase brand awareness. We also plan to share the page with our friends and family and encourage them to like and share it with their wider circle. Our both pages are live and active but in case they becomes inactive or deactivated I have taken screenshots to display here as well
 
+<details><summary>Facebook1 page</summary>
+<img src=readme_img/marketing/dcb2.png>
+</details>
+
+<details><summary>Facebook2 page</summary>
+<img src=readme_img/marketing/fcb1.png>
+</details>
+
+<details><summary>Facebook3 page</summary>
+<img src=readme_img/marketing/fcb5.png>
+</details>
+
+
+<details><summary>Instagram1 page</summary>
+<img src=readme_img/marketing/inst1.png>
+</details>
+
+<details><summary>Instagram2 page</summary>
+<img src=readme_img/marketing/inst2.png>
+</details>
 
 - Newsletter: We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business.
 
@@ -50,10 +71,12 @@ SEO: We understand the importance of effective SEO strategies to increase our we
 ### SEO
 - When planning the SEO strategy for Row to Grow, our e-commerce website focused on rowing-related products, we began by conducting thorough keyword research. We utilized semrush.com and wordtracker.com to identify short tail and long tail keywords that we could use to improve our search engine rankings.
 
-- Our short-tail keywords include terms such as "rowing" "rowing products, rowing, rowing clothing, rowing accessories, rowing equipment, oars" while our long-tail keywords are more specific and include phrases like "rowing clothing for women, rowing clothing for man, rowing gear for rowers, rowing products for boats" By analyzing the results from Google Trends and related search queries, we were able to generate a comprehensive list of targeted keywords.
+- Our short-tail keywords include terms such as "Rowing Products, Rowing Accessories, Rowing Clothing, Rowing Books, Rowing Gear, Rowing Equipment, Rowing Apparel, Rowing Gift, Rowing" while our long-tail keywords are more specific and include phrases like "Rowing Clothing for Women, Rowing Accessories for Men, Rowing Books for Beginners, Rowing Gear for Advanced Rowers, Rowing Equipment for Competitive Rowing, Rowing Apparel for Outdoor Rowing, Rowing Gifts for Rowing Enthusiasts" By analyzing the results from Google Trends and related search queries, we were able to generate a comprehensive list of targeted keywords.
 
 - We strategically placed these keywords throughout our website, ensuring that they were included in important on-page elements such as headings, descriptions, and URLs. We also made use of the Strong tag where necessary to highlight key phrases and improve our website's overall searchability.
+
 ### User Stories
+
 #### Site visitor
 - As a site visitor, I want be able to register for the account so that I can get more access to the website content and to store my profile information
 - As a site visitor, I want to be able to view list of the products so that I can select some to purchase
@@ -130,22 +153,45 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 <img src="readme_img/wireframes/About-us.png">
 </details>
 
+### Agile methodoligy
+
+### Typography
+
+### Color scheme
+
 ### Database 
 
 <details><summary>Database</summary>
 <img src="images/database.png">
 </details>
 
-bug t-shirt product not displaying on the product page
-fix spell correct in tshirt in code
-bug only 4 products displayed on the page
-fix removed divisible counter from walkthrough project for smaller screens and medium screens
-bug webhooks not working locally for stripe payments
-fix share my local workspace
-bug stripe payment was incomplete (locally)
-fix used test information to proceede with payments
-bug order total, delivery and grand total amounts not displaying in admin panel
-fix update signals.py function name, add 'self.save() in update_total function in models
+# Features
+
+# Future features
+
+# Technologies used
+- [Balsamiq](https://en.wikipedia.org/wiki/Balsamiq) was used to create the wireframes.
+- [LucidChart](https://www.lucidchart.com/pages/) was used to design the database schema.
+- [HTML](https://en.wikipedia.org/wiki/HTML) was used for the mark up.
+- [CSS](https://en.wikipedia.org/wiki/CSS)  was used to style the site.
+- [Django](https://www.djangoproject.com/) was the framework that was used.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)), used for the logic in this project
+- [Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)) was also used to style the site.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) was used for interactiveness.
+- [Gitpod](https://www.gitpod.io/about) was used to create this site and then push everything to github.
+- [Heroku](https://en.wikipedia.org/wiki/Heroku) is used to host this site.
+- [Github](https://en.wikipedia.org/wiki/GitHub) was used to store the code.
+- [Git](https://en.wikipedia.org/wiki/Git) was used for version control.
+- [AWS S3 and IAM](https://eu-north-1.console.aws.amazon.com/) was used to host static and media files for this project and IAM for the permissions based roles for accessing the S3 buckets.
+- [ElephantSQL](https://www.elephantsql.com/) was used to store the database.
+- [Grammarly](https://app.grammarly.com/) was used to check typography.
+- [w3c Markup Validator](https://validator.w3.org) was used to validate code
+- [Am I Responsive?](http://ami.responsivedesign.is) was used to display site on different devices
+- [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check that the Python code meets PEP8 standards.
+- [JSHint](https://jshint.com/)  was used to validate the Javascript code
+- [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
+
+# Testing
 
 # Bugs
 | **Bug** | **Fix** |
@@ -351,7 +397,7 @@ and click "Save"
 
 - Accept the warning
 
-# Back in AWS services menu
+## Back in AWS services menu
 
 1. Select "IAM" from the AWS menu and then "User groups" from the menu on the left 
 hand side.
@@ -397,7 +443,7 @@ hand side.
 8. After they are created click on 'download.csv' file
 
 
-# Connect Django
+## Connect Django
 
 1. Install boto3 and django-storages:
 
@@ -442,7 +488,7 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
 ```
 
-# Back in Heroku
+## Back in Heroku
 
 1.  Select "Reveal Config Vars" in the "Settings" tab
 
@@ -452,7 +498,7 @@ values from the credentails.csv file from Step 6 in Add a user to the group abov
 3.  Add an additioanl "USE_AWS" variable with the key of "True"
 
 
-# In the root directory of the project
+## In the root directory of the project
 
 1.  Create a file named "custom_storages.py"
 
@@ -473,7 +519,7 @@ class MediaStorage(S3Boto3Storage):
 3.  Add and commit then push the project to GitHub. If you haven't set up automatic deployment
 to Heroku, also deploy to Heroku.
 
- # In AWS
+ ## In AWS
 
  1.  Add a folder named "media" in the S3 bucket page
 
@@ -486,7 +532,7 @@ to Heroku, also deploy to Heroku.
 
  5.   Click "Upload"
 
-# Stripe
+## Stripe
 
 1.  Sign in or create an account with [Stripe](https://stripe.com/gb)
 
@@ -510,22 +556,7 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
 
 # Credits
-- [w3c Markup Validator](https://validator.w3.org)
-- [Am I Responsive?](http://ami.responsivedesign.is)
-- [Balsamiq](https://balsamiq.com/)
-- [Coolors](https://coolors.co/)
-- [Design Course tutorial](https://www.youtube.com/watch?v=z9H7p1_iI14)
-- [Favicon.io](https://favicon.io)
-- [Font Awesome](https://fontawesome.com)
-- [Free Formatter](https://www.freeformatter.com/)
-- [Google Fonts](https://fonts.google.com)
-- [Git](https://git-scm.com)
-- [GitHub](https://github.com)
-- [Pexels](https://www.pexels.com)
-- [Responsinator](http://www.responsinator.com)
-- [Super Cool Design](https://supercooldesign.co.uk/blog/how-to-write-good-alt-text)
-- [Typespiration](https://typespiration.com)
-- [xml-sitemaps.com](www.xml-sitemaps.com)
+
 ### Tutorials and inspiration
 
 * The project walkthrough Butique Ado from Code Institute
