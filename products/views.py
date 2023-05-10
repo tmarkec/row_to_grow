@@ -123,7 +123,7 @@ def delete_product(request, product_id):
 
 @login_required
 def add_review(request, product_id):
-    """ A view to add review"""
+    """ A view to add a review"""
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ReviewForm(request.POST)
@@ -153,7 +153,7 @@ def add_review(request, product_id):
 
 @login_required
 def del_review(request, review_id):
-    """ A view to delete review """
+    """ A view to delete a review """
     user = request.user
     review = get_object_or_404(Review, id=review_id, user=user)
     if review.user == request.user:

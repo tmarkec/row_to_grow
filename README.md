@@ -31,18 +31,18 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 
 ## Design & Planning:
 ### Business model
-- Row to Grow is an e-commerce website that specializes in rowing-related products, such as clothing, accessories, and education. Our business model is centered around providing high-quality products at affordable prices, with a focus on serving the local rowing community. We believe that by focusing on the needs of our customers and providing excellent customer service, we can establish ourselves as a trusted and respected brand in the rowing community.
- - To achieve our business goals, we have established partnerships with local suppliers to ensure that we can offer a wide range of high-quality products. We carefully select our suppliers based on the quality of their products, their reputation in the industry, and their commitment to sustainable and ethical practices. 
- - To support our business model, we have implemented a range of operational strategies to ensure that we can deliver the best possible customer experience. We offer fast and reliable shipping, easy returns and exchanges, and a customer support team that is available to answer any questions or concerns.By prioritizing customer satisfaction, we believe that we can build long-term relationships with our customers and establish ourselves as a leading provider of rowing-related products.
+- Row to Grow is an e-commerce website that specializes in rowing-related products, such as clothing, accessories, and education. Our business model is centered around providing high-quality products at affordable prices, with a focus on serving rowing community. We believe that by focusing on the needs of our customers and providing excellent customer service, we can establish ourselves as a trusted and respected brand in the rowing community and beyond since we also have products that are not so called "rowing-related" and are more "mainstream"
+ - To achieve our business goals, we carefully select our suppliers based on the quality of their products, their reputation in the industry, and their commitment to sustainable and ethical practices. 
+ - To support our business model, we have implemented a range of operational strategies to ensure that we can deliver the best possible customer experience. We offer fast and reliable shipping, easy returns and exchanges, and a customer support team that is available to answer any questions or concerns.By prioritizing customer satisfaction, we believe that we can build long-term relationships with our customers and establish ourselves as a good provider of sports related products.
 
 ### Marketing 
 #### B2C 
 The application is primarily B2C focused, catering to individual customers who wish to purchase rowing related products
 
 #### Strategies
-- At Row to Grow, we understand the importance of effective marketing strategies to drive traffic to our website and increase sales. Our current marketing strategies include:
+- At Row to Grow, we understand the importance of effective marketing strategies to drive traffic to our website and increase our sales. Our current marketing strategies include:
 
-- Social Media: We have created a [Facebook](https://www.facebook.com/profile.php?id=100092653627209) and [Instagram](https://www.instagram.com/rowto_grow/?fbclid=IwAR1LHVbMfc3Ypo-tBhXvJH1TNpzzMbn2iyowSml0UgkYor25RQ4zspwrwGU) page for our business to reach out to potential customers and promote our products. By regularly posting engaging content and interacting with our followers, we aim to build a strong online presence and increase brand awareness. We also plan to share the page with our friends and family and encourage them to like and share it with their wider circle. Our both pages are live and active but in case they becomes inactive or deactivated I have taken screenshots to display here as well
+- Social Media: We have created a [Facebook](https://www.facebook.com/profile.php?id=100092653627209) and [Instagram](https://www.instagram.com/rowto_grow/?fbclid=IwAR1LHVbMfc3Ypo-tBhXvJH1TNpzzMbn2iyowSml0UgkYor25RQ4zspwrwGU) page for our business to reach out to potential customers and promote our products. By regularly posting engaging content and interacting with our followers, we aim to build an online presence to increase our brand awareness. Our both pages are live and active but in case they becomes inactive or deactivated I have taken screenshots to display here as well
 
 <details><summary>Facebook1 page</summary>
 <img src=readme_img/marketing/dcb2.png>
@@ -65,9 +65,9 @@ The application is primarily B2C focused, catering to individual customers who w
 <img src=readme_img/marketing/inst2.png>
 </details>
 
-- Newsletter: We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business.
+- Newsletter: We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business. Upon subscription user receive our initial conformation email.
 
-- Partnerships: We have established partnerships with local rowing clubs and organizations to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.
+- Partnerships: We have established partnerships with local rowing clubs to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.Also by sponsoring local athletes we extend our reach in marketing area in an old fashion way "Word of a mouth"
 
 SEO: We understand the importance of effective SEO strategies to increase our website's visibility in search engines like Google which will be explained more in next section.
 
@@ -173,7 +173,7 @@ I do realize importance of the agile aproach and documenting all steps and proce
 
 
 ### Typography
-For this project I picked Montserrat which is a widely used font known for its simplicity, clarity, and versatility. It's a great choice for both print and digital media, and its clean and modern design makes it suitable for a wide range of applications, including headings, body text, and branding. As a backdrop font I've put 'Sans-serif'
+For this project I picked Montserrat which is a widely used font known for it's clarity, and versatility. It's clean and modern design makes it suitable for a wide range of applications, including headings, body text, and branding. As a backdrop font I've used 'Sans-serif'.
 
 ### Color scheme
 
@@ -575,7 +575,7 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
 
 # Credits
-
+- 
 ### Tutorials and inspiration
 
 * The project walkthrough Butique Ado from Code Institute
