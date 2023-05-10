@@ -185,6 +185,52 @@ For this project I picked Montserrat which is a widely used font known for it's 
 
 # Features
 
+- Navigation: 
+  - navigation was coded along walkthrough video with some modifications. I belive that navigation from walkthrough video is good example for e-commerce website as it clearly displays features like shooping bag & search bar which clearly indicates what type of website it is
+  - navigation sticks on top of the page and its divided into 2 sections/ rows. First row consist of website logo, search bar, login/logout/register button and basket. Second row displays different pages on the website and number of displayed links depends if it's site visitor, registred user or superuser
+  - when on medium to small screens the navigation menu changes to burger menu which shows all the nav links when clicked on
+
+- Product page:
+  - products page is fully responsive to allow equal spacing between products regardless of screen width
+  - each product consist of image, title, price, category & rating, special fields are displayed for superuser which will all be covered in features:"admin"
+  - pagination is created to display only 8 products per page
+
+- Product detail page:
+    - single product is displayed on a page with additional information and option for the user such as description of the product, option to pick sizes, quantity and 'add to bag' button
+    - additional features 'add to wishlist' & 'add review' are displayed only for registered users
+    - for both features there is displayed paragraph text to indicate user that he needs to login in order to get more access to the website
+- Account page is only displayed to register user
+    - Wishlist:
+        - if there are products on the page user can delete product or add product to the bag
+        - if there are no products text paragraph is clearly displayed on the page
+    - Security:
+        - this page allows user to update his password
+    - Order history
+        - previous orders are displayed with clickable order number for each
+        - link for each order number will redirect user to purchase conformation summary for that order
+    - Purchase conformation
+        - allows user to have detailed view on his purchase
+        - allows user to dowload pdf version of the receipt
+    - Profile info
+        - displayed as a simple form for user to update his delivery information which will be saved
+- Contact page
+    - designed as separate app and model to store data
+    - standard contact form input fields are displayed for the user with conformation toast message displayed after submission and conformation email sent to the user address
+- Footer
+    - displayed on the bottom of every page, colours are matching footer display
+    - divided into 3 sections
+        - 1: Displayed name of the website with social icon links
+        - 2: Quick links that leads a user to the other parts of the website which increases engagemant and gives feel of the more content/complexity of the website
+        - 3: Subscription field, which allows user to subscribe to our newsletter and offer. Same as contact form it is created as separate model which will save users email address and toast message and conformation email are sent to the user
+- Additional pages were created to give more credibility to our buisness
+    - About us
+        - simple layout page with text and image, which provides user with more information about our buisness
+    - Privacy policy
+        - document that explains how we handles any customer information gathered in its operations
+    - Return policy
+        - document that explains our return policy on purchased products
+
+
 # Future features
 
 # Technologies used
