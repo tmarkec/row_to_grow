@@ -1,6 +1,13 @@
 html {
     height: 100%;
 }
+body {
+    background: url('/media/home5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+}
 a {
     list-style: none !important;}
 
@@ -11,13 +18,47 @@ a:hover {
 .navi {
     background-color: #564592
 }
-
 .logo-font:hover {
     color: white !important;
 }
 .navbar {
     padding: 0;
 }
+.search-box {
+    position: relative;
+    width: 20%;
+    max-width: 100%;
+    border-bottom: 2px solid #000;
+    transition: width 0.5s ease-in-out;
+  }
+  .search-box:hover,
+  .search-box:focus-within {
+    width: 100%;
+  }
+  .search-box input[type="text"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  .search-box button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: transparent;
+    color: #444;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+  }
+  .search-box button:hover {
+    color: #000;
+  }
 /* boxes login etc */
 .boxes {
     background-color: #fde74c;
@@ -25,20 +66,12 @@ a:hover {
     border: 2px solid black;
     border-radius: 10px;
 }
-.btn-bag {
-    width: 10px;
-    height: 10px;
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 50%;
-}
 .dropdown-menu-right {
     right: auto;
     left: 100%;
     top: 100px;
     transform: translateX(5px);
   }
-  
 .dropdown-item.dropdown-toggle::after {
     content: "";
     display: inline-block;
@@ -48,84 +81,11 @@ a:hover {
     padding: 0.15em;
     transform: rotate(45deg);
   }
-  .search-box {
-    position: relative;
-    width: 20%;
-    max-width: 100%;
-    border-bottom: 2px solid #000;
-    transition: width 0.5s ease-in-out;
-  }
-  
-  .search-box:hover,
-  .search-box:focus-within {
-    width: 100%;
-  }
-  
-  .search-box input[type="text"] {
-    border: none;
-    outline: none;
-    background: transparent;
-    width: 100%;
-    font-size: 16px;
-    padding: 5px 0;
-  }
-  
-  .search-box button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background: transparent;
-    color: #444;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    padding: 5px 10px;
-  }
-  
-  .search-box button:hover {
-    color: #000;
-  }
-/* .search-box {
-    position: relative;
-    width: 70px;
-    border-bottom: 2px solid #000;
-    transition: width 0.5s ease-in-out;
-  }
-  
-  .search-box:hover {
-    width: 100%;
-  }
-  
-  .search-box input[type="text"] {
-    border: none;
-    outline: none;
-    background: transparent;
-    width: 100%;
-    font-size: 16px;
-    padding: 5px 0;
-  }
-  
-  .search-box button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background: transparent;
-    color: #444;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    padding: 5px 10px;
-  }
-  
-  .search-box button:hover {
-    color: #000;
-  }
-  */
+ 
 .login {
     display: none;
 }
+/* buttons for the website */
 .test-btn {
     background: #fde74c;
     color: black;
@@ -155,13 +115,6 @@ a:hover {
     border: 1px solid #000;
     border-radius: 10px;
   }
-body {
-    background: url('/media/home5.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Montserrat', sans-serif;
-}
 
 /* from Bulma */
 .icon {
@@ -177,26 +130,17 @@ body {
 }
 .one {
     background-color: white;
-    /* opacity: .98; */
     background: rgba(255, 255, 255, 0.98);
-    min-height: 63vh;
-    
+    min-height: 63vh;   
 }
 .main-logo-link {
     width: fit-content;
 }
-
 .shop-now-button {
     background: black;
     color: white;
     min-width: 260px;
 }
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -206,11 +150,9 @@ body {
     background: #222;
     color: white;
 }
-
 .text-black {
     color: #000 !important;
 }
-
 .border-black {
     border: 1px solid black !important;
 }
@@ -273,14 +215,11 @@ body {
 .arrow-dark {
     border-bottom-color: #343a40 !important;
 }
-
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
 }
-/* -------------------------------product page */
-
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -292,7 +231,7 @@ body {
     opacity: .9;
 	z-index: -1;
 }
-
+/* -------------------------------product page and product/detail */
 .delete {
     background-color: white;
     border: none;
@@ -322,7 +261,6 @@ body {
     color: white;
     background-color: #db5461;
   }
-/* rating */
 .rating {
     display: flex; 
     flex-direction: row-reverse; 
@@ -375,12 +313,10 @@ body {
 /* ------------------ */
 
 /* Product Form */
-
 .btn-file {
     position: relative;
     overflow: hidden;
 }
-
 .btn-file input[type="file"] {
     position: absolute;
     top: 0;
@@ -417,26 +353,25 @@ body {
     justify-content: center;
     align-items: center;
   }
-
-  .social_footer_ul li a {
+.social_footer_ul li a {
     color: #3891a6;
   
     padding: 8px;
   }
-  .social_footer_ul li i {
+.social_footer_ul li i {
     width: 50px;
     height: 50px;
     text-align: center;
   }
-  .update-link,
-  .remove-item {
+.update-link,
+.remove-item {
     cursor: pointer;
   }
-  .btn-oposit {
+.btn-oposit {
     background-color: #3891a6;
   }
   /* ------------------------------Allauth */
-  .allauth-form-inner-content p {
+.allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
 }

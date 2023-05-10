@@ -23,12 +23,11 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 
 3. [Future Features](#future-features)
 4. [Technologies Used](#technologies-used)
-5. [Libraries](#libraries-used)
-6. [Testing](#testing)
-7. [Bugs](#bugs)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
-10. [Acknowledgements](#acknowledgements)
+5. [Testing](#testing)
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Acknowledgements](#acknowledgements)
 
 ## Design & Planning:
 ### Business model
@@ -36,7 +35,11 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
  - To achieve our business goals, we have established partnerships with local suppliers to ensure that we can offer a wide range of high-quality products. We carefully select our suppliers based on the quality of their products, their reputation in the industry, and their commitment to sustainable and ethical practices. 
  - To support our business model, we have implemented a range of operational strategies to ensure that we can deliver the best possible customer experience. We offer fast and reliable shipping, easy returns and exchanges, and a customer support team that is available to answer any questions or concerns.By prioritizing customer satisfaction, we believe that we can build long-term relationships with our customers and establish ourselves as a leading provider of rowing-related products.
 
-### Marketing strategies
+### Marketing 
+#### B2C 
+The application is primarily B2C focused, catering to individual customers who wish to purchase rowing related products
+
+#### Strategies
 - At Row to Grow, we understand the importance of effective marketing strategies to drive traffic to our website and increase sales. Our current marketing strategies include:
 
 - Social Media: We have created a [Facebook](https://www.facebook.com/profile.php?id=100092653627209) and [Instagram](https://www.instagram.com/rowto_grow/?fbclid=IwAR1LHVbMfc3Ypo-tBhXvJH1TNpzzMbn2iyowSml0UgkYor25RQ4zspwrwGU) page for our business to reach out to potential customers and promote our products. By regularly posting engaging content and interacting with our followers, we aim to build a strong online presence and increase brand awareness. We also plan to share the page with our friends and family and encourage them to like and share it with their wider circle. Our both pages are live and active but in case they becomes inactive or deactivated I have taken screenshots to display here as well
@@ -170,6 +173,7 @@ I do realize importance of the agile aproach and documenting all steps and proce
 
 
 ### Typography
+For this project I picked Montserrat which is a widely used font known for its simplicity, clarity, and versatility. It's a great choice for both print and digital media, and its clean and modern design makes it suitable for a wide range of applications, including headings, body text, and branding. As a backdrop font I've put 'Sans-serif'
 
 ### Color scheme
 
