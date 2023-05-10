@@ -108,6 +108,22 @@ fix used test information to proceede with payments
 bug order total, delivery and grand total amounts not displaying in admin panel
 fix update signals.py function name, add 'self.save() in update_total function in models
 
+# Bugs
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| t-shirt product not displaying on the product page| spellcheck correct in tshirt in code|
+| Post page was not displaying| Change path in urls.py to post/ |
+| only 4 products displayed on the page | removed divisible counter from walkthrough project for smaller screens and medium screen|
+| webhooks not working locally for stripe payments| clicked "share" in my local workspace|
+| order total, delivery and grand total amounts not displaying in admin panel | update signals.py function name, add 'self.save() in update_total function in models |
+| git push was rejected because changes I made in README.md in github, need to integrate remote changes | run commands in the console git-'fetch, checkout main, merge origin/main, commit and push" |
+| server 500 error after purchase of the product on the stripe-webhook website | import stripe on the top of the webhook_handler.py |
+| not able to download order receipt as pdf file | Created separated function to display blank canvas and manually inputed fields in the function|
+| receipt not rendering as order history template, error "template does not exist"| created same template and placed it in the profile app |
+| no autofill on the checkout page with user information| added if request.user.is_authenticated block of code with functionality in the checkout function|
+| server 500 error on the live version of the website when tried to upload images from admin panel or website | removed trailing whitespace in config vars "AWS_SECRET_ACCESS_KEY"'|
+| rating radio boxes on hover effect where changing colors from right to left (2 were higlighted as 4)| created div and add css to display flex, row-reverse and placed rating in that div|
+
 # Deployment
 ## Create an external database
 
@@ -396,6 +412,7 @@ values from the credentails.csv file from Step 6 in Add a user to the group abov
 
 3.  Add an additioanl "USE_AWS" variable with the key of "True"
 
+
 # In the root directory of the project
 
 1.  Create a file named "custom_storages.py"
@@ -444,7 +461,7 @@ to Heroku, also deploy to Heroku.
 
 6.  Enter the following as the "Endpoint URL":
 ```
-https://ecomm-gw.herokuapp.com/checkout/wh/
+https://'your-website-name'.herokuapp.com/checkout/wh/
 ```
 
 7.  Select "Recieve all events" and then "Add endpoint"
@@ -452,3 +469,33 @@ https://ecomm-gw.herokuapp.com/checkout/wh/
 8.  Copy the "Signing secret"
 
 9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
+
+# Credits
+- [w3c Markup Validator](https://validator.w3.org)
+- [Am I Responsive?](http://ami.responsivedesign.is)
+- [Balsamiq](https://balsamiq.com/)
+- [Coolors](https://coolors.co/)
+- [Design Course tutorial](https://www.youtube.com/watch?v=z9H7p1_iI14)
+- [Favicon.io](https://favicon.io)
+- [Font Awesome](https://fontawesome.com)
+- [Free Formatter](https://www.freeformatter.com/)
+- [Google Fonts](https://fonts.google.com)
+- [Git](https://git-scm.com)
+- [GitHub](https://github.com)
+- [Pexels](https://www.pexels.com)
+- [Responsinator](http://www.responsinator.com)
+- [Super Cool Design](https://supercooldesign.co.uk/blog/how-to-write-good-alt-text)
+- [Typespiration](https://typespiration.com)
+- [xml-sitemaps.com](www.xml-sitemaps.com)
+### Tutorials and inspiration
+
+* The project walkthrough Butique Ado from Code Institute
+# Acknowledgment
+
+## Acknowledgements:
+- I would like to thank my mentor ``Narander Singh`` for all his help throughout the project and guidance in general over the last 6 months. Narander was extremly proffesional and I would highly reccomend him to contionue to provide his guidance and support to the new students
+- I would like to thank Code Institute in general for providing me this opportunity then Slack Community, and tutor support which were amazing. I'm not sure if they are their real names but ``Sean, Oisin, Ed, Sarah`` were there when I needed them and got stuck on my project
+- I would also like to thank our cohort facilitator ``Irene Neville``, for beeing here with us for the last 6 months. Her guidance and advices made this whole experience so much better
+- Last but not least I would like to thank my colleagues in the classroom for daily guidance and code review
+
+[Back to the top](#row-to-grow)
