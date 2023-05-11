@@ -31,15 +31,16 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 
 ## Design & Planning:
 ### Business model
-- Row to Grow is an e-commerce website that specializes in rowing-related products, such as clothing, accessories, and education. Our business model is centered around providing high-quality products at affordable prices, with a focus on serving rowing community. We believe that by focusing on the needs of our customers and providing excellent customer service, we can establish ourselves as a trusted and respected brand in the rowing community and beyond since we also have products that are not so called "rowing-related" and are more "mainstream"
- - To achieve our business goals, we carefully select our suppliers based on the quality of their products, their reputation in the industry, and their commitment to sustainable and ethical practices. 
+- Row to Grow is an e-commerce website that specializes in rowing-related products, such as clothing, accessories, and education. Our business goal is to provide high-quality products at affordable prices, with a focus on serving rowing community. We believe that by focusing on the needs of our customers and providing excellent customer service, we can establish ourselves as a trusted and respected business in the rowing community and beyond since we also have products that are not "rowing-related" and are more for "mainstream" community
+ - To achieve our business goals, we carefully select our suppliers based on the quality of their products and their reputation in the industry 
  - To support our business model, we have implemented a range of operational strategies to ensure that we can deliver the best possible customer experience. We offer fast and reliable shipping, easy returns and exchanges, and a customer support team that is available to answer any questions or concerns.By prioritizing customer satisfaction, we believe that we can build long-term relationships with our customers and establish ourselves as a good provider of sports related products.
+ - While we are just in the starting phase we would focus more on the local community and domestic area before we scale up.We need to create local regular customers, to test which products are selling best and to stock up before we switched from regular marketing to paid marketing
 
 ### Marketing 
 #### B2C 
 The application is primarily B2C focused, catering to individual customers who wish to purchase rowing related products
 
-#### Strategies
+#### Current marketing strategies
 - At Row to Grow, we understand the importance of effective marketing strategies to drive traffic to our website and increase our sales. Our current marketing strategies include:
 
 - Social Media: We have created a [Facebook](https://www.facebook.com/profile.php?id=100092653627209) and [Instagram](https://www.instagram.com/rowto_grow/?fbclid=IwAR1LHVbMfc3Ypo-tBhXvJH1TNpzzMbn2iyowSml0UgkYor25RQ4zspwrwGU) page for our business to reach out to potential customers and promote our products. By regularly posting engaging content and interacting with our followers, we aim to build an online presence to increase our brand awareness. Our both pages are live and active but in case they becomes inactive or deactivated I have taken screenshots to display here as well
@@ -69,9 +70,12 @@ The application is primarily B2C focused, catering to individual customers who w
 
 - Partnerships: We have established partnerships with local rowing clubs to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.Also by sponsoring local athletes we extend our reach in marketing area in an old fashion way "Word of a mouth"
 
-SEO: We understand the importance of effective SEO strategies to increase our website's visibility in search engines like Google which will be explained more in next section.
+#### Future marketing strategies
+- usage of the google and facebook ads to promote and target our audience
+- usage of the social media influencer to promote our products
 
 ### SEO
+-  We understand the importance of effective SEO strategies to increase our website's visibility in search engines like Google 
 - When planning the SEO strategy for Row to Grow, our e-commerce website focused on rowing-related products, we began by conducting thorough keyword research. We utilized semrush.com and wordtracker.com to identify short tail and long tail keywords that we could use to improve our search engine rankings.
 
 - Our short-tail keywords include terms such as "Rowing Products, Rowing Accessories, Rowing Clothing, Rowing Books, Rowing Gear, Rowing Equipment, Rowing Apparel, Rowing Gift, Rowing" while our long-tail keywords are more specific and include phrases like "Rowing clothing for women, Rowing clothing for men, Rowing books for beginners, Rowing gear for student rowers, Rowing equipment for competitive rowers, Rowing equipment for coaches, Rowing gifts for enthusiasts" By analyzing the results from Google Trends and related search queries, we were able to generate a comprehensive list of targeted keywords.
@@ -280,17 +284,16 @@ For this project I picked Montserrat which is a widely used font known for it's 
 | ----------- | ----------- |
 | t-shirt product not displaying on the product page| spellcheck correct in tshirt in code|
 | Post page was not displaying| Change path in urls.py to post/ |
-| only 4 products displayed on the page | removed divisible counter from walkthrough project for smaller screens and medium screen|
+| Only 4 products displayed on the page | removed divisible counter from walkthrough project for smaller screens and medium screen|
 | webhooks not working locally for stripe payments| clicked "share" in my local workspace|
 | order total, delivery and grand total amounts not displaying in admin panel | update signals.py function name, add 'self.save() in update_total function in models |
 | git push was rejected because changes I made in README.md in github, need to integrate remote changes | run commands in the console git-'fetch, checkout main, merge origin/main, commit and push" |
-| server 500 error after purchase of the product on the stripe-webhook website | import stripe on the top of the webhook_handler.py |
-| not able to download order receipt as pdf file | Created separated function to display blank canvas and manually inputed fields in the function|
-| receipt not rendering as order history template, error "template does not exist"| created same template and placed it in the profile app |
+| server 500 error after purchasing of the product on the stripe-webhook website | import stripe on the top of the webhook_handler.py |
+| Not able to download order receipt as pdf file | Created separated function to display blank canvas and manually input fields in the function|
+| receipt not rendering as order history template, error "template does not exist"| created the same template and placed it in the profile app |
 | no autofill on the checkout page with user information| added if request.user.is_authenticated block of code with functionality in the checkout function|
-| server 500 error on the live version of the website when tried to upload images from admin panel or website | removed trailing whitespace in config vars "AWS_SECRET_ACCESS_KEY"'|
-| rating radio boxes on hover effect where changing colors from right to left (2 were higlighted as 4)| created div and add css to display flex, row-reverse and placed rating in that div|
-
+| server 500 error on the live version of the website when tried to upload images from the admin panel or website | removed trailing whitespace in config vars "AWS_SECRET_ACCESS_KEY"'|
+| rating radio boxes on hover effect where changing colors from right to left (2 were highlighted as 4)| created div and add css to display flex, row-reverse, and placed rating in that div|
 # Deployment
 ## Create an external database
 
@@ -636,7 +639,25 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 8.  Copy the "Signing secret"
 
 9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
-
+## Steps to clone project
+- Click on the code tab under the repository name.
+- Then click on "Code" button to the right above the files listed.
+- Click on the clipboard icon to copy the URL.
+- Open Git Bash in gitpod or your preferred IDE.
+- Change the working directory to where you want your cloned directory.
+- Type git clone and then paste the URL that you copied.
+- Press enter and clone is complete.
+- In the terminal install the requirements by using the following: pip3 install -r requirements.txt
+- Next create the env.py file which tells our project which variables to use.
+- Add the file to a .gitignore to prevent it from being pushed to github
+- Make migrations by running : python manage.py makemigrations
+- Then migrate those changes with python manage.py migrate
+- To run the project type python manage.py runserver into the terminal and open port 8000.
+- This will open the project locally for you to work on.
+## Forking repository on GitHub
+- Login to github and find the repository
+- Under your profile photo on the right hand side you will see the fork button.
+- Click the fork button and github will create a copy to your account.
 # Credits
 - 
 ### Tutorials and inspiration
