@@ -8,11 +8,9 @@ from django.utils import timezone
 from django.utils.timezone import now
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
-
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all products, including search queries """
 
     products = Product.objects.all()
     query = None

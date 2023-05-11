@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models import Avg
+from django.db.models import Avg, Count
 
 
 class Category(models.Model):
@@ -41,6 +41,15 @@ class Product(models.Model):
         if reviews['average'] is not None:
             avg = int(reviews['average'])
         return avg
+
+    def countReview(self):
+        reviews = Review.objects.filter(
+            product=self, approved=True
+            ).aggregate(count=Count('id'))
+        count = 0
+        if reviews['count'] is not None:
+            count = int(reviews['count'])
+        return count
 
 
 class Review(models.Model):

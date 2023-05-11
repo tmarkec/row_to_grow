@@ -298,6 +298,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
 | no autofill on the checkout page with user information| added if request.user.is_authenticated block of code with functionality in the checkout function|
 | server 500 error on the live version of the website when tried to upload images from the admin panel or website | removed trailing whitespace in config vars "AWS_SECRET_ACCESS_KEY"'|
 | rating radio boxes on hover effect where changing colors from right to left (2 were highlighted as 4)| created div and add css to display flex, row-reverse, and placed rating in that div|
+| by confirming removing/deleting items, wrong items were deleted from template/database | wrapped form around bootstrap modal, passed product.id and reviews.id into data-target and id for the modal|
 # Deployment
 ## Create an external database
 
