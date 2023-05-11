@@ -140,11 +140,6 @@ def add_to_wishlist(request, product_id):
     wishlist.products.add(product)
     messages.success(request, 'You added item to wishlist!')
     return redirect('wishlist')
-    # template = 'profiles/wishlist.html'
-    # context = {
-    # }
-
-    # return render(request, template, context)
 
 
 @login_required

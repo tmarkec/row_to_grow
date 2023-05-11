@@ -54,35 +54,43 @@
                                         {% endfor %}
                                     </div>
                                     {% endwith %}
-                                    <button type="button" class="text-danger delete" data-toggle="modal"
-                                data-target="#exampleModal">
-                                Remove from wishlist
-                            </button>
+                                    <form action="{% url 'delete_from_wishlist' product.id %}" method="POST">
+                                        {% csrf_token %}
+                                        <button type="button" class="text-danger delete" data-toggle="modal"
+                                            data-target="#exampleModale">
+                                            Remove from wishlist
+                                        </button>
+                                        <div class="modal fade" id="exampleModale"  tabindex="-1"role="dialog"
+                                            aria-labelledby="exampleModaleLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Remove from
+                                                            wishlist
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Are you sure you want to remove this product from your wishlist?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="submit" name="delete"
+                                                            class="my-4 mx-3 btn btn-danger">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Remove from wishlist</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure you want to remove this product from your wishlist?
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                                    <a href="{% url 'delete_from_wishlist' product.id %}"
-                                        class="btn btn-danger btn-sm">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
                 {% endfor %}
                 {% else %}

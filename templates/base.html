@@ -167,10 +167,9 @@
         <div class="container-fluid pt-1 container">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-3">Row to grow</h4>
-                    <p class="small text-muted">Experience our amazing products</p>
-                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved 2023</p>
-                    <ul class="social_footer_ul mt-3 p-0">
+                    <h4 class="mb-3 text-white text-bold">Row to grow</h4>
+                    <p class="small text-white">Experience our amazing products</p>
+                    <ul class="social-footer-ul mt-3 p-0">
                         <li><a href="https://www.facebook.com/" target="blank" rel="noopener" aria-label="Visit our facebook page"><i class="fab fa-facebook-f" ></i></a></li>
                         <li><a href="https://www.twitter.com/" target="blank" rel="noopener" aria-label="Visit our twitter page"><i class="fab fa-twitter p-0"></i></a></li>
                         <li><a href="https://www.linkedin.com/" target="blank" rel="noopener" aria-label="Visit our linkedin page"><i class="fab fa-linkedin p-0"></i></a></li>
@@ -179,26 +178,27 @@
                 </div>
                 <hr>
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-3">Quick links</h4>
-                    <ul class="list-unstyled">
+                    <h4 class="mb-3 text-white ">Quick links</h4>
+                    <ul class="list-unstyled quick-link">
                         <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="{% url 'about' %}">About us</a></li>
                         <li><a href="{% url 'products' %}">Shop now</a></li>
                         <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Shipping and returns</a></li>
                     </ul>
                 </div>
                 <hr class=".d-none .d-sm-block .d-md-none">
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-4 col-md-12 text-white">
                     <h4 class="mb-3">Newsletter</h4>
-                    <p class="small text-muted">Sign up for our newsletter and, get best deals and promotions on your
-                        email</p>
+                    <p class="small">Sign up for our newsletter and, get best deals and promotions on your
+                        email!</p>
                     <form method="post" action="{% url 'subscribe' %}" class="">
                         {% csrf_token %}
                         <div class="input-group mb-3">
                             <input id="email" name="email" type="email" class="form-control" placeholder="Email address"
                                 required>
-                            <button class="btn test-btn" id="button-addon2" type="submit"><i
-                                    class="fas fa-paper-plane"></i></button>
+                            <button class="btn btn-back" id="button-addon2" type="submit"><i
+                                    class="fas fa-share"></i></button>
                         </div>
                     </form>
                 </div>

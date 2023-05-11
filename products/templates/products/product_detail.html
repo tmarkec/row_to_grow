@@ -176,15 +176,15 @@
                     <textarea name="review_comment" rows="2" class="col-10"
                         placeholder="Write your review here"></textarea>
                 </div>
-                <div class="row">            
+                <div class="row">
                     <div class="col-12">
                         <input type="submit" value="Submit review" class="btn btn-back my-3">
                     </div>
                 </div>
             </form>
             {% else %}
-                    <p>You must <a href="{% url 'account_login' %}">login</a> in orded to review this product!</p>
-                    {% endif %}
+            <p>You must <a href="{% url 'account_login' %}">login</a> in orded to review this product!</p>
+            {% endif %}
             <div class="row">
                 <div class="col-12">
                     <hr class="w-100">
@@ -210,32 +210,36 @@
                         {% if review.user == request.user %}
                         <small class="ml-3 m-3">
                             <a href="{% url 'update_review' review_id=review.id %}">Update review</a>
-                            <button type="button" class="text-danger delete" data-toggle="modal"
-                                data-target="#exampleModals">
-                                Delete review
-                            </button>
-                            <div class="modal fade" id="exampleModals" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Delete review</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Are you sure you want to delete review?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary btn-sm"
-                                                data-dismiss="modal">Close</button>
-                                            <a href="{% url 'del_review' review_id=review.id %}"
-                                                class="btn btn-danger btn-sm">Delete review</a>
+                            <form action="{% url 'del_review' review_id=review.id %}" method="POST">
+                                {% csrf_token %}
+                                <button type="button" class="text-danger delete" data-toggle="modal"
+                                    data-target="#exampleModals">
+                                    Delete review
+                                </button>
+                                <div class="modal fade" id="exampleModals" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Delete review</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Are you sure you want to delete review?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary btn-sm"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="submit" name="delete"
+                                                    class="my-4 mx-3 btn btn-danger">Delete</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </small>
                         {% endif %}
                         <hr>

@@ -18,13 +18,13 @@
         <div class="col">
             <hr>
             <h2 class="logo-font mb-4">Products</h2>
-           
+
             {% for c in current_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                        <span class="p-1 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
-                    </a>
-                {% endfor %}
-                <hr>
+            <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                <span class="p-1 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+            </a>
+            {% endfor %}
+            <hr>
         </div>
     </div>
     <div class="row">
@@ -32,8 +32,8 @@
             <div class="row mt-1 mb-2"></div>
             <div class="row m-3">
                 {% for product in products %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 p-4">
-                    <div class="card h-100 border-0">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="card h-100 p-1">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -44,59 +44,56 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body pb-0">
+                        {% with rating=product.averageReview|floatformat %}
+                        <div class=" display-rating">
+                            {% for i in "54321" %}
+                            <input type="radio" name="rating" value="{{ i }}" id="rating{{ i }}"
+                                {% if i == rating %}checked{% endif %}>
+                            <label for="rating{{ i }}" title="{{ i }}"></label>
+                            {% endfor %}
+                        </div>
+                        {% endwith %}
+                        <hr class="horizontal">
+                        <div class="card-body p-0">
                             <p class="mb-0">{{ product.name }}</p>
                         </div>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer bg-white pt-0 border-0">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                                    {% if product.category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-muted"
-                                            href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    {% with rating=product.averageReview|floatformat %}
-                                    <div class=" display-rating">
-                                        {% for i in "54321" %}
-                                        <input type="radio" name="rating" value="{{ i }}" id="rating{{ i }}"
-                                            {% if i == rating %}checked{% endif %}>
-                                        <label for="rating{{ i }}" title="{{ i }}"></label>
-                                        {% endfor %}
-                                    </div>
-                                    {% endwith %}
+                                    <p class="lead mb-0 font-weight-bold">€{{ product.price }}</p>
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3 m-3">
                                         <a href="{% url 'edit_product' product.id %}">Edit product</a>
+                                        <a href="{% url 'delete_product' product.id %}"
+                                            class="btn btn-danger btn-sm">Delete product</a>
                                         <button type="button" class="text-danger delete" data-toggle="modal"
-                                                    data-target="#exampleModal">
-                                                    Delete product
-                                                </button>
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Delete product</h5>
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                Are you sure you want to delete product?
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary btn-sm"
-                                                                    data-dismiss="modal">Close</button>
-                                                                <a href="{% url 'delete_product' product.id %}"
-                                                                    class="btn btn-danger btn-sm">Delete product</a>
-                                                            </div>
-                                                        </div>
+                                            data-target="#exampleModal">
+                                            Delete product
+                                        </button>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Delete product
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Are you sure you want to delete product?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary btn-sm"
+                                                            data-dismiss="modal">Close</button>
+                                                        <a href="{% url 'delete_product' product.id %}"
+                                                            class="btn btn-danger btn-sm">Delete product</a>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
                                     </small>
                                     {% endif %}
                                 </div>
