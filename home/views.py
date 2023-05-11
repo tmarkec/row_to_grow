@@ -15,3 +15,8 @@ def about(request):
 def shipping(request):
     """ A view to display the shipping page """
     return render(request, 'home/shipping_return.html')
+
+
+def privacy(request):
+    """ A view to display the shipping page """
+    return render(request, 'home/privacy.html')
