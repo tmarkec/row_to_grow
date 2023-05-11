@@ -74,7 +74,7 @@ SEO: We understand the importance of effective SEO strategies to increase our we
 ### SEO
 - When planning the SEO strategy for Row to Grow, our e-commerce website focused on rowing-related products, we began by conducting thorough keyword research. We utilized semrush.com and wordtracker.com to identify short tail and long tail keywords that we could use to improve our search engine rankings.
 
-- Our short-tail keywords include terms such as "Rowing Products, Rowing Accessories, Rowing Clothing, Rowing Books, Rowing Gear, Rowing Equipment, Rowing Apparel, Rowing Gift, Rowing" while our long-tail keywords are more specific and include phrases like "Rowing Clothing for Women, Rowing Accessories for Men, Rowing Books for Beginners, Rowing Gear for Advanced Rowers, Rowing Equipment for Competitive Rowing, Rowing Apparel for Outdoor Rowing, Rowing Gifts for Rowing Enthusiasts" By analyzing the results from Google Trends and related search queries, we were able to generate a comprehensive list of targeted keywords.
+- Our short-tail keywords include terms such as "Rowing Products, Rowing Accessories, Rowing Clothing, Rowing Books, Rowing Gear, Rowing Equipment, Rowing Apparel, Rowing Gift, Rowing" while our long-tail keywords are more specific and include phrases like "Rowing clothing for women, Rowing clothing for men, Rowing books for beginners, Rowing gear for student rowers, Rowing equipment for competitive rowers, Rowing equipment for coaches, Rowing gifts for enthusiasts" By analyzing the results from Google Trends and related search queries, we were able to generate a comprehensive list of targeted keywords.
 
 - We strategically placed these keywords throughout our website, ensuring that they were included in important on-page elements such as headings, descriptions, and URLs. We also made use of the Strong tag where necessary to highlight key phrases and improve our website's overall searchability.
 
@@ -157,19 +157,19 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 </details>
 
 ### Agile Methodology
-During the development of this project, I implemented Agile development practices to ensure a flexible and iterative approach to the project's progress. The Agile methodology enabled me to adapt to changing requirements and efficiently manage the development process of this project. It is still learning process for me as this was only second time doing it so I found that quite bit challenging and time consuming. I've created Kanban board to manage and visualise workflow. 
+During the development of this project, I implemented Agile development practices to ensure a flexible and iterative approach to the project's progress. The Agile methodology enabled me to adapt to changing requirements and efficiently manage the development process of this project. It is still a learning process for me as this was only my second time doing it so I found that quite bit challenging and time-consuming. I've created Kanban board to manage and visualize the workflow. 
  - Project board was divided into 3 sections:
    - To-Do- (all user stories were initially entered in the 'To Do' column)
-   - In Progress- (then during development phase and iomplementing functionality stories were moved into the 'In Progress' column)
+   - In Progress- (then during the development phase and implementing functionality stories were moved into the 'In Progress' column)
    - Done- (and then finally they get moved into 'Done' once the development completes and functionality is implemented to cover that user story)
 
-- I've planned 3 itterations for this project. Two were completed as planned and third one is for future development of the webiste, which is described more in feature features in this document
+- I've planned 3 iterations for this project. Two were completed as planned and the third one is for future development of the webiste, which is described more in feature features in this document
 
-- Each milestone consist of user stories, which are displayed either open or closed depends on the progress. Each user story is labeled either as 'must-have', 'should-have' or 'could-have'depending of the needs of the project with estimated story points attached to it.
+- Each milestone consists of user stories, which are displayed either open or closed depending on the progress. Each user story is labeled either as 'must-have', 'should-have', or 'could-have' depending on the needs of the project with estimated story points attached to it.
 
-- Each user story have acceptance criteria and tasks that needed to be done to accomplish that criteria
+- Each user story has acceptance criteria and tasks that needed to be done to accomplish that criteria
 
-I do realize importance of the agile aproach and documenting all steps and procedures, but it is quite challenging when you are just team of 1 and you have to write adn do everything like there are multiple people working on this project. I do think with time and practice better implementation of the methodology can be achived.
+I do realize the importance of the agile approach and documenting all steps and procedures, but it is quite challenging when you are just a team of 1 and you have to write and do everything like multiple people are working on this project. I do think with time and practice better implementation of the methodology can be achieved.
 
 
 ### Typography
@@ -185,51 +185,68 @@ For this project I picked Montserrat which is a widely used font known for it's 
 
 # Features
 
-- Navigation: 
-  - navigation was coded along walkthrough video with some modifications. I belive that navigation from walkthrough video is good example for e-commerce website as it clearly displays features like shooping bag & search bar which clearly indicates what type of website it is
-  - navigation sticks on top of the page and its divided into 2 sections/ rows. First row consist of website logo, search bar, login/logout/register button and basket. Second row displays different pages on the website and number of displayed links depends if it's site visitor, registred user or superuser
-  - when on medium to small screens the navigation menu changes to burger menu which shows all the nav links when clicked on
+ Navigation: 
+  - navigation was coded along the walkthrough video with some modifications. I believe that navigation from a walkthrough video is a good example of an e-commerce website as it displays features like a shopping bag & search bar which indicates what type of website it is
+  - navigation sticks on top of the page and it's divided into 2 sections/ rows. The first row consists of the website logo, search bar, login/logout/register button, and basket. The second row displays different pages on the website and the number of displayed links depends if it's site visitor, registered user, or superuser
+  - when on medium to small screens the navigation menu changes to the burger menu which shows all the nav links when clicked on
 
 - Product page:
   - products page is fully responsive to allow equal spacing between products regardless of screen width
-  - each product consist of image, title, price, category & rating, special fields are displayed for superuser which will all be covered in features:"admin"
+  - each product consists of an image, title, price, category & rating, special fields are displayed for the superuser which will all be covered in features: "admin"
   - pagination is created to display only 8 products per page
 
 - Product detail page:
-    - single product is displayed on a page with additional information and option for the user such as description of the product, option to pick sizes, quantity and 'add to bag' button
-    - additional features 'add to wishlist' & 'add review' are displayed only for registered users
-    - for both features there is displayed paragraph text to indicate user that he needs to login in order to get more access to the website
-- Account page is only displayed to register user
+    - single product is displayed on a page with additional information and various option for the user such as a description of the product, an option to pick sizes, quantity and 'add to bag' button
+    - additional features 'add to wishlist & 'add review' are displayed only for registered users
+    - for both features, there is displayed paragraph text to indicate to the user that he needs to login in order to get more access to the website
+    - if a user reviews our product it will be indicated with a toast message
+    - once the superuser approves the review, the registered user has the option to update it or delete its review
+- The account page is only displayed to registered user
     - Wishlist:
-        - if there are products on the page user can delete product or add product to the bag
-        - if there are no products text paragraph is clearly displayed on the page
+        - if there are products on the page user can delete a product or add a product to the bag
+        - if there are no products text paragraph is displayed on the page, indicating user with the link that he can go to the product page to add products to a wishlist
     - Security:
-        - this page allows user to update his password
+        - this page allows the user to update his password
+        - 3 input fields with confirm button, also help text how to set password is displayed on the page
     - Order history
-        - previous orders are displayed with clickable order number for each
-        - link for each order number will redirect user to purchase conformation summary for that order
-    - Purchase conformation
-        - allows user to have detailed view on his purchase
-        - allows user to dowload pdf version of the receipt
+        - previous orders are displayed with clickable order numbers for each
+        - link for each order number will redirect the user to the purchase confirmation summary for that order
+    - Purchase confirmation
+        - allows a user to have a detailed view of his purchase
+        - allows a user to download a pdf version of the receipt
     - Profile info
-        - displayed as a simple form for user to update his delivery information which will be saved
+        - displayed as a simple form for a user to update his delivery information which will be saved
+- Bag page
+    - as it might increase our business and drive more traffic to our website unregistered users can purchase our products
+    - shopping bag is accessible simply by clicking the bag icon in the navigation menu, or during the shopping user can click on the 'secure checkout' button
+    - all products that the user has decided to purchase are displayed on the template, also there is an option for a user to change the quantity of the product or to remove it from the bag
+- Checkout page
+    - page is divided into two sections, order summary, and input form
+    - if a user is registered and has saved his profile information in the 'account', the checkout form will be pre-populated with his information
+    - if a user is registered and doesn't have saved information on his profile after he populates all the fields he can tick the checkbox to save his information for future purchases
+    - site visitors will have to populate all the fields in the form
+    - both registered and site visitors are required to provide card details to finalize a purchase
+    - upon completion of the purchase user is redirected to view his purchase in the separate template
 - Contact page
-    - designed as separate app and model to store data
-    - standard contact form input fields are displayed for the user with conformation toast message displayed after submission and conformation email sent to the user address
+    - designed as a separate app and model to store data
+    - standard contact form input fields are displayed for the user with a conformation toast message displayed after submission and a confirmation email sent to the user address
 - Footer
-    - displayed on the bottom of every page, colours are matching footer display
+    - displayed on the bottom of every page, colors are matching footer display
     - divided into 3 sections
         - 1: Displayed name of the website with social icon links
-        - 2: Quick links that leads a user to the other parts of the website which increases engagemant and gives feel of the more content/complexity of the website
-        - 3: Subscription field, which allows user to subscribe to our newsletter and offer. Same as contact form it is created as separate model which will save users email address and toast message and conformation email are sent to the user
-- Additional pages were created to give more credibility to our buisness
+        - 2: Quick links that lead a user to the other parts of the website which increases engagement and gives a feel of the more content/complexity of the website
+        - 3: Subscription field, which allows users to subscribe to our newsletter and offers. Same as the contact form it is created as a separate model which will save the user's email address and toast messages and confirmation emails are sent to the user
+- Additional pages were created to give more credibility to our business
     - About us
-        - simple layout page with text and image, which provides user with more information about our buisness
+        - simple layout page with text and images, which provides users with more information about our business
     - Privacy policy
-        - document that explains how we handles any customer information gathered in its operations
+        - a document that explains how we handle any customer information gathered in its operations
     - Return policy
-        - document that explains our return policy on purchased products
-
+        - a document that explains our return policy on purchased products
+- Admin-related permissions
+    - as a superuser, you get more access to the website, 2 additional tabs are displayed in the navigation menu:'admin' which will lead the superuser to the admin panel, and 'add product' which will get a user to the new page which he can add a product directly from the website without using admin panel
+    - as a superuser, you can also delete and update products on the website without having to access the admin panel
+    - also as a superuser you can choose which reviews/ratings you want to approve from registered users
 
 # Future features
 
