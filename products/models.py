@@ -4,7 +4,9 @@ from django.db.models import Avg, Count
 
 
 class Category(models.Model):
-
+    """
+    class for categories for products
+    """
     class Meta:
         verbose_name_plural = 'Categories'
     name = models.CharField(max_length=254)
@@ -18,6 +20,9 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    class for products
+    """
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -53,6 +58,9 @@ class Product(models.Model):
 
 
 class Review(models.Model):
+    """
+    class for reviews and ratings of the product
+    """
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.IntegerField()

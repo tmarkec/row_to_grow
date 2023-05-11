@@ -10,8 +10,9 @@ from django.contrib.auth.decorators import login_required
 
 
 def all_products(request):
-    """ A view to show all products, including search queries """
-
+    """ 
+    A view to show all products, including search queries 
+    """
     products = Product.objects.all()
     query = None
     categories = None
@@ -57,7 +58,9 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """
+     Add a product to the store 
+    """
     if not request.user.is_superuser:
         messages.warning(request, 'Only admin can access it!')
         return redirect(reverse('home'))

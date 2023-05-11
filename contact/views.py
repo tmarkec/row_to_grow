@@ -3,6 +3,9 @@ from .forms import ContactForm
 
 
 def contact(request):
+    """
+    view to display contact form
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -14,4 +17,7 @@ def contact(request):
 
 
 def contact_success(request):
+    """
+    view to display succesfully submitting contact form
+    """
     return render(request, 'contact/contact_success.html')

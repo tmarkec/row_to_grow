@@ -5,7 +5,7 @@ from django.utils import timezone
 # Create your models here.
 class Subscription(models.Model):
     """
-    Subscription on newsletter
+    Subscription on newsletter model
     """
 
     email = models.EmailField()

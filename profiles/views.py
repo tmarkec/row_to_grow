@@ -14,7 +14,9 @@ from django.contrib.auth import update_session_auth_hash
 
 @login_required
 def profile(request):
-    """ Display the user's profile information """
+    """ 
+    Display the user's profile information 
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -60,6 +62,9 @@ def history(request):
 
 
 def order_history(request, order_number):
+    """
+    view to display order history
+    """
     order = get_object_or_404(Order, order_number=order_number)
     context = {
         'order': order,
@@ -108,10 +113,8 @@ def generate_pdf(order):
 
 def download_order_pdf(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
-
     # Generate the PDF
     pdf = generate_pdf(order)
-
     # Create the HTTP response with PDF file
     response = HttpResponse(pdf, content_type='application/pdf')
     response[
@@ -123,6 +126,9 @@ def download_order_pdf(request, order_number):
 
 @login_required
 def wishlist(request):
+    """
+    view to display wishlist for logged in user
+    """
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     products = wishlist.products.all()
     context = {
@@ -135,6 +141,9 @@ def wishlist(request):
 
 @login_required
 def add_to_wishlist(request, product_id):
+    """
+    view to add product to wishlist
+    """
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
@@ -144,6 +153,9 @@ def add_to_wishlist(request, product_id):
 
 @login_required
 def delete_from_wishlist(request, product_id):
+    """
+    view to delete product to wishlist
+    """
     product = get_object_or_404(Product, id=product_id)
     wishlist = Wishlist.objects.get(user=request.user)
     wishlist.products.remove(product)
@@ -153,6 +165,9 @@ def delete_from_wishlist(request, product_id):
 
 @login_required
 def password_change(request):
+    """
+    view to change user password
+    """
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
