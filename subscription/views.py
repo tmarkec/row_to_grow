@@ -22,7 +22,7 @@ def subscribe(request):
                 + " you will get latest updates on our new products and deals!"
                 + "Go back to ...."
             )
-            from_email = "tmarkec@gmail.com"
+            from_email = "rowtogrow1@gmail.com"
             recipient_list = [email]
             send_mail(subject,
                       message, from_email, recipient_list, fail_silently=False)
