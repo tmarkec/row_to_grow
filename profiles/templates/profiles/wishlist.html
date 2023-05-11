@@ -57,10 +57,10 @@
                                     <form action="{% url 'delete_from_wishlist' product.id %}" method="POST">
                                         {% csrf_token %}
                                         <button type="button" class="text-danger delete" data-toggle="modal"
-                                            data-target="#exampleModale">
+                                            data-target="#remove_wishlist_{{product.id}}">
                                             Remove from wishlist
                                         </button>
-                                        <div class="modal fade" id="exampleModale"  tabindex="-1"role="dialog"
+                                        <div class="modal fade" id="remove_wishlist_{{product.id}}" tabindex="-1" role="dialog"
                                             aria-labelledby="exampleModaleLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">

@@ -64,13 +64,12 @@
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3 m-3">
                                         <a href="{% url 'edit_product' product.id %}">Edit product</a>
-                                        <a href="{% url 'delete_product' product.id %}"
-                                            class="btn btn-danger btn-sm">Delete product</a>
+                                        <form action="{% url 'delete_product' product.id %}" method="POST">
                                         <button type="button" class="text-danger delete" data-toggle="modal"
-                                            data-target="#exampleModal">
+                                            data-target="#delete_product_{{product.id}}">
                                             Delete product
                                         </button>
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                        <div class="modal fade" id="delete_product_{{product.id}}" tabindex="-1" role="dialog"
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
@@ -88,12 +87,13 @@
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary btn-sm"
                                                             data-dismiss="modal">Close</button>
-                                                        <a href="{% url 'delete_product' product.id %}"
+                                                        <a href=""
                                                             class="btn btn-danger btn-sm">Delete product</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        </form>
                                     </small>
                                     {% endif %}
                                 </div>
