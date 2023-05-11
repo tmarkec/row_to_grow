@@ -1,17 +1,12 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from io import BytesIO
-from django.template.loader import render_to_string, get_template
-from django.template import Context
 from reportlab.pdfgen import canvas
-from django.views import View
 from .models import UserProfile, Wishlist
 from .forms import UserProfileForm
 from django.contrib import messages
 from checkout.models import Order
 from products.models import Product
-from django.urls import reverse_lazy
-from django.views.generic.edit import FormView
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
@@ -28,7 +23,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(request, 'Update failed.' +
+                                    'Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
 
@@ -77,7 +73,7 @@ def order_history(request, order_number):
 
 
 def generate_pdf(order):
-    
+
     buffer = BytesIO()
     p = canvas.Canvas(buffer)
     p.setFont('Helvetica-Bold', 24)
@@ -85,7 +81,8 @@ def generate_pdf(order):
     p.setFont('Helvetica', 16)
     p.drawCentredString(300, 760, "Order History")
     p.drawString(50, 720, f"Order Number: {order.order_number}")
-    p.drawString(50, 690, f"Order Date: {order.date.strftime('%Y-%m-%d %H:%M:%S')}")
+    p.drawString(
+        50, 690, f"Order Date: {order.date.strftime('%Y-%m-%d %H:%M:%S')}")
     p.drawString(50, 660, f"Full name: {order.full_name}")
     p.drawString(50, 630, f"Email: {order.email}")
     p.drawString(50, 600, f"Address: {order.street_address1},")
@@ -98,9 +95,10 @@ def generate_pdf(order):
     y = 430
     for item in order.lineitems.all():
         p.setFont('Helvetica', 12)
-        p.drawString(50, y, f"{item.product.name} x {item.quantity} @ {item.product.price}")
+        p.drawString(
+            50, y, f"{item.product.name} x {item.quantity} @ {item.product.price}")
         y -= 15
-    
+
     p.showPage()
     p.save()
 
@@ -116,7 +114,9 @@ def download_order_pdf(request, order_number):
 
     # Create the HTTP response with PDF file
     response = HttpResponse(pdf, content_type='application/pdf')
-    response['Content-Disposition'] = f'attachment; filename=order_{order.order_number}.pdf'
+    response[
+        'Content-Disposition'
+        ] = f'attachment; filename=order_{order.order_number}.pdf'
 
     return response
 
@@ -162,8 +162,9 @@ def password_change(request):
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
-            update_session_auth_hash(request, user)  # important to update the session
-            messages.success(request, 'Your password was successfully updated!')
+            update_session_auth_hash(request, user)
+            messages.success(
+                request, 'Your password was successfully updated!')
             return redirect('info')
     else:
         form = PasswordChangeForm(request.user)

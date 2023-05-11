@@ -15,13 +15,10 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
     * [Wireframes](#wireframes)
     * [Agile Methodology](#agile-methodology)
     * [Typography](#typography)
-    * [Colour Scheme](#colour-scheme)
+    * [Color Scheme](#color-scheme)
     * [Database Diagram](#database-diagram)
-   
 2. [Features](#features)
-
-
-3. [Future Features](#future-features)
+3. [Future features](#future-features)
 4. [Technologies Used](#technologies-used)
 5. [Testing](#testing)
 6. [Bugs](#bugs)
@@ -253,6 +250,13 @@ For this project I picked Montserrat which is a widely used font known for it's 
     - also as a superuser you can choose which reviews/ratings you want to approve from registered users
 
 # Future features
+- Profile image
+    - as a future feature a user would have option to upload his profile picture, which then would be displayed in the navigation bar and once the user submits review it will be displayed next to it
+- Frequently bough items
+    - as a future feature a user would be able to see our frequently bought products as a list just before he checkout from the shooping bag
+- Chat bot
+    -  as a future feature a user would be able to get answers to frequently asked questions such as shipping, returns, policies, products
+
 
 # Technologies used
 - [Balsamiq](https://en.wikipedia.org/wiki/Balsamiq) was used to create the wireframes.

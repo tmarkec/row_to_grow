@@ -27,10 +27,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
 
     context = {
@@ -69,7 +71,9 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add product.' +
+                         'Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -95,7 +99,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product.' +
+                                    'Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -130,7 +135,7 @@ def add_review(request, product_id):
 
         if form.is_valid():
             rating = form.cleaned_data['rating']
-            review_comment = form.cleaned_data['review_comment']    
+            review_comment = form.cleaned_data['review_comment']
             review = Review.objects.create(
                 product=product,
                 user=request.user,
@@ -138,7 +143,8 @@ def add_review(request, product_id):
                 review_comment=review_comment,
                 )
             review.save()
-            messages.success(request, 'Thank you for your review, it is waiting for the approval!')
+            messages.success(request, 'Thank you for your review,' +
+                                      'it is waiting for the approval!')
         else:
             messages.warning(request, 'You must rate and review the product!')
         return redirect('product_detail', product_id=product.id)
@@ -174,7 +180,8 @@ def update_review(request, review_id):
             review.approved = False
             review.updated_on = timezone.now()
             review.save()
-            messages.success(request, 'Your review has been updated, wait for the approval.')
+            messages.success(request, 'Your review has been updated,' +
+                                      'wait for the approval.')
             return redirect('product_detail', product_id=review.product.id)
     else:
         form = ReviewForm(instance=review)
