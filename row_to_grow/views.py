@@ -2,8 +2,10 @@ from django.shortcuts import render
 
 
 def handler404(request, exception):
-    """ Error Handler 404 - Page Not Found """
-    return render(request, 'errors/404.html', status=404)
+    """ 
+    This function shows a customized 404 error page
+     """
+    return render(request, '404.html', status=404)
 
 
 def server_error(request):
