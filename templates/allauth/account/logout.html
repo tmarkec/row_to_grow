@@ -1,17 +1,13 @@
 {% extends "account/base.html" %}
 
-{% load i18n %}
-
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
-
 {% block inner_content %}
 
 <hr class="w-100">
-<h2 class="logo-font mb-4">{% trans "Sign Out" %}</h2>
-<hr class="w-100">
-<div class="row mx-auto boxes">
-<div class="col-md-auto mx-auto my-4 text-center">
-    <p>{% trans 'Are you sure you want to sign out?' %}</p>
+<h2 class="logo-font mb-4">Sign Out</h2>
+<hr class="hr">
+<div class="row mx-auto">
+<div class="col-sm-12 mx-auto col-md-6 my-4 text-center boxes m-2 p-3">
+    <p>Are you sure you want to sign out?</p>
 
     <form method="post" action="{% url 'account_logout' %}" class="">
       {% csrf_token %}
@@ -19,8 +15,8 @@
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
       {% endif %}
       <div class="my-4">
-        <a class="px-4 text-black" href="{% url 'home' %}">Cancel</a>
-        <button type="submit " class="btn btn-back">{% trans 'Sign Out' %}</button>
+        <a class="px-4 btn btn-cancel" href="{% url 'home' %}">Cancel</a>
+        <button type="submit " class="btn btn-back">Sign Out</button>
       </div>
     </form>
   </div>

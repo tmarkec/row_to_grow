@@ -68,8 +68,9 @@ a:hover {
   }
 /* boxes login etc */
 .boxes {
-    background-color: #fde74c;
-    color: black;
+    background-color: #564592;
+    opacity: .75;
+    color: white;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -126,7 +127,16 @@ a:hover {
     border: 1px solid #000;
     border-radius: 10px;
   }
-
+.btn-cancel {
+    background: #564592;
+    color: #f896d8;
+    border: 1px solid #f896d8;
+    border-radius: 5px;
+}
+.btn-cancel:hover {
+    background:#f896d8;
+    color: #564592;
+}
 /* from Bulma */
 .icon {
     align-items: center;
