@@ -18,7 +18,7 @@
         <div class="col">
             <hr>
             <h2 class="logo-font mb-4">Products</h2>
-
+            <hr class="hr">
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-1 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>

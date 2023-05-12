@@ -14,8 +14,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay one"></div>
-    <div class="container p-5">
+    <div class="overlay"></div>
+    <div class="container p-5 one">
         <div class="row">
             <div class="col">
                 <hr>
@@ -26,6 +26,7 @@
         <div class="row">
             <div class="col-10 col-lg-8">
                 <h1>Thank you for contacting us!</h1>
-                <a href="{% url 'home' %}">Home page</a>
+                <p>We will get back to you as soon as we can, in the mean time check out our new products!</p>
+                <a href="{% url 'products' %}?category=new_arrivals">New arrivals</a>
             </div>
 {% endblock %}
