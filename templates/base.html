@@ -1,14 +1,16 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
-
 <head>
-
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Marko Tot">
+    <meta name="description"
+    content="Rowing related products">
+    <meta name="keywords"
+    content="rowing, rowing apperal, rowing clothing, row, sport clothes, training material">
     {% endblock %}
 
     {% block extra_meta %}
@@ -49,9 +51,9 @@
 <body>
     <header class="container-fluid fixed-top navi">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex align-items-start p-0">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <div class="col-12 col-lg-4 my-auto p-0 m-0">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-white my-0"><strong>Row to grow</strong></h2>
+                    <img src="{% static 'images/logos.png' %}" alt="Row to grow logo" class="logo"></a>
                 </a>
             </div>   
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">

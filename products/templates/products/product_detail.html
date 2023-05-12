@@ -122,6 +122,7 @@
                     <small class="ml-3 m-3">
                         <a href="{% url 'edit_product' product.id %}">Edit product</a>
                         <form action="{% url 'delete_product' product.id %}" method="POST">
+                            {% csrf_token %}
                             <button type="button" class="text-danger delete" data-toggle="modal"
                                 data-target="#product_delete_{{product.id}}">
                                 Delete product
