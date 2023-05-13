@@ -22,8 +22,14 @@ a:hover {
     background-color: #564592;
 }
 /* navigation */
+.bag:hover {
+    color: #000;
+}
 .navi {
     background-color: #564592
+}
+.nav-link {
+    padding: 0.5rem;
 }
 .logo-font:hover {
     color: white !important;
@@ -173,6 +179,9 @@ a:hover {
 }
 .text-black {
     color: #000 !important;
+}
+.text-red {
+    color: #fff;
 }
 .border-black {
     border: 1px solid black !important;

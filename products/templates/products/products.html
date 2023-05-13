@@ -106,6 +106,28 @@
 
                 {% endfor %}
             </div>
+            <div class="row">
+                <div class="col m-3">
+                    <div class="row justify-content-center">
+                        {% if products.has_previous %}
+                        <a href="?page={{ products.previous_page_number }}"><span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Previous</span></a>
+                        {% endif %}
+                        <p><small class="px-3">Page {{ products.number }} of {{ products.paginator.num_pages }}.</small>
+                        </p>
+                        {% if products.has_next %}
+                        <a href="?page={{ products.next_page_number }}">
+                            <span class="text-uppercase">Next</span>
+                            <span class="icon">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>  
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -7,11 +7,12 @@ from checkout.models import OrderLineItem
 from django.utils import timezone
 from django.utils.timezone import now
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, PageNotAnInteger
 
 
 def all_products(request):
-    """ 
-    A view to show all products, including search queries 
+    """
+    A view to show all products, including search queries
     """
     products = Product.objects.all()
     query = None
@@ -34,6 +35,13 @@ def all_products(request):
                 description__icontains=query)
             products = products.filter(queries)
 
+    paginator = Paginator(products, 12)
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+
     context = {
         'products': products,
         'search_term': query,
@@ -52,14 +60,13 @@ def product_detail(request, product_id):
         'product': product,
         'reviews': reviews,
     }
-
     return render(request, 'products/product_detail.html', context)
 
 
 @login_required
 def add_product(request):
     """
-     Add a product to the store 
+     Add a product to the store
     """
     if not request.user.is_superuser:
         messages.warning(request, 'Only admin can access it!')
