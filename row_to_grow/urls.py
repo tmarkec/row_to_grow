@@ -33,4 +33,4 @@ urlpatterns = [
     path('', include('home.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'row_to_grow.views.handler404'
+handler404 = 'home.views.handler404'
