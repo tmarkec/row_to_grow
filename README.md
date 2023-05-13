@@ -84,12 +84,11 @@ The application is primarily B2C focused, catering to individual customers who w
 #### Site visitor
 - As a site visitor, I want be able to register for the account so that I can get more access to the website content and to store my profile information
 - As a site visitor, I want to be able to view list of the products so that I can select some to purchase
-- As a site visitor I want to be able to sort the list of specific category or product so that I can easily find products of certain price, rating and name
+- As a site visitor I want to be able to view my shoping bag, so I that can confirm my choices or simply update/remove quantity
 - As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product
 - As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product
 - As a site visitor I want to be able to chose products and select size and quantity of the product
 - As a site visitor I want to be able to pay for selected products so that I can complete my purchase option
-- As a site visitor, I want be able to view blog posts so that I can get more knowledge about benefits of related selling products on the website
 - As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products
 - As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website
 #### Registered user
@@ -282,6 +281,21 @@ For this project I picked Montserrat which is a widely used font known for it's 
 - [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
 
 # Testing
+
+## Testing user stories
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a site visitor, I want be able to register for the account so that I can get more access to the website content | Upon landing on the index page, I can see a navigation bar with login and register buttons, upon clicking either options forms are displayed for user to fill information, after login/registration new navigation tabs are shown to the user| &check;
+As a site visitor, I want to be able to view list of the products so that I can select some to purchaset| Navigating either to products or special offers, list of products are displayed to the user |&check;
+ As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product|Search bar is displayed on the top of the navigation menu, user can type words if there are matching words in product title/description those products will be display, otherwise message will be shown "o search results"|&check;
+  As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product | By clicking on the image of the product, user is redirected to the separate page which show description, rating, gives option for user to put it in the bag or for registered user to save it in the wishlist| &check;
+ As a site visitor I want to be able to chose products and select size and quantity of the product | If product has sizes option for user will be displayed, and under size option user can choose quantity | &check;
+ As a site visitor I want to be able to view my shoping bag, so I that can confirm my choices or simply update/remove quantity | User can acces shopping bag by clicking on the icon bag in the navigation menu, new page is displayed to the user with products in the bag, choice to update/delete product and grand total that he has to pay| &check;
+As a site visitor I want to be able to pay for selected products so that I can complete my purchase option | By clicking 'secure checkout' in the shoping bag user is redirected to the checkout page, on which he can once again see his selected products and form that user needs to fill out in order to complete purchase |&check;
+As a site visitor, I want to be able to get confirmation for my previous order | After puchasing the product new template with order history is displayed to the user
+As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products | On the bottom of the website in the right corner of the footer there is an input field with a label that allows me to input my email address and subscribe to the newsletter |&check;
+ As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website | I can navigate on the website and click contact, new page is displayed with the form for user to fill out, after submitting form, confirmation page is shown to the user |&check;
 
 # Bugs
 | **Bug** | **Fix** |

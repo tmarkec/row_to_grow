@@ -14,16 +14,16 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container one">
-    <div class="row justify-content-center">
+    <div class="row">
         <div class="col">
             <hr>
             <h2 class="">About us</h2>
             <hr class="hr">
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-10 m-1">
-            <h4>Our story</h4>
+    <div class="row justify-content-around my-4">
+        <div class="col-sm-12 col-md-10">
+            <h4>Our story <i class="fas fa-book-open mx-2"></i></h4>
             <p>"Row to Grow" began 10 years ago with a simple idea:
                 to provide rowing enthusiasts with the highest-quality
                 products and gear available. Our founders, all passionate
@@ -32,21 +32,25 @@
                 variety of products.<br> Starting a business from scratch is never easy, but our
                 commitment to excellence and customer satisfaction helped us overcome
                 the challenges we faced. We worked tirelessly to curate a selection of
-                <strong>rowing-related </strong>products that we were proud to offer to our customers.
+                <strong>rowing-related </strong>products such as: <strong>rowing accessories, rowing apperal,
+                    rowing books, rowing equipment</strong> and many more.
                 Over the years, we've built a reputation for exceptional quality and
                 service, and we've expanded our offerings to include everything from
                 books and clothing to accessories.</p>
-            <h4>Goals</h4>
+            <h4>Goals <i class="fas fa-bullseye mx-2"></i></h4>
             <p>Today we remain committed
                 to our founding vision: to help the <strong>rowing community</strong> grow by providing
                 the tools and resources that rowers need to succeed.
                 We're proud of what we've achieved so far, and we look forward to continuing
                 to serve our customers for years to come and to expand our area and products we provide you with!</p>
-            <h4>Our founders</h4>
-
         </div>
     </div>
-    <div class="row justify-content-around">
+    <div class="row mx-4">
+        <div class="col-sm-12 col-md-5">
+            <h4 >Our founders <i class="fas fa-people-carry"></i></h4>
+        </div>
+    </div>
+    <div class="row justify-content-around my-4">
         <div class="col-sm-12 col-md-5">
             <div class="card">
                 <img class="card-img-top" src="{% static 'images/markos.jpg' %}" alt="Marko profile image">
@@ -78,14 +82,15 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-10 m-3">
-            <h4>Final thoughts</h4>
-            <p>At <strong>Row to Grow</strong>, we're proud to have Marko and Elaine as our leaders. Their passion for rowing and
+    <div class="row justify-content-around mt-4">
+        <div class="col-sm-12 col-md-10">
+            <h4>Final thoughts <i class="far fa-comment mx-2"></i></h4>
+            <p>At <strong>Row to Grow</strong>, we're proud to have Marko and Elaine as our leaders. Their passion for
+                rowing and
                 dedication to the customers is what sets us apart and makes us a trusted name in the rowing community.
                 From beginner rowers to seasoned pros, Row to Grow has everything needed
                 to make the most out of the sport.</p>
-            <p> Your opinion matters to us so go ahead and <a href="{% url 'products' %}">Check our products</a> and
+            <p> Your opinion matters to us so go ahead and <a href="{% url 'products' %}">check our products</a> and
                 give us some feedback!</p>
         </div>
     </div>
