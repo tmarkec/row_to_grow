@@ -1,5 +1,5 @@
 <div class="collapse navbar-collapse navi" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto as">
+    <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,39 +52,33 @@
                 href="{% url 'admin:index' %}">Admin panel</a></li>
 
         <li class="list-inline-item ">
-            <a href="{% url 'add_product' %}" class="logo-font font-weight-bold nav-link text-black mr-5">Add product</a></li>
+            <a href="{% url 'add_product' %}" class="logo-font font-weight-bold nav-link text-black mr-5">Add
+                product</a></li>
 
         {% endif %}
         <li class="nav-item login left">
-            <ul class="list-inline list-unstyled text-center text-lg-right">
+            <ul class="list-inline list-unstyled text-lg-right m-2">
                 {% if request.user.is_authenticated %}
                 <li class="list-inline-item ">
-                    <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_logout' %}">
-                        <div class="text-center">
-                            <p class="my-0">Logout</p>
-                        </div>
+                    <a class="nav-link btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_logout' %}">
+                        Logout
                     </a>
                 </li>
                 {% else %}
                 <li class="list-inline-item ">
-                    <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_login' %}">
-                        <div class="text-center">
-                            <p class="my-0">Login</p>
-                        </div>
+                    <a class="nav-link btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_login' %}">
+                        Login
                     </a>
                 </li>
                 <li class="list-inline-item ">
-                    <a class="nav-link btn test-btn text-uppercase" href="{% url 'account_signup' %}">
-                        <div class="text-center">
-                            <p class="my-0">Register</p>
-                        </div>
+                    <a class="nav-link btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_signup' %}">
+                        Register
                     </a>
                 </li>
                 {% endif %}
-
             </ul>
         </li>
+    </ul>
 </div>
 
-</ul>
-</div>
+
