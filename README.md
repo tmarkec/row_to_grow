@@ -216,7 +216,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
         - allows a user to download a pdf version of the receipt
     - Profile info
         - displayed as a simple form for a user to update his delivery information which will be saved
-- Bag page
+- Shooping bag page
     - as it might increase our business and drive more traffic to our website unregistered users can purchase our products
     - shopping bag is accessible simply by clicking the bag icon in the navigation menu, or during the shopping user can click on the 'secure checkout' button
     - all products that the user has decided to purchase are displayed on the template, also there is an option for a user to change the quantity of the product or to remove it from the bag
@@ -246,7 +246,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
 - Admin-related permissions
     - as a superuser, you get more access to the website, 2 additional tabs are displayed in the navigation menu:'admin' which will lead the superuser to the admin panel, and 'add product' which will get a user to the new page which he can add a product directly from the website without using admin panel
     - as a superuser, you can also delete and update products on the website without having to access the admin panel
-    - also as a superuser you can choose which reviews/ratings you want to approve from registered users
+
 
 # Future features
 - Profile image
@@ -311,9 +311,9 @@ As a site owner I want to be able to add, update and delete products directly fr
 ## Testing features 
 - some features have been tested in user stories
 
+NAVIGATION
 Feature/test |  Action | Pass
 --- | --- | :---:
-NAVIGATION
 click logo icon|return user to the index page|&check;
 input word in search bar| search user input, if input matches product title/description product is shown on the page|&check;
 click login button| direct user to the login template|&check;
@@ -321,14 +321,20 @@ click register button | direct user to the signup template|&check;
 click basket icon| direct user to the shooping bag template|&check;
 click products & special offers| display dropdown menu|&check;
 click navigation links | navigate user to the matching templates (contact:contact, account:account, add product:add product)|&check;
+
 HOME
+Feature/test |  Action | Pass
+--- | --- | :---:
 click shop now button|user is redirected to the products page|&check;
 PRODUCT PAGE
 all products displayed on the page|navigate to the product page, products displayed in row of 4|&check;
 click on categories tags|chosen tag product should be displayed on the page|&check;
 click on product image|direct user to the product detail page|&check;
 pagination displayed| if more than 12 products user have option to go to the next page|&check;
+
 PRODUCT DETAIL PAGE
+Feature/test |  Action | Pass
+--- | --- | :--
 average rating| above product description average rating and number of reviews are displayed|&check;
 click - or + or input quantity for the product|user only allowed to input quantity from 1-99|&check;
 click add to bag|success message is shown to the user,and product is added to the bag|&check;
@@ -342,44 +348,121 @@ write review and click on 'submit'|user shouldn't be allowed just to rate produc
 rate and review product and click on 'submit'|info message displayed to the user|&check;
 click update review|user redirected to the new template to update review|&check;
 click delete review|modal is shown to the user to confirm his actions|&check;
+
 ACCOUNT
+Feature/test |  Action | Pass
+--- | --- | :--
 account link|only shown to the registered user|&check;
+
 ORDER HISTORY
+Feature/test |  Action | Pass
+--- | --- | :--
 click on order history in the account page|user is redirected to the order history page|&check;
 click link on one of your previous orders|purchase template with detail description is displayed|&check;
+
 SECURITY
+Feature/test |  Action | Pass
+--- | --- | :--
 click on security in the account page |user is redirected to the change password page|&check;
-input||&check;
 input old and new password|user only allowed to change password if the old one match his from login details|&check;
 follow guidlines to choose new password and click change password|info message is displayed to the user and password has been changed|&check;
+
 PROFILE INFO
+Feature/test |  Action | Pass
+--- | --- | :--
 click on profile info in the account page| user is redirected to the my profile page|&check;
 user can change any field and click on 'update'|info message shown to the user and information has been updated|&check;
+
 WISHLIST
+Feature/test |  Action | Pass
+--- | --- | :--
 click on wishlist in the account page|user is redirected to the wishlist page|&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
-||&check;
+wishlist page|user saved product are displayed on the page|&check;
+click remove product|modal is shown to the user to confirm his choice|&check;
+click delete|product is removed from wishlist, info message is shown to the user|&check;
+
+SHOOPING BAG PAGE
+Feature/test |  Action | Pass
+--- | --- | :--
+user can update quantity or remove product| product quantity is updated or product is removed from the bag|&check;
+delivery costs| bottom of the page delivery and grand total are dispalyed to the user|&check;
+click on 'keep shooping' button |user is navigated to the products page|&check;
+click on 'secure checkout' button| user is navigated to the checkout page |&check;
+
+CHECKOUT PAGE
+Feature/test |  Action | Pass
+--- | --- | :--
+prepopulated fields with user delivery information from users account| only registered user have this option|&check;
+click 'adjust bag'| user redirected to the checkout page|&check;
+click 'complete order'|order purchase detail view displayed to the user and info message as well|&check;
+
+PURCHASE INFO
+Feature/test |  Action | Pass
+--- | --- | :--
+click on 'keep shooping'|user is redirected to the product page|&check;
+click on 'download pdf'| pdf file with purchase info is downloaded for the user|&check;
+
+CONTACT PAGE
+Feature/test |  Action | Pass
+--- | --- | :--
+form displayed to the user| click on 'contact' in the navigation|&check;
+submit form| user only allowed to submit form if all fields are populated|&check;
+contact success page| upon submitting form user is prompt with the success page|&check;
+click link 'new arrivals' on contact success page| user is redirected to product page on category 'new arrivals'|&check;
+
+FOOTER
+Feature/test |  Action | Pass
+--- | --- | :--
+click on social links|opened in new tab|&check;
+click on 'Home' link| user redirected to the home page|&check;
+click on 'About us' link|user redirected to the about us page|&check;
+click on 'Shop now' link|user redirected to the products page|&check;
+click on 'Privacy policy' link|user redirected to the products page|&check;
+click on 'Shipping and returns' link|user redirected to the shipping & returns page|&check;
+
+NEWSLETTER
+Feature/test |  Action | Pass
+--- | --- | :--
+input email address in newsletter field click the button|user redirected to the home page|&check;
+.|info message displayed to the user|&check;
+.|user received conformation email about subscription|&check;
+
+PRIVACY POLICY
+Feature/test |  Action | Pass
+--- | --- | :--
+click on the link contact us on the bottom of the page|user is redirected to the contact page|&check;
+
+SUPERUSER PERMISSIONS
+Feature/test |  Action | Pass
+--- | --- | :--
+login as superuser|2 navigation links displayed 'admin panel' & 'add product'|&check;
+click on admin panel|superuser is redirected to the admin panel|&check;
+click on add product|superuser is redirected to add product page|&check;
+fill form in add product page |user can only input name, description and the price of the product|&check;
+click 'add product'|user is redirected to the product detail page with displayed product|&check;
+edit product| 'edit product' button on products and product detail page|&check;
+click 'edit product'|user redirected to product managment page|&check;
+update form fields, click 'update'| the user is redirected to product detail page with updated product|&check;
+delete product|'delete product' button on products and product detail page|&check;
+click 'delete product'|the user is shown a modal to confirm his actions|&check;
+click 'delete'|product is deleted|&check;
+
+PASSWORD RESET
+Feature/test |  Action | Pass
+--- | --- | :--
+click on forget password on the login page|user is redirected to provide his email address|&check;
+input email click 'reset password'|conformation email with reset password link has been sent to the provided email, password reset template displayed to the user with link |&check;
+click link 'deals' |user is redirected to the product templates category deals|&check;
+click link in email|user is redirected to the template to create new password|&check;
+input new password, click submit|user is redirected to confirmation page with link to 'go shopping'|&check;
+click on link 'go shopping'| user is redirected to the products page|&check;
+
+REGISTRATION
+Feature/test |  Action | Pass
+--- | --- | :--
+input form|user is required to populate all form fields|&check;
+click on sign up|user is logged in and redirected to the home page|&check;
+
 
 # Bugs
 | **Bug** | **Fix** |
