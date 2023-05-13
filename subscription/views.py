@@ -3,7 +3,6 @@ from .forms import SubscribeForm
 from .models import Subscription
 from django.contrib import messages
 from django.core.mail import send_mail
-# Create your views here.
 
 
 def subscribe(request):
@@ -14,13 +13,13 @@ def subscribe(request):
         form = SubscribeForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "You subscribed to our newsletter!")
+            messages.info(request, "You subscribed to our newsletter!")
             email = request.POST.get("email")
             subject = "Row to grow subscription"
             message = (
                 "Thank you for subscribing to our newsletter,"
                 + " you will get latest updates on our new products and deals!"
-                + "Go back to ...."
+                
             )
             from_email = "rowtogrow1@gmail.com"
             recipient_list = [email]

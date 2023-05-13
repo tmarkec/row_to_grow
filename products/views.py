@@ -47,7 +47,6 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
     }
-
     return render(request, 'products/products.html', context)
 
 
@@ -152,10 +151,11 @@ def add_review(request, product_id):
                 review_comment=review_comment,
                 )
             review.save()
-            messages.success(request, 'Thank you for your review,' +
-                                      'it is waiting for the approval!')
+            messages.info(request, 'Thank you for your review,' +
+                                   'it is waiting for the approval!')
         else:
-            messages.warning(request, 'You must rate and review the product!')
+            messages.warning(request, 'Not allowed, you MUST rate and review' + 
+                                      'product, in order to submit it.')
         return redirect('product_detail', product_id=product.id)
 
     context = {
@@ -173,7 +173,7 @@ def del_review(request, review_id):
     review = get_object_or_404(Review, id=review_id, user=user)
     if review.user == request.user:
         review.delete()
-        messages.success(request, "Review deleted successfully.")
+        messages.info(request, "Review deleted successfully.")
     return redirect('product_detail', product_id=review.product.id)
 
 
@@ -189,7 +189,7 @@ def update_review(request, review_id):
             review.approved = False
             review.updated_on = timezone.now()
             review.save()
-            messages.success(request, 'Your review has been updated,' +
+            messages.info(request, 'Your review has been updated,' +
                                       'wait for the approval.')
             return redirect('product_detail', product_id=review.product.id)
     else:

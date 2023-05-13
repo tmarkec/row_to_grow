@@ -92,16 +92,16 @@ The application is primarily B2C focused, catering to individual customers who w
 - As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products
 - As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website
 #### Registered user
-- As a registered user, I want to be able to login and logout from the website
-- As a registered user, I want to be able to recove my password so that I can recover access to my account in case I forget my password
+- As a registered user, I want to be able to reset my password so that I can recover access to my account in case I forget my password
 - As a registered user, I want to be able to update my profile and delivery information
-- As a registered user, I want to be able to leave comments for posts so that I can engage with other users and leave feedback about certain posts
-- As a registered user, I want to be able rate the products so that I can express my satisfaction or disatisfaction of the certain products
+- As a registered user, I want to be able to rate and review  product so I could leave feedback for other users and express my satisfaction or disatisfaction
+- As a registered user, I want to be able to update my rate and review of the product
+- As a registered user, I want to be able to delete my rate and review of the product
 - As a registered user, I want to be able to view my order history on the profile page so that I can have better insight of my previous purchases
+- As a registered user, I want to be able to change my password so I can have greater control over my account in case I think it's compromised
+- As a registered user, I want to be able to save products to the wishlist so I can keep track of the products I am interested in
+- As a registered user, I want to be able to remove products from the wishlist so I can reduce clutter of my wishlist
 #### Site owner
-- As a site owner, I want to be able to create, update and delete posts so that I can control my website content
-- As a site owner, I want to be able to approve or delete comments so that I can filter out objectionable comments
-- As a site owner, I want to be able to delete users so that I can receive several benefits such as: manage my data, reduce liability & resource optimization
 - As a site owner I want to be able to add, update and delete products directly from the website so I don't have to access admin panel everytime I want to make changes to the products
 
 
@@ -238,11 +238,11 @@ For this project I picked Montserrat which is a widely used font known for it's 
         - 3: Subscription field, which allows users to subscribe to our newsletter and offers. Same as the contact form it is created as a separate model which will save the user's email address and toast messages and confirmation emails are sent to the user
 - Additional pages were created to give more credibility to our business
     - About us
-        - simple layout page with text and images, which provides users with more information about our business
+        - a page  which provides users with more information about us and our business
     - Privacy policy
-        - a document that explains how we handle any customer information gathered in its operations
-    - Return policy
-        - a document that explains our return policy on purchased products
+        - a page that explains how we handle any customer information gathered in its operations
+    - Shipping and return
+        - a page that give the user information about delivery times/costs and steps to return product
 - Admin-related permissions
     - as a superuser, you get more access to the website, 2 additional tabs are displayed in the navigation menu:'admin' which will lead the superuser to the admin panel, and 'add product' which will get a user to the new page which he can add a product directly from the website without using admin panel
     - as a superuser, you can also delete and update products on the website without having to access the admin panel
@@ -279,6 +279,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
 - [PEP8 CI Python Linter](https://pep8ci.herokuapp.com/) was used to check that the Python code meets PEP8 standards.
 - [JSHint](https://jshint.com/)  was used to validate the Javascript code
 - [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/) was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
+- [tinyPNG](https://tinypng.com/) was used to compress images
 
 # Testing
 
@@ -287,15 +288,98 @@ For this project I picked Montserrat which is a widely used font known for it's 
 User Story |  Test | Pass
 --- | --- | :---:
 As a site visitor, I want be able to register for the account so that I can get more access to the website content | Upon landing on the index page, I can see a navigation bar with login and register buttons, upon clicking either options forms are displayed for user to fill information, after login/registration new navigation tabs are shown to the user| &check;
-As a site visitor, I want to be able to view list of the products so that I can select some to purchaset| Navigating either to products or special offers, list of products are displayed to the user |&check;
- As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product|Search bar is displayed on the top of the navigation menu, user can type words if there are matching words in product title/description those products will be display, otherwise message will be shown "o search results"|&check;
-  As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product | By clicking on the image of the product, user is redirected to the separate page which show description, rating, gives option for user to put it in the bag or for registered user to save it in the wishlist| &check;
+As a site visitor, I want to be able to view list of the products so that I can select some to purchase| Navigating either to products or special offers, list of products are displayed to the user |&check;
+As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product|Search bar is displayed on the top of the navigation menu, user can type words if there are matching words in product title/description those products will be display, otherwise message will be shown "o search results"|&check;
+As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product | By clicking on the image of the product, user is redirected to the separate page which show description, rating, gives option for user to put it in the bag or for registered user to save it in the wishlist| &check;
  As a site visitor I want to be able to chose products and select size and quantity of the product | If product has sizes option for user will be displayed, and under size option user can choose quantity | &check;
  As a site visitor I want to be able to view my shoping bag, so I that can confirm my choices or simply update/remove quantity | User can acces shopping bag by clicking on the icon bag in the navigation menu, new page is displayed to the user with products in the bag, choice to update/delete product and grand total that he has to pay| &check;
 As a site visitor I want to be able to pay for selected products so that I can complete my purchase option | By clicking 'secure checkout' in the shoping bag user is redirected to the checkout page, on which he can once again see his selected products and form that user needs to fill out in order to complete purchase |&check;
 As a site visitor, I want to be able to get confirmation for my previous order | After puchasing the product new template with order history is displayed to the user
 As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products | On the bottom of the website in the right corner of the footer there is an input field with a label that allows me to input my email address and subscribe to the newsletter |&check;
  As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website | I can navigate on the website and click contact, new page is displayed with the form for user to fill out, after submitting form, confirmation page is shown to the user |&check;
+ As a registered user, I want to be able to reset my password so that I can recover access to my account in case I forget my password|By clicking on login button, user can click on 'forgot password' link which will lead user in 4 steps to reset his password|&check;
+As a registered user, I want to be able to update my profile and delivery information|Clicking on the account user is redirected to the profile page, from there user can open 'profile-info' page where he can upload his delivery/personal information|&check;
+As a registered user, I want to be able rate and review the products so that I can express my satisfaction or disatisfaction of the certain products|On the product detail page, bellow the product user can write review and rate product by choosing between 1-5 stars |&check;
+As a registered user, I want to be able to update my rate and review of the product|On the product detail page under the product user can find his review and click on the update which will lead user to the new template on which he can input review and rate the product again|&check;
+As a registered user, I want to be able to delete my rate and review of the product|On the product detail page under users review he can click on the 'delete' button, user must confirm his choice |&check;
+As a registered user, I want to be able to view my order history on the profile page so that I can have better insight of my previous purchases| Clicking on the account user is redirected to the profile page, from there user can open 'order history' page where he can see list of his previous orders, each order consist of order number link which user can click and it will show user detail description of his purchase |&check;
+As a registered user, I want to be able to change my password so I can have greater control over my account in case I think it's compromised| Clicking on the account user is redirected to the profile page, from there user can open 'security' page from where he can update his |&check;
+As a registered user, I want to be able to save products to the wishlist so I can keep track of the products I am interested in| On product detail page there is a button 'add to wishlist' which will save current open product to the wishlist and will redirect user to that page|&check;
+As a registered user, I want to be able to remove products from the wishlist so I can keep|On wishlist page under every product there is button to remove the same product from the page, user must confirm his choice |&check;
+As a site owner I want to be able to add, update and delete products directly from the website so I don't have to access admin panel everytime I want to make changes to the products|Login as admin user, in the navigation menu new link is shown to the superuser, by clicking on that link superuser can add product, to delete or update product superuser has to navigate to products or product detail page where 2 links are shown under the product so superuser can perform either action|&check;
+
+## Testing features 
+- some features have been tested in user stories
+
+Feature/test |  Action | Pass
+--- | --- | :---:
+NAVIGATION
+click logo icon|return user to the index page|&check;
+input word in search bar| search user input, if input matches product title/description product is shown on the page|&check;
+click login button| direct user to the login template|&check;
+click register button | direct user to the signup template|&check;
+click basket icon| direct user to the shooping bag template|&check;
+click products & special offers| display dropdown menu|&check;
+click navigation links | navigate user to the matching templates (contact:contact, account:account, add product:add product)|&check;
+HOME
+click shop now button|user is redirected to the products page|&check;
+PRODUCT PAGE
+all products displayed on the page|navigate to the product page, products displayed in row of 4|&check;
+click on categories tags|chosen tag product should be displayed on the page|&check;
+click on product image|direct user to the product detail page|&check;
+pagination displayed| if more than 12 products user have option to go to the next page|&check;
+PRODUCT DETAIL PAGE
+average rating| above product description average rating and number of reviews are displayed|&check;
+click - or + or input quantity for the product|user only allowed to input quantity from 1-99|&check;
+click add to bag|success message is shown to the user,and product is added to the bag|&check;
+size option|user should be able to select sizes for certain products|&check;
+wishlist button|only displayed to the registered user|&check;
+rating and review| only displayed to the registered user|&check;
+click login link in the paragraph|direct user to the login page|&check;
+click add to wihslist|product added to the wishlist|&check;
+click on stars to rate the product and click 'submit review'|user shouldn't be allowed just to rate product|&check;
+write review and click on 'submit'|user shouldn't be allowed just to rate product|&check;
+rate and review product and click on 'submit'|info message displayed to the user|&check;
+click update review|user redirected to the new template to update review|&check;
+click delete review|modal is shown to the user to confirm his actions|&check;
+ACCOUNT
+account link|only shown to the registered user|&check;
+ORDER HISTORY
+click on order history in the account page|user is redirected to the order history page|&check;
+click link on one of your previous orders|purchase template with detail description is displayed|&check;
+SECURITY
+click on security in the account page |user is redirected to the change password page|&check;
+input||&check;
+input old and new password|user only allowed to change password if the old one match his from login details|&check;
+follow guidlines to choose new password and click change password|info message is displayed to the user and password has been changed|&check;
+PROFILE INFO
+click on profile info in the account page| user is redirected to the my profile page|&check;
+user can change any field and click on 'update'|info message shown to the user and information has been updated|&check;
+WISHLIST
+click on wishlist in the account page|user is redirected to the wishlist page|&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
+||&check;
 
 # Bugs
 | **Bug** | **Fix** |
@@ -313,6 +397,7 @@ As a site visitor, I want to be able to subscribe to newsletter so that I can re
 | server 500 error on the live version of the website when tried to upload images from the admin panel or website | removed trailing whitespace in config vars "AWS_SECRET_ACCESS_KEY"'|
 | rating radio boxes on hover effect where changing colors from right to left (2 were highlighted as 4)| created div and add css to display flex, row-reverse, and placed rating in that div|
 | by confirming removing/deleting items, wrong items were deleted from template/database | wrapped form around bootstrap modal, passed product.id and reviews.id into data-target and id for the modal|
+| after changing delivery cost on the checkout error shown 'standard delivery percdentage' | modified code in views.py and in models.py and set delivery cost to standard delivery price|
 # Deployment
 ## Create an external database
 

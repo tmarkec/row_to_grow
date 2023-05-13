@@ -23,7 +23,7 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile updated successfully')
+            messages.info(request, 'Profile updated successfully')
         else:
             messages.error(request, 'Update failed.' +
                                     'Please ensure the form is valid.')
@@ -113,14 +113,11 @@ def generate_pdf(order):
 
 def download_order_pdf(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
-    # Generate the PDF
     pdf = generate_pdf(order)
-    # Create the HTTP response with PDF file
     response = HttpResponse(pdf, content_type='application/pdf')
     response[
         'Content-Disposition'
         ] = f'attachment; filename=order_{order.order_number}.pdf'
-
     return response
 
 
@@ -147,7 +144,7 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     wishlist.products.add(product)
-    messages.success(request, 'You added item to wishlist!')
+    messages.info(request, f'Added: {product.name} to the wishlist!')
     return redirect('wishlist')
 
 
@@ -159,7 +156,7 @@ def delete_from_wishlist(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     wishlist = Wishlist.objects.get(user=request.user)
     wishlist.products.remove(product)
-    messages.success(request, 'You removed item from wishlist!')
+    messages.info(request, f'You removed {product.name} from the wishlist!')
     return redirect('wishlist')
 
 
@@ -173,7 +170,7 @@ def password_change(request):
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request, user)
-            messages.success(
+            messages.info(
                 request, 'Your password was successfully updated!')
             return redirect('info')
     else:
