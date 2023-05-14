@@ -63,7 +63,7 @@ The application is primarily B2C focused, catering to individual customers who w
 <img src=readme_img/marketing/inst2.png>
 </details>
 
-- Newsletter: We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business. Upon subscription user receive our initial conformation email.
+- Newsletter: We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business. Upon subscription user receive our initial conformation email from us. First phase is just gather email address in our database then sign up with some provider to setup group emails for promotion of our products/business.
 
 - Partnerships: We have established partnerships with local rowing clubs to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.Also by sponsoring local athletes we extend our reach in marketing area in an old fashion way "Word of a mouth"
 
@@ -91,6 +91,7 @@ The application is primarily B2C focused, catering to individual customers who w
 - As a site visitor I want to be able to pay for selected products so that I can complete my purchase option
 - As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products
 - As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website
+- As a site visitor, I want to be able to view blog posts so that I can get more information and insights about row to grow business
 #### Registered user
 - As a registered user, I want to be able to reset my password so that I can recover access to my account in case I forget my password
 - As a registered user, I want to be able to update my profile and delivery information
@@ -101,6 +102,7 @@ The application is primarily B2C focused, catering to individual customers who w
 - As a registered user, I want to be able to change my password so I can have greater control over my account in case I think it's compromised
 - As a registered user, I want to be able to save products to the wishlist so I can keep track of the products I am interested in
 - As a registered user, I want to be able to remove products from the wishlist so I can reduce clutter of my wishlist
+- As a registered user, I want to be able to like posts so that I can express my satisfaction with certain posts/topics
 #### Site owner
 - As a site owner I want to be able to add, update and delete products directly from the website so I don't have to access admin panel everytime I want to make changes to the products
 
@@ -156,6 +158,13 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 <img src="readme_img/wireframes/About-us.png">
 </details>
 
+<details><summary>Blog</summary>
+<img src="readme_img/wireframes/About-us.png">
+</details>
+
+<details><summary>Blog detail</summary>
+<img src="readme_img/wireframes/About-us.png">
+</details>
 ### Agile Methodology
 During the development of this project, I implemented Agile development practices to ensure a flexible and iterative approach to the project's progress. The Agile methodology enabled me to adapt to changing requirements and efficiently manage the development process of this project. It is still a learning process for me as this was only my second time doing it so I found that quite bit challenging and time-consuming. I've created Kanban board to manage and visualize the workflow. 
  - Project board was divided into 3 sections:
@@ -230,6 +239,14 @@ For this project I picked Montserrat which is a widely used font known for it's 
 - Contact page
     - designed as a separate app and model to store data
     - standard contact form input fields are displayed for the user with a conformation toast message displayed after submission and a confirmation email sent to the user address
+- Blog page
+    - posts are displayed in columns with 3 posts per row, each post contains of: image, author, created date and post excerpt
+    - posts card are scaling up as the user hovers over them and clickable title and excerpt
+    - when clicked on title/excerpt user is redirected to blog detail page which will give user more description about the post
+- Blog detail page
+    - On this page, the user can read  description of the post that he clicked on and get all relevant information about it
+    - Bellow post section register user can like or unlike the post
+    - next to the like icon user can see number of likes 
 - Footer
     - displayed on the bottom of every page, colors are matching footer display
     - divided into 3 sections
@@ -297,6 +314,7 @@ As a site visitor I want to be able to pay for selected products so that I can c
 As a site visitor, I want to be able to get confirmation for my previous order | After puchasing the product new template with order history is displayed to the user
 As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products | On the bottom of the website in the right corner of the footer there is an input field with a label that allows me to input my email address and subscribe to the newsletter |&check;
  As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website | I can navigate on the website and click contact, new page is displayed with the form for user to fill out, after submitting form, confirmation page is shown to the user |&check;
+ As a site visitor, I want to be able to view blog posts so that I can get more information and insights about row to grow business|Clickin on the 'blog' user is redirected to the blog page from which he can choose which blog he wants to read by simply clicking on the title of the blog post |&check;
  As a registered user, I want to be able to reset my password so that I can recover access to my account in case I forget my password|By clicking on login button, user can click on 'forgot password' link which will lead user in 4 steps to reset his password|&check;
 As a registered user, I want to be able to update my profile and delivery information|Clicking on the account user is redirected to the profile page, from there user can open 'profile-info' page where he can upload his delivery/personal information|&check;
 As a registered user, I want to be able rate and review the products so that I can express my satisfaction or disatisfaction of the certain products|On the product detail page, bellow the product user can write review and rate product by choosing between 1-5 stars |&check;
@@ -306,7 +324,9 @@ As a registered user, I want to be able to view my order history on the profile 
 As a registered user, I want to be able to change my password so I can have greater control over my account in case I think it's compromised| Clicking on the account user is redirected to the profile page, from there user can open 'security' page from where he can update his |&check;
 As a registered user, I want to be able to save products to the wishlist so I can keep track of the products I am interested in| On product detail page there is a button 'add to wishlist' which will save current open product to the wishlist and will redirect user to that page|&check;
 As a registered user, I want to be able to remove products from the wishlist so I can keep|On wishlist page under every product there is button to remove the same product from the page, user must confirm his choice |&check;
+As a registered user, I want to be able to like posts so that I can express my satisfaction with certain posts/topics|By clicking on the title of the post user can scroll down to the heart icon and he can click the icon to like the post|&check;
 As a site owner I want to be able to add, update and delete products directly from the website so I don't have to access admin panel everytime I want to make changes to the products|Login as admin user, in the navigation menu new link is shown to the superuser, by clicking on that link superuser can add product, to delete or update product superuser has to navigate to products or product detail page where 2 links are shown under the product so superuser can perform either action|&check;
+
 
 ## Testing features 
 - some features have been tested in user stories
@@ -427,6 +447,23 @@ form displayed to the user| click on 'contact' in the navigation|&check;
 submit form| user only allowed to submit form if all fields are populated|&check;
 contact success page| upon submitting form user is prompt with the success page|&check;
 click link 'new arrivals' on contact success page| user is redirected to product page on category 'new arrivals'|&check;
+
+BLOG PAGE
+Feature/test |  Action | Pass
+--- | --- | :--
+click on 'blog' in the navigation menu|user is redirected to the blog page|&check;
+.|pagination on the bottom of the page|&check;
+click on the title or excerpt|user is redirected to the blog detail page|&check;
+
+BLOG DETAIL PAGE
+Feature/test |  Action | Pass
+--- | --- | :--
+click on the heart icon under the blog post|only registered users are allowed to like the posts|&check;
+when icon clicked|counter next to the icon increase|&check;
+.|icon heart change state from empty to full|&check;
+click again to unlike post|counter next to the icon decrease|&check;
+.|icon heart change state from full to empty|&check;
+number of likes|unregistered user can view number of likes|&check;
 
 FOOTER
 Feature/test |  Action | Pass
