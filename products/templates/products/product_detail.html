@@ -111,7 +111,7 @@
                 <div class="row mt-3">
                     {% if user.is_authenticated%}
                     <div class="col-12">
-                        <a href="{% url 'add_to_wishlist' product.id %}" class="btn test-btn p-2 text-uppercase"> Add to
+                        <a href="{% url 'add_to_wishlist' product.id %}" class="btn add-btn p-2 text-uppercase"> Add to
                             wishlist!</a>
                     </div>
                     {% else %}
@@ -182,7 +182,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <input type="submit" value="Submit" class="btn btn-back my-3">
+                        <input type="submit" value="Submit" class="btn test-btn btn-sm my-3">
                     </div>
                 </div>
             </form>

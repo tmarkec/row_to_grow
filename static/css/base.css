@@ -26,7 +26,7 @@ a:hover {
     color: #000;
 }
 .navi {
-    background-color: #7f7c8b;
+    background-color: #5638c0;
     opacity: .99;
 }
 .nav-link {
@@ -55,7 +55,7 @@ a:hover {
 
 /* boxes login etc */
 .boxes {
-    background-color: #4D7EA8;
+    background-color: #5638c0;
     opacity: .75;
     color: white;
     border: 1px solid black;
@@ -100,7 +100,8 @@ a:hover {
     margin-left: 10px;
 }
 .btn-back:hover {
-    color: #fde74c;
+    color: #000;
+    background-color: #fde74c;
 }
 .test-box {
     background: rgb(253,231,76);
@@ -120,12 +121,30 @@ a:hover {
     border-radius:5px;
 }
 .btn-cancel:hover {
-    color: #c23d00;
+    background-color: #948c8c;
+    color: #fff;
+}
+.add-btn {
+    background-color: #5638c0;
+    color: #fde74c;
+}
+.add-btn:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: #5638c0;
+}
+.btn-outline-black {
+    border: 1px solid black;
+    border-radius: 5px;
 }
 /* lead text website */
 .lead-text {
     text-transform: uppercase;
     font-weight: 600;
+}
+.toogle {
+    padding: 15px;
+    background-color: #fde74c;
 }
 /* links website */
 .links {
@@ -256,7 +275,7 @@ a:hover {
 	z-index: -1;
 }
 .password-link {
-    color: #04284e;
+    color: #000000;
 }
 .password-link:hover {
     color: #fde74c;
@@ -375,7 +394,7 @@ a:hover {
 /* ---------------------------------Footer */
 .main-footer {
     border-top: solid 1px #ccc;
-    background-color: #7f7c8b ;
+    background-color: #5638c0;
     position: -webkit-sticky;
     position: sticky;
 
