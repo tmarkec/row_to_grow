@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import (
+ render, get_object_or_404, HttpResponseRedirect, reverse
+)
 from .models import Blog
 from django.views import generic, View
 from django.core.paginator import Paginator
@@ -51,3 +53,23 @@ class BlogDetail(View):
                 "liked": liked,
             },
         )
+
+
+class BlogLikes(View):
+    """
+    View to like a post
+    """
+    def post(self, request, slug):
+        blog = get_object_or_404(Blog, slug=slug)
+
+        if blog.likes.filter(id=request.user.id).exists():
+            blog.likes.remove(request.user)
+        else:
+            blog.likes.add(request.user)
+
+        return HttpResponseRedirect(
+                                    reverse(
+                                            'blog:blog_detail',
+                                            args=[slug]
+                                             )
+                                    )

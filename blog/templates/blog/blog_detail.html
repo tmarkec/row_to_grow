@@ -30,14 +30,26 @@
             <img class="" src="{{ blog.image.url }}" alt="Post image">
         </div>
         <div class="col-sm-12 col-md-6">
-            <p><small class="text-muted">Author: <strong>{{blog.author}}</strong></p>
-            <p><small class="text-muted">{{blog.created_on}}</p>
-            <h5>{{blog.content | safe }}</h5>      
+            <p><small class="text-muted">Author: <strong>{{blog.author}}</strong></small></p>
+            <p><small class="text-muted">{{blog.created_on}}</small></p>
+            <h5>{{blog.content | safe }}</h5>
         </div>
     </div>
-</div>
-<!-- Pagination -->
-<!-- END Pagination -->
+    <div class="row">
+        {% if user.is_authenticated %}
+        <form class="d-inline" action="{% url 'blog:blog_like' blog.slug %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+            <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="btn-like none"><i class="fas fa-heart"></i>></button>
+            {% else %}
+            <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="btn-like none"><i class="far fa-heart"></i></button>
+            {% endif %}
+        </form>
+        {% else %}
+        <span class="text-secondary"><i class="far fa-heart"></i></span>
+        {% endif %}
+        <span class="text-secondary">{{ blog.number_of_likes }} </span>
+    </div>
 </div>
 
 {% endblock %}
