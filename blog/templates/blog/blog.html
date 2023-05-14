@@ -18,29 +18,35 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container one">
-    <div class="row mt-5 mb-5">
-        <!--Blog Entries-->
-        {% for blog in bloglist %}
-        <div class="col-xs-12 col-md-4">
-            <div class="card grow shadow">
-                <a href="#">
-                    <img class="#" src="#" alt="Card image cap">
-                </a>
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="lead-text">Blog posts</h2>
+            <hr class="hr">
+        </div>
+    </div>
+    <div class="row mt-5">
+        {% for blog in object_list %}
+        <div class="col-xs-12 col-md-4 m-2">
+            <div class="card rounded" style="width: 18rem;">
+                <a href="">
+                    <img class="card-img-top" src="{{ blog.image.url }}" alt="Post image">
+                
                 <div class="card-body">
-                    <a href="#">
-                        <h5 class="card-title">{{blog.title}}</h5>
-                    </a>
+                    <h5 class="card-title">{{blog.title}}</h5></a>
+                    <hr class="w-20">
+                    <p class="card-text"><small class="text-muted">Author: {{blog.author}} /
+                            {{blog.created_on }}</small></p>
                     <p class="card-text">{{ blog.excerpt|safe}}</p>
-                    <p class="card-text"><small class="text-muted">Author: {{blog.author}}</small></p>
-                    <span><i class="fa-solid fa-heart"> {{ blog.num_of_likes }}</i></span>
-                    <p class="card-text"><small class="text-muted">{{blog.created_on }}</small></p>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
-    <!-- Pagination -->
-    <!-- END Pagination -->
+</div>
+{% endfor %}
+</div>
+<!-- Pagination -->
+<!-- END Pagination -->
 </div>
 
 {% endblock %}
