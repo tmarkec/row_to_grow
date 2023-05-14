@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="header-container container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container one">
+    <div class="row mt-5 mb-5">
+        <!--Blog Entries-->
+        {% for blog in bloglist %}
+        <div class="col-xs-12 col-md-4">
+            <div class="card grow shadow">
+                <a href="#">
+                    <img class="#" src="#" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                    <a href="#">
+                        <h5 class="card-title">{{blog.title}}</h5>
+                    </a>
+                    <p class="card-text">{{ blog.excerpt|safe}}</p>
+                    <p class="card-text"><small class="text-muted">Author: {{blog.author}}</small></p>
+                    <span><i class="fa-solid fa-heart"> {{ blog.num_of_likes }}</i></span>
+                    <p class="card-text"><small class="text-muted">{{blog.created_on }}</small></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Pagination -->
+    <!-- END Pagination -->
+</div>
+
+{% endblock %}
