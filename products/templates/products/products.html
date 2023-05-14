@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Products</h2>
+            <h2 class="lead-text mb-4">Products</h2>
             <hr class="hr">
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="product-container col-10 offset-1">
+        <div class="product-container col-sm-12 col-md-10 mx-auto">
             <div class="row mt-1 mb-2"></div>
             <div class="row m-3">
                 {% for product in products %}
@@ -51,16 +51,8 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        {% with rating=product.averageReview|floatformat %}
-                        <div class="display-rating">
-                            {% for i in "54321" %}
-                            <input type="radio" name="rating" value="{{ i }}" id="rating{{ i }}"
-                                {% if i == rating %}checked{% endif %}>
-                            <label for="rating{{ i }}" title="{{ i }}"></label>
-                            {% endfor %}
-                        </div>
-                        {% endwith %}
-                        <hr class="horizontal">
+                        <p class="pb-0 my-0 mx-2"><i class="fas fa-star" style="color: #f91f06;"></i><small class="px-1">{{product.averageReview}}/5</small></p>
+                        <hr class="hr mt-0">
                         <div class="card-body p-0">
                             <p class="mb-0">{{ product.name }}</p>
                         </div>

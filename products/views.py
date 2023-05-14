@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponse
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category, Review
@@ -154,7 +155,7 @@ def add_review(request, product_id):
             messages.info(request, 'Thank you for your review,' +
                                    'it is waiting for the approval!')
         else:
-            messages.warning(request, 'Not allowed, you MUST rate and review' + 
+            messages.warning(request, 'Not allowed, you MUST rate and review' +
                                       'product, in order to submit it.')
         return redirect('product_detail', product_id=product.id)
 
@@ -162,7 +163,6 @@ def add_review(request, product_id):
         'product': product,
         'form': form,
     }
-
     return render(request, 'products/product_detail.html', context)
 
 
@@ -190,9 +190,12 @@ def update_review(request, review_id):
             review.updated_on = timezone.now()
             review.save()
             messages.info(request, 'Your review has been updated,' +
-                                      'wait for the approval.')
+                                   'wait for the approval.')
             return redirect('product_detail', product_id=review.product.id)
     else:
         form = ReviewForm(instance=review)
-    return render(request,
-                  "products/update_review.html", {"form": form})
+    if review is not None:
+        return render(request,
+                      "products/update_review.html", {"form": form})
+    else:
+        return HttpResponse("Review not found")

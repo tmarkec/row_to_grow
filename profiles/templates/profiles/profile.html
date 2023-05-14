@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">My Profile</h2>
+            <h2 class="lead-text mb-4">My Profile</h2>
             <hr class="hr">
         </div>
     </div>
@@ -29,7 +29,7 @@
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-back text-uppercase float-right">Update Information</button>
+                <button class="btn btn-back text-uppercase float-right">Update</button>
             </form>
         </div>
     </div>

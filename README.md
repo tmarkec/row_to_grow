@@ -315,22 +315,26 @@ NAVIGATION
 Feature/test |  Action | Pass
 --- | --- | :---:
 click logo icon|return user to the index page|&check;
-input word in search bar| search user input, if input matches product title/description product is shown on the page|&check;
+input the word in the search bar| searches user input, if input matches product title/description,that product is shown on the page|&check;
 click login button| direct user to the login template|&check;
 click register button | direct user to the signup template|&check;
 click basket icon| direct user to the shooping bag template|&check;
-click products & special offers| display dropdown menu|&check;
+click products & special offers in the navigation| display dropdown menu with more page options|&check;
 click navigation links | navigate user to the matching templates (contact:contact, account:account, add product:add product)|&check;
 
 HOME
 Feature/test |  Action | Pass
 --- | --- | :---:
-click shop now button|user is redirected to the products page|&check;
+click 'shop now' button|user is redirected to the products page|&check;
 PRODUCT PAGE
+Feature/test |  Action | Pass
+--- | --- | :---:
 all products displayed on the page|navigate to the product page, products displayed in row of 4|&check;
 click on categories tags|chosen tag product should be displayed on the page|&check;
 click on product image|direct user to the product detail page|&check;
 pagination displayed| if more than 12 products user have option to go to the next page|&check;
+click 'next'| user redirected to the next page with different products displayed|&check;
+click 'previous'| user redirected to the previous page with different products displayed|&check;
 
 PRODUCT DETAIL PAGE
 Feature/test |  Action | Pass
@@ -340,14 +344,19 @@ click - or + or input quantity for the product|user only allowed to input quanti
 click add to bag|success message is shown to the user,and product is added to the bag|&check;
 size option|user should be able to select sizes for certain products|&check;
 wishlist button|only displayed to the registered user|&check;
-rating and review| only displayed to the registered user|&check;
+rating and reviewing product| option only displayed to the registered user|&check;
 click login link in the paragraph|direct user to the login page|&check;
 click add to wihslist|product added to the wishlist|&check;
-click on stars to rate the product and click 'submit review'|user shouldn't be allowed just to rate product|&check;
-write review and click on 'submit'|user shouldn't be allowed just to rate product|&check;
-rate and review product and click on 'submit'|info message displayed to the user|&check;
+click on stars to rate the product and click on the'submit' button|user shouldn't be allowed just to rate the product|&check;
+write review and click on the 'submit' button|user shouldn't be allowed just to review the product|&check;
+rate and review product and click on the'submit' button|info message displayed to the user, indicating that is waiting on the approval|&check;
 click update review|user redirected to the new template to update review|&check;
-click delete review|modal is shown to the user to confirm his actions|&check;
+create new review on the template, click 'update review' |user redirected to the product detail page|&check;
+.|info message is displayed to the user indicating he needs to wait for the approval|&check;
+.|old review and rating is removed from the template|&check;
+average rating|score and counts are reduced/removed depending on the previous reviews|&check;
+click delete review|modal is displayed to the user to confirm his actions|&check;
+click delete |review is deleted |&check;
 
 ACCOUNT
 Feature/test |  Action | Pass
@@ -359,27 +368,36 @@ Feature/test |  Action | Pass
 --- | --- | :--
 click on order history in the account page|user is redirected to the order history page|&check;
 click link on one of your previous orders|purchase template with detail description is displayed|&check;
+click on 'keep shooping'|	user is redirected to the product page|&check;
+click on 'download pdf'|pdf file with purchase info is downloaded for the user|&check;
+
 
 SECURITY
 Feature/test |  Action | Pass
 --- | --- | :--
 click on security in the account page |user is redirected to the change password page|&check;
-input old and new password|user only allowed to change password if the old one match his from login details|&check;
-follow guidlines to choose new password and click change password|info message is displayed to the user and password has been changed|&check;
+input old and new password|user only allowed to change password if the old one match his from the login details|&check;
+follow guidlines to choose new password and click change password|info message is displayed to the user |&check;
+.|password has been changed|&check;
+.|user is redirected to 'accounts' page|&check;
 
 PROFILE INFO
 Feature/test |  Action | Pass
 --- | --- | :--
 click on profile info in the account page| user is redirected to the my profile page|&check;
-user can change any field and click on 'update'|info message shown to the user and information has been updated|&check;
+user can change any field and click on 'update'|info message is displayed to the user and information has been updated|&check;
 
 WISHLIST
 Feature/test |  Action | Pass
 --- | --- | :--
-click on wishlist in the account page|user is redirected to the wishlist page|&check;
+click on wishlist in the 'accounts' page|user is redirected to the 'wishlist' page|&check;
 wishlist page|user saved product are displayed on the page|&check;
-click remove product|modal is shown to the user to confirm his choice|&check;
-click delete|product is removed from wishlist, info message is shown to the user|&check;
+click 'add more product'|user is redirected to the products page|&check;
+no product in the 'wishlist', click on 'select products' button|user is redirected to the products page|&check;
+click 'bag' icon|product is added to the bag|&check;
+click 'bin' icon|modal is displayed to the user to confirm his choice|&check;
+
+click 'delete'|product is removed from the 'wishlist', info message is displayed to the user|&check;
 
 SHOOPING BAG PAGE
 Feature/test |  Action | Pass

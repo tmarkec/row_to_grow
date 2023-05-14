@@ -17,7 +17,7 @@ class ReviewForm(forms.ModelForm):
             'review_comment': 'Write your review',
             'rating': 'Rating (out of 5)',
         }
-        required = {
+        required_fields = {
             'rating': False
         }
 

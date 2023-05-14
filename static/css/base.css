@@ -26,7 +26,8 @@ a:hover {
     color: #000;
 }
 .navi {
-    background-color: #564592
+    background-color: #7f7c8b;
+    opacity: .99;
 }
 .nav-link {
     padding: 0.5rem;
@@ -34,48 +35,23 @@ a:hover {
 .navbar {
     padding: 0;
 }
-.form-control:not(.search-box) {
-    border-color: #ced4da;
-  }
-.search-box:hover > .search-txt{
-    width: 90%;
-    padding: 0 6px; 
-  }
-.search-box:hover > .search-btn{
-    background: #fde74c;
-  }
 .search-btn{
-    color: #fde74c;
+    color: #fff;
     float: right;
     width: 40px;
     height: 40px;
-    background-color: #564592;
-    border: 1px solid #fde74c !important;
+    background-color: #000;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.4s
   }
 .search-btn:hover {
-    color: #564592;
+    color: #000;
     background-color: #fde74c;
     border: 1px solid #564592 !important;
   }
-/* .search-txt{
-    border:none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-  } */
-.mobile-search {
-    width: 150px !important;
-}
 
 /* boxes login etc */
 .boxes {
@@ -148,6 +124,11 @@ a:hover {
     background:#f896d8;
     color: #564592;
 }
+/* lead text website */
+.lead-text {
+    text-transform: uppercase;
+    font-weight: 600;
+}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -156,9 +137,15 @@ a:hover {
     height: 1.5rem;
     width: 1.5rem;
 }
-
+.icons {
+    color: #f35106;
+}
 .logo-font {
     text-transform: uppercase;
+    font-weight: 700;
+}
+.logo-font:hover {
+    color: #fde74c !important;
 }
 .one {
     background-color: white;
@@ -380,7 +367,7 @@ a:hover {
 /* ---------------------------------Footer */
 .main-footer {
     border-top: solid 1px #ccc;
-    background-color: #564592 ;
+    background-color: #7f7c8b ;
     position: -webkit-sticky;
     position: sticky;
 

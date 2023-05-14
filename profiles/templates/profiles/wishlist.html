@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">Wishlist</h2>
+            <h2 class="lead-text mb-4">Wishlist</h2>
             <hr class="hr">
         </div>
     </div>
@@ -45,43 +45,43 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="lead mb-0 font-weight-bold">€{{ product.price }}</p>
-                                    <form action="{% url 'delete_from_wishlist' product.id %}" method="POST">
-                                        {% csrf_token %}
-                                        <button type="button" class="text-danger delete small-text" data-toggle="modal"
-                                            data-target="#remove_wishlist_{{product.id}}"><i class="fas fa-trash"></i>
-                                            Remove
-                                        </button>
-                                        <div class="modal fade" id="remove_wishlist_{{product.id}}" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModaleLabel" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Remove from
-                                                            wishlist
-                                                        </h5>
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Are you sure you want to remove this product from your wishlist?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary btn-sm"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="submit" name="delete"
-                                                            class="my-4 mx-3 btn btn-danger">Delete</button>
+                                        <form action="{% url 'delete_from_wishlist' product.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <button type="button" class="text-danger delete small-text"
+                                                data-toggle="modal" data-target="#remove_wishlist_{{product.id}}"><i
+                                                    class="fas fa-trash-alt fa-lg"></i>
+                                            </button>
+                                            <div class="modal fade" id="remove_wishlist_{{product.id}}" tabindex="-1"
+                                                role="dialog" aria-labelledby="exampleModaleLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Remove from
+                                                                wishlist
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Are you sure you want to remove this product from your
+                                                            wishlist?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary btn-sm"
+                                                                data-dismiss="modal">Close</button>
+                                                            <button type="submit" name="delete"
+                                                                class="my-4 mx-3 btn btn-danger btn-sm">Delete</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 {% endfor %}
                 {% else %}

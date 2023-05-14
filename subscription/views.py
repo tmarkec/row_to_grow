@@ -19,7 +19,7 @@ def subscribe(request):
             message = (
                 "Thank you for subscribing to our newsletter,"
                 + " you will get latest updates on our new products and deals!"
-                
+
             )
             from_email = "rowtogrow1@gmail.com"
             recipient_list = [email]
