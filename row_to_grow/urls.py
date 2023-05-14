@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-# from .views import handler404
+from .views import handler404
 from django.urls import path
 
 
@@ -33,4 +33,4 @@ urlpatterns = [
     path('', include('home.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'home.views.handler404'
+handler404 = 'row_to_grow.views.handler404'
