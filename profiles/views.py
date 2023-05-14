@@ -15,7 +15,7 @@ from django.contrib.auth import update_session_auth_hash
 @login_required
 def profile(request):
     """ 
-    Display the user's profile information 
+    Display the user's profile information
     """
     profile = get_object_or_404(UserProfile, user=request.user)
 
@@ -101,7 +101,8 @@ def generate_pdf(order):
     for item in order.lineitems.all():
         p.setFont('Helvetica', 12)
         p.drawString(
-            50, y, f"{item.product.name} x {item.quantity} @ {item.product.price}")
+            50, y, f'{item.product.name} x {item.quantity} @' +
+                   '{item.product.price}')
         y -= 15
 
     p.showPage()
