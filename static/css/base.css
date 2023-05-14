@@ -55,10 +55,10 @@ a:hover {
 
 /* boxes login etc */
 .boxes {
-    background-color: #564592;
+    background-color: #4D7EA8;
     opacity: .75;
     color: white;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
 }
 .dropdown-menu-right {
@@ -88,20 +88,19 @@ a:hover {
     font-size: 1.1rem;
 }
 .test-btn:hover {
-    background: #564592;
+    background: #000;
     color: #fde74c;
     border: 1px solid #fde74c;
     border-radius:5px;
 }
 .btn-back {
-    background: #564592;
-    color: #fde74c;
-    border: 1px solid #fde74c;
+    background: #000;
+    color: #fff;
     border-radius:5px;
+    margin-left: 10px;
 }
 .btn-back:hover {
-    background: #fde74c;
-    color: black;
+    color: #fde74c;
 }
 .test-box {
     background: rgb(253,231,76);
@@ -115,19 +114,22 @@ a:hover {
     border-radius: 10px;
   }
 .btn-cancel {
-    background: #564592;
-    color: #f896d8;
-    border: 1px solid #f896d8;
-    border-radius: 5px;
+    background: #fff;  
+    color: #000;
+    border: 1px solid #000;
+    border-radius:5px;
 }
 .btn-cancel:hover {
-    background:#f896d8;
-    color: #564592;
+    color: #c23d00;
 }
 /* lead text website */
 .lead-text {
     text-transform: uppercase;
     font-weight: 600;
+}
+/* links website */
+.links {
+    color: #f35106;
 }
 /* from Bulma */
 .icon {
@@ -138,7 +140,7 @@ a:hover {
     width: 1.5rem;
 }
 .icons {
-    color: #f35106;
+    color: #000;
 }
 .logo-font {
     text-transform: uppercase;
@@ -252,6 +254,12 @@ a:hover {
     background-size: cover;
     opacity: .9;
 	z-index: -1;
+}
+.password-link {
+    color: #04284e;
+}
+.password-link:hover {
+    color: #fde74c;
 }
 /* -------------------------------product page and product/detail */
 .horizontal {
@@ -380,7 +388,8 @@ a:hover {
     align-items: center;
   }
 .social-footer-ul li a {
-    color: #f35106;
+    font-size: 1.2rem;
+    color: #fde74c;
     padding: 8px;
   }
 .social-footer-ul li:hover {
@@ -392,19 +401,20 @@ a:hover {
     height: 50px;
     text-align: center;
   }
-.quick-link li a{
+.quick-links{
     color: #fde74c;
     font-weight: 500;
 }
-.ouick-link li a:hover {
-    color: #28a745;
+.quick-links:hover {
+    color: #fff;
+}
+.copyright {
+    background-color: #000;
+    color: #fde74c;
 }
 .update-link,
 .remove-item {
     cursor: pointer;
-  }
-.btn-oposit {
-    background-color: #3891a6;
   }
   /* ------------------------------Allauth */
 .allauth-form-inner-content p {

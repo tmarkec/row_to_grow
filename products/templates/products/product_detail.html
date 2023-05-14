@@ -112,7 +112,7 @@
                     {% if user.is_authenticated%}
                     <div class="col-12">
                         <a href="{% url 'add_to_wishlist' product.id %}" class="btn test-btn p-2 text-uppercase"> Add to
-                            wishlist! <i class="fas fa-gift"></i></a>
+                            wishlist!</a>
                     </div>
                     {% else %}
                     <p><a href="{% url 'account_login' %}">Login</a> to add this product to your

@@ -6,7 +6,7 @@
     transition: .7s ease-in-out ;
 }
 .ico {
-    font-size: 3rem;  
+    font-size: 2.8rem;  
 }
 .profile-box:hover { 
     transform: scale(1.1); 
@@ -15,14 +15,9 @@
     color: black;
 }
 .profile-box a:hover {
-    color: #db5461;
+    color: #fde74c;
 }
-.profile-link {
-    color: #3891a6 !important; 
-}
-.profile-link > h2:hover {
-    color: #135868;
-}
+
 @media (max-width: 551px) {
    .ico {
     font-size: 2rem;

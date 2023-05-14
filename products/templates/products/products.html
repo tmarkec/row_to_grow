@@ -109,7 +109,7 @@
                 <div class="col m-3">
                     <div class="row justify-content-center">
                         {% if products.has_previous %}
-                        <a href="?page={{ products.previous_page_number }}"><span class="icon">
+                        <a href="?page={{ products.previous_page_number }}" rel="prev"><span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="text-uppercase">Previous</span></a>
@@ -117,7 +117,7 @@
                         <p><small class="px-3">Page {{ products.number }} of {{ products.paginator.num_pages }}.</small>
                         </p>
                         {% if products.has_next %}
-                        <a href="?page={{ products.next_page_number }}">
+                        <a href="?page={{ products.next_page_number }}" rel="next">
                             <span class="text-uppercase">Next</span>
                             <span class="icon">
                                 <i class="fas fa-chevron-right"></i>

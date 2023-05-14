@@ -52,7 +52,7 @@
     <header class="container-fluid fixed-top navi">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex align-items-start p-0">
             <div class="col-12 col-lg-4 my-auto p-0 m-0">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link" rel="icon">
                     <img src="{% static 'images/logos.png' %}" alt="Row to grow logo" class="logo"></a>
                 </a>
             </div> 
@@ -153,10 +153,9 @@
         <div class="container-fluid pt-1 container">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-3 text-white text-bold">Row to grow</h4>
-                    <p class="small text-white">Experience our amazing products</p>
+                    <h4 class="mb-3 icons font-weight-bold">Row to grow</h4>
                     <ul class="social-footer-ul mt-3 p-0">
-                        <li><a href="https://www.facebook.com/" target="blank" rel="noopener" aria-label="Visit our facebook page"><i class="fab fa-facebook-f" ></i></a></li>
+                        <li><a href="https://www.facebook.com/" target="blank" rel="noopener" aria-label="Visit our facebook page"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="https://www.twitter.com/" target="blank" rel="noopener" aria-label="Visit our twitter page"><i class="fab fa-twitter p-0"></i></a></li>
                         <li><a href="https://www.linkedin.com/" target="blank" rel="noopener" aria-label="Visit our linkedin page"><i class="fab fa-linkedin p-0"></i></a></li>
                         <li><a href="https://www.instagram.com/" target="blank" rel="noopener" aria-label="Visit our instagram page"><i class="fab fa-instagram p-0"></i></a></li>
@@ -164,32 +163,40 @@
                 </div>
                 <hr>
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-3 text-white ">Quick links</h4>
-                    <ul class="list-unstyled quick-link">
-                        <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About us</a></li>
-                        <li><a href="{% url 'products' %}">Shop now</a></li>
-                        <li><a href="{% url 'privacy' %}">Privacy policy</a></li>
-                        <li><a href="{% url 'shipping' %}">Shipping & returns</a></li>
+                    <h4 class="mb-2 icons font-weight-bold">Quick links</h4>
+                    <div class="d-flex justify-content-center align-items-center">
+                    <ul class="list-unstyled px-2">
+                        <li><a href="{% url 'home' %}" class="quick-links">Home</a></li>
+                        <li><a href="{% url 'about' %}"class="quick-links" rel="author">About us</a></li>
                     </ul>
+                    <ul class="list-unstyled px-2">
+                        <li><a href="{% url 'shipping' %}"class="quick-links" rel="help">Shipping</a></li>
+                        <li><a href="{% url 'privacy' %}"class="quick-links" rel="license">Privacy policy</a></li>
+                    </ul>
+                    </div>
                 </div>
                 <hr class=".d-none .d-sm-block .d-md-none">
                 <div class="col-lg-4 col-md-12 text-white">
-                    <h4 class="mb-3">Newsletter</h4>
-                    <p class="small">Sign up for our newsletter and, get best deals and promotions on your
+                    <h4 class="mb-2 icons font-weight-bold">Newsletter</h4>
+                    <p class="m-0 p-0">Get best deals and promotions on your
                         email!</p>
                     <form method="post" action="{% url 'subscribe' %}" class="">
                         {% csrf_token %}
                         <div class="input-group mb-3">
                             <input id="email" name="email" type="email" class="form-control" placeholder="Email address"
                                 required>
-                            <button class="btn btn-back" id="button-addon2" type="submit"><i
+                            <button class="btn search-btn" id="button-addon2" type="submit"><i
                                     class="fas fa-share"></i></button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+            <div class="row m-0">
+                <div class="col-12 copyright m-0 text-center">
+                    <p class="m-0">© Copyright Row to grow 2023. </p>
+                </div>
+            </div>
     </footer>
     {% block postloadjs %}
     <script type="text/javascript">
