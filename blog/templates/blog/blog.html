@@ -29,7 +29,7 @@
         {% for blog in object_list %}
         <div class="col-xs-12 col-md-4 m-2">
             <div class="card rounded" style="width: 18rem;">
-                <a href="">
+                <a href="{% url 'blog:blog_detail' blog.slug %}">
                     <img class="card-img-top" src="{{ blog.image.url }}" alt="Post image">
                 
                 <div class="card-body">
