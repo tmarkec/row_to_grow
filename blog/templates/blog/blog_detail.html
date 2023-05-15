@@ -30,27 +30,35 @@
             <img class="" src="{{ blog.image.url }}" alt="Post image">
         </div>
         <div class="col-sm-12 col-md-6">
-            <p><small class="text-muted">Author: <strong>{{blog.author}}</strong></small></p>
-            <p><small class="text-muted">{{blog.created_on}}</small></p>
-            <h5>{{blog.content | safe }}</h5>
+            <p><small class="text-muted">Author: <strong>{{blog.author}} | {{blog.created_on}}</strong></small></p>
+            <p>{{blog.content | safe }}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col mx-5">
+            {% if user.is_authenticated %}
+            <form class="d-inline" action="{% url 'blog:blog_like' blog.slug %}" method="POST">
+                {% csrf_token %}
+                {% if liked %}
+                <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="heart"><i
+                        class="fas fa-heart fa-lg"></i></button>
+                {% else %}
+                <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="heart"><i
+                        class="far fa-heart fa-lg"></i></button>
+                {% endif %}
+            </form>
+            {% else %}
+            <span class="text-secondary"><i class="far fa-heart fa-lg"></i></span>
+            {% endif %}
+            <span class="text-secondary"><strong>{{ blog.number_of_likes }} </strong></span>
         </div>
     </div>
     <div class="row">
-        {% if user.is_authenticated %}
-        <form class="d-inline" action="{% url 'blog:blog_like' blog.slug %}" method="POST">
-            {% csrf_token %}
-            {% if liked %}
-            <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="btn-like none"><i class="fas fa-heart"></i>></button>
-            {% else %}
-            <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="btn-like none"><i class="far fa-heart"></i></button>
-            {% endif %}
-        </form>
-        {% else %}
-        <span class="text-secondary"><i class="far fa-heart"></i></span>
-        {% endif %}
-        <span class="text-secondary">{{ blog.number_of_likes }} </span>
+        <div class="col mx-5 p-3">
+            <a href="{% url 'blog:blog' %}" class="search-back m-5 py-4"><i class="fas fa-arrow-left"></i>Back</a>
+        </div>
     </div>
-    <a href="{% url 'blog:blog' %}" class="search-back mx-5"><i class="fas fa-arrow-left"></i>Back</a>
 </div>
 
 {% endblock %}

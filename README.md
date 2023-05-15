@@ -24,7 +24,7 @@ Row to grow is a fictional website(for educational purposes) for a rowing commun
 6. [Bugs](#bugs)
 7. [Deployment](#deployment)
 8. [Credits](#credits)
-9. [Acknowledgements](#acknowledgements)
+9. [Acknowledgments](#acknowledgments)
 
 ## Design & Planning:
 ### Business model
@@ -534,6 +534,11 @@ click on sign up|user is logged in and redirected to the home page|&check;
 | by confirming removing/deleting items, wrong items were deleted from template/database | wrapped form around bootstrap modal, passed product.id and reviews.id into data-target and id for the modal|
 | after changing delivery cost on the checkout error shown 'standard delivery percdentage' | modified code in views.py and in models.py and set delivery cost to standard delivery price|
 | page 404 not displayed on the deployed version | change a href link just to backslash and repeat the whole process from walkthrough project |
+| average rating stars not displaying properly, only updating rating on previous entry | created if elif statemapn with star icons depending on the average score |
+## Unfixed bugs
+- user can write review for the same product even if he already submitted one
+- user can't add product from wishlist to the shooping bag
+- pdf file to download receipt is not rendering from the template, it is manually coded in
 # Deployment
 ## Create an external database
 
@@ -899,13 +904,18 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 - Under your profile photo on the right hand side you will see the fork button.
 - Click the fork button and github will create a copy to your account.
 # Credits
-- 
+- images for my website content were taken from Unsplash
+- all images, products and most of product description were taken from rowing shop website with consent from my friend Damir Markota who is owner of that shop
+- Stackoverflow community helped me to find solutions for my bugs, particular one was passing the product id into the modals, and just in general to understand certain concepts
+- W3schools helped with looking up forgotten CSS,JS and PYTHON syntax and how to use it.
+- Logoapp for generating my idea to create logo for my website
+- [Medium](https://medium.com/geekculture/django-implementing-star-rating-e1deff03bb1c) for providing example and guidance how to implement and calculate average rating
 ### Tutorials and inspiration
 
 * The project walkthrough Butique Ado from Code Institute
 # Acknowledgment
 
-## Acknowledgements:
+## Acknowledgments:
 - I would like to thank my mentor ``Narander Singh`` for all his help throughout the project and guidance in general over the last 6 months. Narander was extremly proffesional and I would highly reccomend him to contionue to provide his guidance and support to the new students
 - I would like to thank Code Institute in general for providing me this opportunity then Slack Community, and tutor support which were amazing. I'm not sure if they are their real names but ``Sean, Oisin, Ed, Sarah`` were there when I needed them and got stuck on my project
 - I would also like to thank our cohort facilitator ``Irene Neville``, for beeing here with us for the last 6 months. Her guidance and advices made this whole experience so much better

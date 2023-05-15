@@ -1,0 +1,21 @@
+.post-box {
+    border: 1px solid rgb(68, 65, 65);
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px #888888;
+    transition: .7s ease-in-out;
+}
+.post-box:hover { 
+    transform: scale(1.05); 
+}
+.card-title {
+    color: #5638c0;
+    font-weight: 600;
+}
+.card-title:hover {
+    color: black;
+}
+.heart {
+    color: red;
+    background-color: #fff;
+    border: none;
+}

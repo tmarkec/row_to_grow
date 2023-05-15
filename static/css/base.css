@@ -26,7 +26,7 @@ a:hover {
     color: #000;
 }
 .navi {
-    background-color: #5638c0;
+    background-color: #6848D8;
     opacity: .99;
 }
 .nav-link {
@@ -289,6 +289,22 @@ a:hover {
     background-color: white;
     border: none;
 }
+.star {
+    border: 1px solid red;
+    color: white;
+    background-color: red;
+    border-radius: 2px;
+}
+.empty-star {
+    border: 1px solid red;
+    border-radius: 2px;
+}
+.mx {
+    margin:0.1rem;
+}
+.small {
+    font-size: 0.8rem!important;
+}
 .display-rating {
     display: flex; 
     flex-direction: row-reverse; 
@@ -362,7 +378,15 @@ a:hover {
 .rating > input:checked ~ label:hover ~ label:hover:before {
     color: #a01523;
 }
-
+.image-box {
+    border: 1px solid rgb(68, 65, 65);
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px #888888;
+    transition: .7s ease-in-out;
+}
+.image-box:hover { 
+    transform: scale(1.05); 
+}
 /* ------------------ */
 
 /* Product Form */
@@ -390,15 +414,11 @@ a:hover {
     border-color: #dc3545;
     border-radius: 0;
 }
-.star {
-    border: 1px solid red;
-    color: white;
-    background-color: red;
-}
+
 /* ---------------------------------Footer */
 .main-footer {
     border-top: solid 1px #ccc;
-    background-color: #5638c0;
+    background-color: #6848D8;
     position: -webkit-sticky;
     position: sticky;
 
