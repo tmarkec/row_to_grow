@@ -305,6 +305,9 @@ a:hover {
 .small {
     font-size: 0.8rem!important;
 }
+.discount-price {
+    color: red;
+}
 .display-rating {
     display: flex; 
     flex-direction: row-reverse; 
@@ -416,6 +419,9 @@ a:hover {
 }
 
 /* ---------------------------------Footer */
+.top-btn {
+    background-color: #fff;
+}
 .main-footer {
     border-top: solid 1px #ccc;
     background-color: #6848D8;

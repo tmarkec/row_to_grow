@@ -200,6 +200,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
   - products page is fully responsive to allow equal spacing between products regardless of screen width
   - each product consists of an image, title, price, category & rating, special fields are displayed for the superuser which will all be covered in features: "admin"
   - pagination is created to display only 8 products per page
+  - products from 'deals' category have 2 prices displayed original and discounted price
 
 - Product detail page:
     - single product is displayed on a page with additional information and various option for the user such as a description of the product, an option to pick sizes, quantity and 'add to bag' button
@@ -207,6 +208,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
     - for both features, there is displayed paragraph text to indicate to the user that he needs to login in order to get more access to the website
     - if a user reviews our product it will be indicated with a toast message
     - once the superuser approves the review, the registered user has the option to update it or delete its review
+    - products from 'deals' category have 2 prices displayed original and discounted price
 - The account page is only displayed to registered user
     - Wishlist:
         - if there are products on the page user can delete a product or add a product to the bag

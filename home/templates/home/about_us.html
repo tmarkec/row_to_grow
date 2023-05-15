@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-around mt-4 pb-5">
+    <div class="row justify-content-around mt-4 p-4">
         <div class="col-sm-12 col-md-10">
             <h4 class="font-weight-bold">Final thoughts <i class="far fa-comment mx-2 icons"></i></h4>
             <p>At <strong>Row to Grow</strong>, we're proud to have Marko and Elaine as our leaders. Their passion for
@@ -96,5 +96,20 @@
                 give us some feedback!</p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 ">
+            <a class="btt-link btn btn-sm m-1 shadow-sm rounded-0 border border-black">
+                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+            </a>
+        </div>
+    </div>
 </div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 {% endblock %}
