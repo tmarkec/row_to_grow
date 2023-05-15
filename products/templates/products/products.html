@@ -30,7 +30,8 @@
     <div class="row">
         <div class="col-12 col-md-6 order-md-first">
             <p class="text-muted mt-3 text-center text-md-left">
-                {{ products|length }} Product(s){% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                {{ products|length }} Product(s){% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
             </p>
         </div>
     </div>
@@ -51,8 +52,58 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <p class="pb-0 my-0 mx-2"><i class="fas fa-star" style="color: #f91f06;"></i><small class="px-1">{{product.averageReview}}/5</small></p>
-                        <p class=""><i class="far fa-star star" style="color: #fff;"></i></p>
+                        <p class="pb-0 my-0 mx-2"><i class="fas fa-star" style="color: #f91f06;"></i><small
+                                class="px-1">{{product.averageReview}}/5</small></p>
+                        {% if product.averageReview == 0 %}
+                        <div class="d-flex flex-row">
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                        </div>
+                        {% elif product.averageReview == 1 %}
+                        <div class="d-flex flex-row">
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                        </div>
+                        {% elif product.averageReview == 2 %}
+                        <div class="d-flex flex-row">
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                        </div>
+                        {% elif product.averageReview == 3 %}
+                        <div class="d-flex flex-row">
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                        </div>
+                            {% elif product.averageReview == 4 %}
+                            <div class="d-flex flex-row">
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star" style="color: #f91f06;"></i></p>
+                        </div>
+                        {% else %}
+                        <div class="d-flex flex-row">
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                            <p class="mx-1"><i class="far fa-star star" style="color: #fff;"></i></p>
+                        </div>
+                        {% endif %}
+
                         <hr class="hr mt-0">
                         <div class="card-body p-0">
                             <p class="mb-0">{{ product.name }}</p>
@@ -122,7 +173,7 @@
                             <span class="text-uppercase">Next</span>
                             <span class="icon">
                                 <i class="fas fa-chevron-right"></i>
-                            </span>  
+                            </span>
                         </a>
                         {% endif %}
                     </div>

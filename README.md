@@ -159,12 +159,9 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 </details>
 
 <details><summary>Blog</summary>
-<img src="readme_img/wireframes/About-us.png">
+<img src="readme_img/wireframes/blog.png">
 </details>
 
-<details><summary>Blog detail</summary>
-<img src="readme_img/wireframes/About-us.png">
-</details>
 ### Agile Methodology
 During the development of this project, I implemented Agile development practices to ensure a flexible and iterative approach to the project's progress. The Agile methodology enabled me to adapt to changing requirements and efficiently manage the development process of this project. It is still a learning process for me as this was only my second time doing it so I found that quite bit challenging and time-consuming. I've created Kanban board to manage and visualize the workflow. 
  - Project board was divided into 3 sections:
@@ -189,7 +186,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
 ### Database 
 
 <details><summary>Database</summary>
-<img src="images/database.png">
+<img src=readme_img/wireframes/row_to_grow.jpeg>
 </details>
 
 # Features
