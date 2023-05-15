@@ -40,6 +40,7 @@
                     <p class="card-text"><small class="text-muted">Author: {{blog.author}} |
                             {{blog.created_on }}</small></p>
                     <p class="card-text">{{ blog.excerpt|safe}}</p>
+                    <span class="text-secondary"><i class="fas fa-heart fa-lg heart"></i> <strong>{{ blog.number_of_likes }} </strong></span>
                 </div>
             </div>
         </div>

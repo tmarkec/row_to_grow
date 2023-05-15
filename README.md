@@ -299,6 +299,27 @@ For this project I picked Montserrat which is a widely used font known for it's 
 
 # Testing
 
+## Testing purchase procedure
+Action |  Expected result | Pass
+--- | --- | :---:
+Click on the navigation 'products' |  Dropdown menu appears with different categories | &check;
+Click on 'all products' |  All products are displayed on the page | &check;
+Pick product, click on image |  Single product is displayed on the page with description | &check;
+Click + on quantity |  Quantity of product increases | &check;
+Click - on quantity |  Quantity of product decreases | &check;
+Click on sizes if applicible |  Picked size is displayed in the box| &check;
+Click 'add to bag' |  Product is added to shopping bag, success message is shown to the user | &check;
+Click on the 'basket' icon in the navigation menu|  Redirected to shopping bag template, with products in it | &check;
+Click + on quantity |  Quantity of product increases | &check;
+Click - on quantity |  Quantity of product decreases | &check;
+Click 'update' |  Quantity of products have been updated | &check;
+To remove product, click 'remove'|  Product is removed from shopping bag| &check;
+Click 'secure checkout'|  Redirected to checkout page | &check;
+Fill in all form details |  No errors displayed on the form | &check;
+In payment section input 42 and repeat all the way to the end & click complete order | Payment went through, preview of purchase is displayed | &check;
+Click on download pdf |  PDF receipt is downloaded  | &check;
+Check email |  Email comfirmation has been sent | &check;
+
 ## Testing user stories
 
 User Story |  Test | Pass
@@ -365,7 +386,7 @@ size option|user should be able to select sizes for certain products|&check;
 wishlist button|only displayed to the registered user|&check;
 rating and reviewing product| option only displayed to the registered user|&check;
 click login link in the paragraph|direct user to the login page|&check;
-click add to wihslist|product added to the wishlist|&check;
+click add to wishlist|product added to the wishlist|&check;
 click on stars to rate the product and click on the'submit' button|user shouldn't be allowed just to rate the product|&check;
 write review and click on the 'submit' button|user shouldn't be allowed just to review the product|&check;
 rate and review product and click on the'submit' button|info message displayed to the user, indicating that is waiting on the approval|&check;
@@ -373,7 +394,7 @@ click update review|user redirected to the new template to update review|&check;
 create new review on the template, click 'update review' |user redirected to the product detail page|&check;
 .|info message is displayed to the user indicating he needs to wait for the approval|&check;
 .|old review and rating is removed from the template|&check;
-average rating|score and counts are reduced/removed depending on the previous reviews|&check;
+average rating|average score and ratin counts are reduced/removed depending on the previous reviews|&check;
 click delete review|modal is displayed to the user to confirm his actions|&check;
 click delete |review is deleted |&check;
 
@@ -537,6 +558,8 @@ click on sign up|user is logged in and redirected to the home page|&check;
 | after changing delivery cost on the checkout error shown 'standard delivery percdentage' | modified code in views.py and in models.py and set delivery cost to standard delivery price|
 | page 404 not displayed on the deployed version | change a href link just to backslash and repeat the whole process from walkthrough project |
 | average rating stars not displaying properly, only updating rating on previous entry | created if elif statemapn with star icons depending on the average score |
+| after making new review, couldn't update existing one | in update  review function in context passed review.id |
+| deployed version missing some css style| did hard refresh of the website |
 ## Unfixed bugs
 - user can write review for the same product even if he already submitted one
 - user can't add product from wishlist to the shooping bag
@@ -886,6 +909,7 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 8.  Copy the "Signing secret"
 
 9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
+
 ## Steps to clone project
 - Click on the code tab under the repository name.
 - Then click on "Code" button to the right above the files listed.
@@ -901,18 +925,26 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 - Then migrate those changes with python manage.py migrate
 - To run the project type python manage.py runserver into the terminal and open port 8000.
 - This will open the project locally for you to work on.
+
 ## Forking repository on GitHub
 - Login to github and find the repository
 - Under your profile photo on the right hand side you will see the fork button.
 - Click the fork button and github will create a copy to your account.
+
 # Credits
-- blog text world rowing & accudoch/blog
-- images for my website content were taken from Unsplash
-- all images, products and most of product description were taken from rowing shop website with consent from my friend Damir Markota who is owner of that shop
+
+- [world rowing](https://worldrowing.com/) & [Kevin Fujii](https://www.kevinfujii.com/rowing-fashion) for content for blog posts
+- images for my website content were taken from [Unsplash](https://unsplash.com/)
+- all images, products and most of product description were taken from [rowing shop](https://rowing-shop.com/) website with consent from my friend Damir Markota who is owner of that shop
 - Stackoverflow community helped me to find solutions for my bugs, particular one was passing the product id into the modals, and just in general to understand certain concepts
 - W3schools helped with looking up forgotten CSS,JS and PYTHON syntax and how to use it.
 - Logoapp for generating my idea to create logo for my website
+- [Code institute](https://codeinstitute.net) for their walkthrough project Butique Ado which was used as core for my website
+- youtube channels from [Denis Ivvy](https://www.youtube.com/watch?v=_ELCMngbM0E&list=PL-51WBLyFTg0omnamUjL1TCVov7yDTRng&ab_channel=DennisIvy), [Code artistan lab](https://www.youtube.com/@CodeArtisanLab), [Very accademy](https://www.youtube.com/@CodeArtisanLab) and [Rathar Kuman](https://www.youtube.com/results?search_query=rathan+kumar) which videos and django e-commerce projects I watched to get better understanding of the code
 - [Medium](https://medium.com/geekculture/django-implementing-star-rating-e1deff03bb1c) for providing example and guidance how to implement and calculate average rating
+- how to create dynamic active classes [Yash Patel](https://www.youtube.com/watch?v=qLG6B6yWH58)
+- idea and guidance for business and marketing plan came from [hubspot](https://blog.hubspot.com/marketing/ecommerce-business-plan) and [big commerce](https://www.bigcommerce.com/articles/ecommerce/business-plan/)
+
 ### Tutorials and inspiration
 
 * The project walkthrough Butique Ado from Code Institute
