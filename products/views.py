@@ -196,6 +196,7 @@ def update_review(request, review_id):
         form = ReviewForm(instance=review)
     if review is not None:
         return render(request,
-                      "products/update_review.html", {"form": form})
+                      "products/update_review.html", {"form": form,
+                                                      "review": review})
     else:
         return HttpResponse("Review not found")

@@ -906,6 +906,7 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 - Under your profile photo on the right hand side you will see the fork button.
 - Click the fork button and github will create a copy to your account.
 # Credits
+- blog text world rowing & accudoch/blog
 - images for my website content were taken from Unsplash
 - all images, products and most of product description were taken from rowing shop website with consent from my friend Damir Markota who is owner of that shop
 - Stackoverflow community helped me to find solutions for my bugs, particular one was passing the product id into the modals, and just in general to understand certain concepts

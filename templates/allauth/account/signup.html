@@ -13,7 +13,7 @@
 
 <div class="row my-5">
   <div class="col-sm-12 col-md-8 boxes mx-auto m-2 p-3">
-    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}" class="m-3">
+    <form class="signup m-3" id="signup_form" method="post" action="{% url 'account_signup' %}">
       {% csrf_token %}
       {{ form|crispy }}
       {% if redirect_field_value %}

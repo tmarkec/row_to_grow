@@ -19,9 +19,9 @@
             <hr>
             <h2 class="lead-text">Update review</h2>
             <hr class="hr">
-            <form action="" method="POST">
+            <form action="{% url 'update_review' review.id %}" method="POST">
                 {% csrf_token %}
-                <label for="">Rate this product!</label>
+                <p>Rate this product</p>
                 <div class="row rating">
                     <input type="radio" name="rating" value="5" id="rating5">
                     <label for="rating5" title="5"></label>
@@ -43,7 +43,6 @@
                         <input type="submit" value="Update review" class="btn btn-back my-3">
                     </div>
                 </div>
-
             </form>
         </div>
     </div>

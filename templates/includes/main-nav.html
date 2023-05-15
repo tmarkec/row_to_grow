@@ -1,8 +1,9 @@
+{% load active_link_tags %}
 <div class="collapse navbar-collapse navi" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
@@ -15,17 +16,16 @@
                     Apperal
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownSubmenu">
-                    <a class="dropdown-item" href="{% url 'products' %}?category=rowing_jackets">Rowing jackets</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?category=leggings">Leggings</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?category=t_shirt">T-shirts</a>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=rowing_jackets">Rowing jackets</a>
+                    </li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=leggings">Leggings</a></li>
+                    <li><a class="dropdown-item" href="{% url 'products' %}?category=t_shirt">T-shirts</a></li>
                 </ul>
-
-
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="specials-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
@@ -35,47 +35,50 @@
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'blog:blog' %}">
+            <a {% if request.path == '/blog/' %} class="active-link logo-font font-weight-bold nav-link mr-5" {% else %}
+                class="logo-font font-weight-bold nav-link mr-5" {% endif %} href="{% url 'blog:blog' %}">
                 Blog
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'contact' %}">
+            <a {% if request.path == '/contact/' %} class="active-link logo-font font-weight-bold nav-link mr-5"
+                {% else %} class="logo-font font-weight-bold nav-link mr-5" {% endif %} href="{% url 'contact' %}">
                 Contact
             </a>
         </li>
         {% if request.user.is_authenticated %}
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'info' %}">
+            <a {% if request.path == '/profile/info/' %} class="active-link logo-font font-weight-bold nav-link mr-5"
+                {% else %} class="logo-font font-weight-bold nav-link mr-5" {% endif %} href="{% url 'info' %}">
                 Account
             </a>
         </li>
         {% endif %}
         {% if request.user.is_superuser %}
-        <li class="nav-item"><a class="logo-font font-weight-bold nav-link text-black mr-5"
-                href="{% url 'admin:index' %}">Admin panel</a></li>
+        <li class="nav-item"><a class="logo-font font-weight-bold nav-link  mr-5" href="{% url 'admin:index' %}">Admin
+                panel</a></li>
 
         <li class="list-inline-item ">
-            <a href="{% url 'add_product' %}" class="logo-font font-weight-bold nav-link text-black mr-5">Add
+            <a {% if request.path == '/products/add/' %} class="active-link logo-font font-weight-bold nav-link mr-5" 
+            {% else %} class="logo-font font-weight-bold nav-link mr-5" {% endif %} href="{% url 'add_product' %}" >Add
                 product</a></li>
-
         {% endif %}
         <li class="nav-item login left">
             <ul class="list-inline list-unstyled text-lg-right m-2">
                 {% if request.user.is_authenticated %}
                 <li class="list-inline-item ">
-                    <a class="nav-link btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_logout' %}">
+                    <a class="btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_logout' %}">
                         Logout
                     </a>
                 </li>
                 {% else %}
                 <li class="list-inline-item ">
-                    <a class="nav-link btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_login' %}">
-                        Login
+                    <a class="btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_login' %}">
+                        <p class="m-0 p-0">Login</p>
                     </a>
                 </li>
                 <li class="list-inline-item ">
-                    <a class="nav-link btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_signup' %}">
+                    <a class="btn test-btn btn-sm text-uppercase p-1" href="{% url 'account_signup' %}">
                         Register
                     </a>
                 </li>
@@ -84,5 +87,3 @@
         </li>
     </ul>
 </div>
-
-

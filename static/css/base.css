@@ -14,6 +14,9 @@ a {
 a:hover {
     text-decoration: none;
 }
+.asteriskField {
+    display: none;
+}
 .logo {
     max-width: 100px;
     max-height: 100px;
@@ -22,6 +25,11 @@ a:hover {
     background-color: #564592;
 }
 /* navigation */
+.active-link {
+    font-weight: 800;
+    border-bottom: 4px solid red;
+    border-radius: 10px;
+}
 .bag:hover {
     color: #000;
 }
@@ -164,32 +172,20 @@ a:hover {
 .logo-font {
     text-transform: uppercase;
     font-weight: 700;
+    color: black!important;
 }
 .logo-font:hover {
-    color: #fde74c !important;
+    color: #fff!important;
 }
 .one {
     background-color: white;
     background: rgba(255, 255, 255, 0.98);
-    min-height: 63vh;   
+    min-height: 67vh;   
 }
 .main-logo-link {
     width: fit-content;
 }
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
+
 .text-black {
     color: #000 !important;
 }
@@ -290,7 +286,7 @@ a:hover {
     border: none;
 }
 .star {
-    border: 1px solid red;
+    border: 1px solid white;
     color: white;
     background-color: red;
     border-radius: 2px;
@@ -303,7 +299,7 @@ a:hover {
     margin:0.1rem;
 }
 .small {
-    font-size: 0.8rem!important;
+    font-size: 0.7rem!important;
 }
 .discount-price {
     color: red;
@@ -414,7 +410,7 @@ a:hover {
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
-    border-color: #dc3545;
+    border-color: #ce2839;
     border-radius: 0;
 }
 
@@ -423,11 +419,8 @@ a:hover {
     background-color: #fff;
 }
 .main-footer {
-    border-top: solid 1px #ccc;
     background-color: #6848D8;
-    position: -webkit-sticky;
     position: sticky;
-
 }
 .social-footer-ul {
     list-style-type: none;
@@ -484,38 +477,8 @@ a:hover {
     color: #aab7c4;
 }
 
-/* .allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	/* display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0; */
-
-    /* standard bootstrap btn transitions */
-    /* transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
-} */ 
-
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #17a2b8; 
 }
 /* -------------------------------- Media Queries */
 
@@ -553,5 +516,8 @@ a:hover {
       .login {
         display: block;
       }
+      .active-link {
+        border: none!important;
+    }
   }
  
