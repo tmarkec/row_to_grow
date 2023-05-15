@@ -390,7 +390,11 @@ a:hover {
     border-color: #dc3545;
     border-radius: 0;
 }
-
+.star {
+    border: 1px solid red;
+    color: white;
+    background-color: red;
+}
 /* ---------------------------------Footer */
 .main-footer {
     border-top: solid 1px #ccc;

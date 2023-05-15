@@ -536,6 +536,7 @@ click on sign up|user is logged in and redirected to the home page|&check;
 | rating radio boxes on hover effect where changing colors from right to left (2 were highlighted as 4)| created div and add css to display flex, row-reverse, and placed rating in that div|
 | by confirming removing/deleting items, wrong items were deleted from template/database | wrapped form around bootstrap modal, passed product.id and reviews.id into data-target and id for the modal|
 | after changing delivery cost on the checkout error shown 'standard delivery percdentage' | modified code in views.py and in models.py and set delivery cost to standard delivery price|
+| page 404 not displayed on the deployed version | change a href link just to backslash and repeat the whole process from walkthrough project |
 # Deployment
 ## Create an external database
 
