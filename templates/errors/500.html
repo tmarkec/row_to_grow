@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container one">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-2">500 page</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row m-4 justify-content-md-center">
+        <div class="col-md-6 text-center form-box mt5">
+          <h1 class="lead-text mt-5">Internal server error</h1>
+          <p>Back to <a href="/"><strong> home page!</strong></a></p>
+        </div>
+      </div>
+    <div class="row h-10 p-4"></div>
+</div>
+{% endblock %}

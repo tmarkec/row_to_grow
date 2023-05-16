@@ -194,6 +194,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
 <details><summary>Color pallete</summary>
 <img src=readme_img/screenshots/color.png>
 </details>
+
 ### Database 
 
 <details><summary>Database</summary>
@@ -202,12 +203,12 @@ For this project I picked Montserrat which is a widely used font known for it's 
 
 # Features
 
- Navigation: 
+ ### Navigation: 
   - navigation was coded along the walkthrough video with some modifications. I believe that navigation from a walkthrough video is a good example of an e-commerce website as it displays features like a shopping bag & search bar which indicates what type of website it is
   - navigation sticks on top of the page and it's divided into 2 sections/ rows. The first row consists of the website logo, search bar, login/logout/register button, and basket. The second row displays different pages on the website and the number of displayed links depends if it's site visitor, registered user, or superuser
   - when on medium to small screens the navigation menu changes to the burger menu which shows all the nav links when clicked on
 
-- Product page:
+### Product page:
 <details><summary>Products</summary>
 <img src="readme_img/screenshots/products.png">
 </details>
@@ -216,7 +217,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
   - pagination is created to display only 8 products per page
   - products from 'deals' category have 2 prices displayed original and discounted price
 
-- Product detail page:
+### Product detail page:
 <details><summary>Product detail</summary>
 <img src="readme_img/screenshots/product_detail.png">
 </details>
@@ -226,36 +227,41 @@ For this project I picked Montserrat which is a widely used font known for it's 
     - if a user reviews our product it will be indicated with a toast message
     - once the superuser approves the review, the registered user has the option to update it or delete its review
     - products from 'deals' category have 2 prices displayed original and discounted price
-- The account page is only displayed to registered user
+
+### Account page is only displayed to registered user
 <details><summary>Account</summary>
 <img src="readme_img/screenshots/account.png">
 </details>
-    - Wishlist:
+
+#### Wishlist:
         - if there are products on the page user can delete a product or add a product to the bag
         - if there are no products text paragraph is displayed on the page, indicating user with the link that he can go to the product page to add products to a wishlist
-    - Security:
+
+#### Security:
         - this page allows the user to update his password
         - 3 input fields with confirm button, also help text how to set password is displayed on the page
-    - Order history
+
+#### Order history
         - previous orders are displayed with clickable order numbers for each
         - link for each order number will redirect the user to the purchase confirmation summary for that order
     - Purchase confirmation
         - allows a user to have a detailed view of his purchase
         - allows a user to download a pdf version of the receipt
-    - Profile info
+#### Profile info
         - displayed as a simple form for a user to update his delivery information which will be saved
-- Shooping bag page
+
+### Shooping bag page
     - as it might increase our business and drive more traffic to our website unregistered users can purchase our products
     - shopping bag is accessible simply by clicking the bag icon in the navigation menu, or during the shopping user can click on the 'secure checkout' button
     - all products that the user has decided to purchase are displayed on the template, also there is an option for a user to change the quantity of the product or to remove it from the bag
-- Checkout page
+### Checkout page
     - page is divided into two sections, order summary, and input form
     - if a user is registered and has saved his profile information in the 'account', the checkout form will be pre-populated with his information
     - if a user is registered and doesn't have saved information on his profile after he populates all the fields he can tick the checkbox to save his information for future purchases
     - site visitors will have to populate all the fields in the form
     - both registered and site visitors are required to provide card details to finalize a purchase
     - upon completion of the purchase user is redirected to view his purchase in the separate template
-- Contact page
+### Contact page
     - designed as a separate app and model to store data
     - standard contact form input fields are displayed for the user with a conformation toast message displayed after submission and a confirmation email sent to the user address
 <details><summary>Contact</summary>
@@ -263,18 +269,20 @@ For this project I picked Montserrat which is a widely used font known for it's 
 </details><details><summary>Submitted</summary>
 <img src="readme_img/screenshots/contact_submitted.png">
 </details>
-- Blog page
+
+ ### Blog page
     - posts are displayed in columns with 3 posts per row, each post contains of: image, author, created date and post excerpt
     - posts card are scaling up as the user hovers over them and clickable title and excerpt
     - when clicked on title/excerpt user is redirected to blog detail page which will give user more description about the post
-- Blog detail page
+### Blog detail page
     - On this page, the user can read  description of the post that he clicked on and get all relevant information about it
     - Bellow post section register user can like or unlike the post
     - next to the like icon user can see number of likes
 <details><summary>Blog</summary>
 <img src="readme_img/screenshots/blog_det_1.png">
 </details>
-- Footer
+
+### Footer
     - displayed on the bottom of every page, colors are matching footer display
     - divided into 3 sections
         - 1: Displayed name of the website with social icon links
@@ -283,23 +291,27 @@ For this project I picked Montserrat which is a widely used font known for it's 
 <details><summary>Subscription</summary>
 <img src="readme_img/screenshots/subscribe2.png">
 </details>
-- Additional pages were created to give more credibility to our business
-    - About us
+
+### Additional pages were created to give more credibility to our business
+#### About us
         - a page  which provides users with more information about us and our business
 <details><summary>About us</summary>
 <img src="readme_img/screenshots/about_us.png">
 </details>
-    - Privacy policy
+
+#### Privacy policy
         - a page that explains how we handle any customer information gathered in its operations
 <details><summary>Privacy policy</summary>
 <img src="readme_img/screenshots/privacy.png">
 </details>
-    - Shipping and return
+
+#### Shipping and return
         - a page that give the user information about delivery times/costs and steps to return product
 <details><summary>Shipping</summary>
 <img src="readme_img/screenshots/shipping.png">
 </details>
-- Admin-related permissions
+
+### Admin-related permissions
     - as a superuser, you get more access to the website, 2 additional tabs are displayed in the navigation menu:'admin' which will lead the superuser to the admin panel, and 'add product' which will get a user to the new page which he can add a product directly from the website without using admin panel
     - as a superuser, you can also delete and update products on the website without having to access the admin panel
 <details><summary>Admin nav</summary>
@@ -313,11 +325,11 @@ For this project I picked Montserrat which is a widely used font known for it's 
 </details>
 
 # Future features
-- Profile image
+### Profile image
     - as a future feature user I would have option to upload his profile picture, which then would be displayed in the navigation bar and once the user submits review it will be displayed next to it
-- Frequently bough items
+### Frequently bough items
     - as a future feature user I would be able to see our frequently bought products as a list just before he checkout from the shooping bag
-- Chat bot
+### Chat bot
     -  as a future feature user I would be able to get answers to frequently asked questions such as shipping, returns, policies, products
 
 
@@ -434,6 +446,8 @@ For this project I picked Montserrat which is a widely used font known for it's 
 <details><summary>Wishlist</summary>
 <img src="readme_img/responsive/wish_medium.png">
 </details>
+
+## Performance
 
 ## Code validation
 ### HTML

@@ -294,6 +294,7 @@ a:hover {
 .empty-star {
     border: 1px solid red;
     border-radius: 2px;
+    color: #000;
 }
 .mx {
     margin:0.1rem;
@@ -363,7 +364,6 @@ a:hover {
     background-color: #db5461;
   }
   
-
 .rating > label:hover:before,
 .rating > input:checked ~ label:before {
     text-shadow: 0 0 1px #db5461;

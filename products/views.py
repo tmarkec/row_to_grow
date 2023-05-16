@@ -156,7 +156,7 @@ def add_review(request, product_id):
                                    'it is waiting for the approval!')
         else:
             messages.warning(request, 'Not allowed, you MUST rate and review' +
-                                      'product, in order to submit it.')
+                                      ' the product, in order to submit it.')
         return redirect('product_detail', product_id=product.id)
 
     context = {
@@ -192,6 +192,9 @@ def update_review(request, review_id):
             messages.info(request, 'Your review has been updated,' +
                                    'wait for the approval.')
             return redirect('product_detail', product_id=review.product.id)
+        else:
+            messages.warning(request, 'Not allowed, you MUST rate and review' +
+                                      ' the product, in order to submit it.')
     else:
         form = ReviewForm(instance=review)
     if review is not None:

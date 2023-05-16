@@ -14,7 +14,7 @@ from django.contrib.auth import update_session_auth_hash
 
 @login_required
 def profile(request):
-    """ 
+    """
     Display the user's profile information
     """
     profile = get_object_or_404(UserProfile, user=request.user)

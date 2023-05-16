@@ -20,7 +20,7 @@
 .profile-box a:hover {
     color: #fde74c;
 }
-
+/* media-querry */
 @media (max-width: 551px) {
    .ico {
     font-size: 2rem;

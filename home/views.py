@@ -20,6 +20,3 @@ def shipping(request):
 def privacy(request):
     """ A view to display the shipping page """
     return render(request, 'home/privacy.html')
-
-
-

@@ -30,7 +30,8 @@ class ReviewAdmin(admin.ModelAdmin):
         'product',
         'user',
         'created_on',
-        'updated_on'
+        'updated_on',
+        'approved'
     )
 
 

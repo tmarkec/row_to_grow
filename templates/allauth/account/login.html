@@ -13,7 +13,7 @@
       {% if redirect_field_value %}
       <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
       {% endif %}
-      <a class="px-4 btn btn-cancel" href="{% url 'home' %}">Cancel</a>
+      <a class="mx-2 btn btn-cancel" href="{% url 'home' %}">Cancel</a>
       <button class="primaryAction btn btn-back" type="submit">Sign in</button>
       <p class="mt-2">
         <a class="password-link secondaryAction" href="{% url 'account_reset_password' %}">Forgot Password?</a>
