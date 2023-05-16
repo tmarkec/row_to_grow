@@ -537,6 +537,7 @@ Check email |  Email comfirmation has been sent | &check;
 <details><summary>Email comformation</summary>
 <img src="readme_img/screenshots/email_comfirmation.png">
 </details>
+
 ## Testing user stories
 
 User Story |  Test | Pass
@@ -545,31 +546,151 @@ As a site visitor, I want be able to register for the account so that I can get 
 <details><summary>Navbar</summary>
 <img src="readme_img/screenshots/navbar_site.png">
 </details>
+
+User Story |  Test | Pass
+--- | --- | :---:
 As a site visitor, I want to be able to view list of the products so that I can select some to purchase| Navigating either to products or special offers, list of products are displayed to the user |&check;
 <details><summary>Product page</summary>
 <img src="readme_img/screenshots/products_page.png">
 </details>
-As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product|Search bar is displayed on the top of the navigation menu, user can type words if there are matching words in product title/description those products will be display, otherwise message will be shown "o search results"|&check;
-As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product | By clicking on the image of the product, user is redirected to the separate page which show description, rating, gives option for user to put it in the bag or for registered user to save it in the wishlist| &check;
- As a site visitor I want to be able to chose products and select size and quantity of the product | If product has sizes option for user will be displayed, and under size option user can choose quantity | &check;
- As a site visitor I want to be able to view my shoping bag, so I that can confirm my choices or simply update/remove quantity | User can acces shopping bag by clicking on the icon bag in the navigation menu, new page is displayed to the user with products in the bag, choice to update/delete product and grand total that he has to pay| &check;
-As a site visitor I want to be able to pay for selected products so that I can complete my purchase option | By clicking 'secure checkout' in the shoping bag user is redirected to the checkout page, on which he can once again see his selected products and form that user needs to fill out in order to complete purchase |&check;
-As a site visitor, I want to be able to get confirmation for my previous order | After puchasing the product new template with order history is displayed to the user
-As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products | On the bottom of the website in the right corner of the footer there is an input field with a label that allows me to input my email address and subscribe to the newsletter |&check;
- As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website | I can navigate on the website and click contact, new page is displayed with the form for user to fill out, after submitting form, confirmation page is shown to the user |&check;
- As a site visitor, I want to be able to view blog posts so that I can get more information and insights about row to grow business|Clickin on the 'blog' user is redirected to the blog page from which he can choose which blog he wants to read by simply clicking on the title of the blog post |&check;
- As a registered user, I want to be able to reset my password so that I can recover access to my account in case I forget my password|By clicking on login button, user can click on 'forgot password' link which will lead user in 4 steps to reset his password|&check;
-As a registered user, I want to be able to update my profile and delivery information|Clicking on the account user is redirected to the profile page, from there user can open 'profile-info' page where he can upload his delivery/personal information|&check;
-As a registered user, I want to be able rate and review the products so that I can express my satisfaction or disatisfaction of the certain products|On the product detail page, bellow the product user can write review and rate product by choosing between 1-5 stars |&check;
-As a registered user, I want to be able to update my rate and review of the product|On the product detail page under the product user can find his review and click on the update which will lead user to the new template on which he can input review and rate the product again|&check;
-As a registered user, I want to be able to delete my rate and review of the product|On the product detail page under users review he can click on the 'delete' button, user must confirm his choice |&check;
-As a registered user, I want to be able to view my order history on the profile page so that I can have better insight of my previous purchases| Clicking on the account user is redirected to the profile page, from there user can open 'order history' page where he can see list of his previous orders, each order consist of order number link which user can click and it will show user detail description of his purchase |&check;
-As a registered user, I want to be able to change my password so I can have greater control over my account in case I think it's compromised| Clicking on the account user is redirected to the profile page, from there user can open 'security' page from where he can update his |&check;
-As a registered user, I want to be able to save products to the wishlist so I can keep track of the products I am interested in| On product detail page there is a button 'add to wishlist' which will save current open product to the wishlist and will redirect user to that page|&check;
-As a registered user, I want to be able to remove products from the wishlist so I can keep|On wishlist page under every product there is button to remove the same product from the page, user must confirm his choice |&check;
-As a registered user, I want to be able to like posts so that I can express my satisfaction with certain posts/topics|By clicking on the title of the post user can scroll down to the heart icon and he can click the icon to like the post|&check;
-As a site owner I want to be able to add, update and delete products directly from the website so I don't have to access admin panel everytime I want to make changes to the products|Login as admin user, in the navigation menu new link is shown to the superuser, by clicking on that link superuser can add product, to delete or update product superuser has to navigate to products or product detail page where 2 links are shown under the product so superuser can perform either action|&check;
 
+User Story |  Test | Pass
+--- | --- | :---:
+As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product|Search bar is displayed on the top of the navigation menu, user can type words if there are matching words in product title/description those products will be display, otherwise message will be shown "o search results"|&check;
+<details><summary>Search bar</summary>
+<img src="readme_img/screenshots/no_search.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product | By clicking on the image of the product, user is redirected to the separate page which show description, rating, gives option for user to put it in the bag or for registered user to save it in the wishlist| &check;
+<details><summary>Product detail</summary>
+<img src="readme_img/screenshots/product_detail.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+ As a site visitor I want to be able to chose products and select size and quantity of the product | If product has sizes option for user will be displayed, and under size option, user can choose quantity | &check;
+
+ User Story |  Test | Pass
+--- | --- | :---:
+ As a site visitor I want to be able to view my shoping bag, so I that can confirm my choices or simply update/remove quantity | User can acces shopping bag by clicking on the icon bag in the navigation menu, new page is displayed to the user with products in the bag, choice to update/delete product and grand total that he has to pay| &check;
+ <details><summary>Shopping bag</summary>
+<img src="readme_img/screenshots/shopping_bag.png">
+</details>
+
+ User Story |  Test | Pass
+--- | --- | :---:
+As a site visitor I want to be able to pay for selected products so that I can complete my purchase option | By clicking 'secure checkout' in the shoping bag user is redirected to the checkout page, on which he can once again see his selected products and form that user needs to fill out in order to complete purchase |&check;
+<details><summary>Checkout</summary>
+<img src="readme_img/screenshots/checkout.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a site visitor, I want to be able to get confirmation for my previous order | After puchasing the product new template with order history is displayed to the user
+<details><summary>Order confirmation</summary>
+<img src="readme_img/screenshots/order_comformation.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products | On the bottom of the website in the right corner of the footer there is an input field with a label that allows me to input my email address and subscribe to the newsletter |&check;
+<details><summary>Subscribe</summary>
+<img src="readme_img/screenshots/subscribe2.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+ As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website | I can navigate on the website and click contact, new page is displayed with the form for user to fill out, after submitting form, confirmation page is shown to the user |&check;
+ <details><summary>Contact</summary>
+<img src="readme_img/screenshots/contact.png">
+</details>
+
+ User Story |  Test | Pass
+--- | --- | :---:
+ As a site visitor, I want to be able to view blog posts so that I can get more information and insights about row to grow business|Clickin on the 'blog' user is redirected to the blog page from which he can choose which blog he wants to read by simply clicking on the title of the blog post |&check;
+  <details><summary>Blog</summary>
+<img src="readme_img/screenshots/blog_1.png">
+</details>
+
+ User Story |  Test | Pass
+--- | --- | :---:
+ As a registered user, I want to be able to reset my password so that I can recover access to my account in case I forget my password|By clicking on login button, user can click on 'forgot password' link which will lead user in 4 steps to reset his password|&check;
+  <details><summary>Sign in</summary>
+<img src="readme_img/screenshots/sing_in.png">
+</details>
+
+ User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able to update my profile and delivery information|Clicking on the account user is redirected to the profile page, from there user can open 'profile-info' page where he can upload his delivery/personal information|&check;
+ <details><summary>Profile update</summary>
+<img src="readme_img/screenshots/profile_update.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able rate and review the products so that I can express my satisfaction or disatisfaction of the certain products|On the product detail page, bellow the product user can write review and rate product by choosing between 1-5 stars |&check;
+<details><summary>Review</summary>
+<img src="readme_img/screenshots/reviews.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able to update my rate and review of the product|On the product detail page under the product user can find his review and click on the update which will lead user to the new template on which he can input review and rate the product again|&check;
+<details><summary>Review2</summary>
+<img src="readme_img/screenshots/review_crud2.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able to delete my rate and review of the product|On the product detail page under users review he can click on the 'delete' button, user must confirm his choice |&check;
+<details><summary>Review3</summary>
+<img src="readme_img/screenshots/review_crud3.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able to view my order history on the profile page so that I can have better insight of my previous purchases| Clicking on the account user is redirected to the profile page, from there user can open 'order history' page where he can see list of his previous orders, each order consist of order number link which user can click and it will show user detail description of his purchase |&check;
+<details><summary>Order history</summary>
+<img src="readme_img/screenshots/order_history.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able to change my password so I can have greater control over my account in case I think it's compromised| Clicking on the account user is redirected to the profile page, from there user can open 'security' page from where he can update his |&check;
+<details><summary>Order history</summary>
+<img src="readme_img/screenshots/order_history.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able to save products to the wishlist so I can keep track of the products I am interested in| On product detail page there is a button 'add to wishlist' which will save current open product to the wishlist and will redirect user to that page|&check;
+<details><summary>Wishlist</summary>
+<img src="readme_img/screenshots/wishlist.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able to remove products from the wishlist so I can keep|On wishlist page under every product there is button to remove the same product from the page, user must confirm his choice |&check;
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a registered user, I want to be able to like posts so that I can express my satisfaction with certain posts/topics|By clicking on the title of the post user can scroll down to the heart icon and he can click the icon to like the post|&check;
+<details><summary>Blog like button</summary>
+<img src="readme_img/screenshots/blog_det_2.png">
+</details>
+
+User Story |  Test | Pass
+--- | --- | :---:
+As a site owner I want to be able to add, update and delete products directly from the website so I don't have to access admin panel everytime I want to make changes to the products|Login as admin user, in the navigation menu new link is shown to the superuser, by clicking on that link superuser can add product, to delete or update product superuser has to navigate to products or product detail page where 2 links are shown under the product so superuser can perform either action|&check;
+<details><summary>Form to add product</summary>
+<img src="readme_img/screenshots/add_product.png">
+</details>
+
+<details><summary>Product added to the site</summary>
+<img src="readme_img/screenshots/add_product3.png">
+</details>
 
 ## Testing features 
 - some features have been tested in user stories
@@ -584,11 +705,15 @@ click register button | direct user to the signup template|&check;
 click basket icon| direct user to the shooping bag template|&check;
 click products & special offers in the navigation| display dropdown menu with more page options|&check;
 click navigation links | navigate user to the matching templates (contact:contact, account:account, add product:add product)|&check;
+<details><summary>Admin navigation menu</summary>
+<img src="readme_img/screenshots/admin_nav.png">
+</details>
 
 HOME
 Feature/test |  Action | Pass
 --- | --- | :---:
 click 'shop now' button|user is redirected to the products page|&check;
+
 PRODUCT PAGE
 Feature/test |  Action | Pass
 --- | --- | :---:
@@ -598,6 +723,10 @@ click on product image|direct user to the product detail page|&check;
 pagination displayed| if more than 12 products user have option to go to the next page|&check;
 click 'next'| user redirected to the next page with different products displayed|&check;
 click 'previous'| user redirected to the previous page with different products displayed|&check;
+
+<details><summary>Pagination</summary>
+<img src="readme_img/screenshots/footer_paggination.png">
+</details>
 
 PRODUCT DETAIL PAGE
 Feature/test |  Action | Pass
@@ -609,7 +738,7 @@ size option|user should be able to select sizes for certain products|&check;
 wishlist button|only displayed to the registered user|&check;
 rating and reviewing product| option only displayed to the registered user|&check;
 click login link in the paragraph|direct user to the login page|&check;
-click add to wishlist|product added to the wishlist|&check;
+click add to wishlist|product added to the wishlist, user redirected tot the wishlist|&check;
 click on stars to rate the product and click on the'submit' button|user shouldn't be allowed just to rate the product|&check;
 write review and click on the 'submit' button|user shouldn't be allowed just to review the product|&check;
 rate and review product and click on the'submit' button|info message displayed to the user, indicating that is waiting on the approval|&check;
@@ -620,6 +749,12 @@ create new review on the template, click 'update review' |user redirected to the
 average rating|average score and ratin counts are reduced/removed depending on the previous reviews|&check;
 click delete review|modal is displayed to the user to confirm his actions|&check;
 click delete |review is deleted |&check;
+<details><summary>Review update</summary>
+<img src="readme_img/screenshots/review_update.png">
+</details>
+<details><summary>Review succeed</summary>
+<img src="readme_img/screenshots/review_succ.png">
+</details>
 
 ACCOUNT
 Feature/test |  Action | Pass
@@ -633,7 +768,12 @@ click on order history in the account page|user is redirected to the order histo
 click link on one of your previous orders|purchase template with detail description is displayed|&check;
 click on 'keep shooping'|	user is redirected to the product page|&check;
 click on 'download pdf'|pdf file with purchase info is downloaded for the user|&check;
-
+<details><summary>Order history</summary>
+<img src="readme_img/screenshots/order_history.png">
+</details>
+<details><summary>Order confirmation</summary>
+<img src="readme_img/screenshots/order_comformation.png">
+</details>
 
 SECURITY
 Feature/test |  Action | Pass
@@ -644,11 +784,18 @@ follow guidlines to choose new password and click change password|info message i
 .|password has been changed|&check;
 .|user is redirected to 'accounts' page|&check;
 
+<details><summary>Password change</summary>
+<img src="readme_img/screenshots/security.png">
+</details>
+
 PROFILE INFO
 Feature/test |  Action | Pass
 --- | --- | :--
 click on profile info in the account page| user is redirected to the my profile page|&check;
 user can change any field and click on 'update'|info message is displayed to the user and information has been updated|&check;
+<details><summary>Profile update</summary>
+<img src="readme_img/screenshots/profile_update.png">
+</details>
 
 WISHLIST
 Feature/test |  Action | Pass
@@ -659,8 +806,10 @@ click 'add more product'|user is redirected to the products page|&check;
 no product in the 'wishlist', click on 'select products' button|user is redirected to the products page|&check;
 click 'bag' icon|product is added to the bag|&check;
 click 'bin' icon|modal is displayed to the user to confirm his choice|&check;
-
 click 'delete'|product is removed from the 'wishlist', info message is displayed to the user|&check;
+<details><summary>Remove wishlist</summary>
+<img src="readme_img/screenshots/remove_wishlist.png">
+</details>
 
 SHOOPING BAG PAGE
 Feature/test |  Action | Pass
@@ -669,6 +818,7 @@ user can update quantity or remove product| product quantity is updated or produ
 delivery costs| bottom of the page delivery and grand total are dispalyed to the user|&check;
 click on 'keep shooping' button |user is navigated to the products page|&check;
 click on 'secure checkout' button| user is navigated to the checkout page |&check;
+
 
 CHECKOUT PAGE
 Feature/test |  Action | Pass
@@ -682,6 +832,10 @@ Feature/test |  Action | Pass
 --- | --- | :--
 click on 'keep shooping'|user is redirected to the product page|&check;
 click on 'download pdf'| pdf file with purchase info is downloaded for the user|&check;
+<details><summary>PDF</summary>
+<img src="readme_img/screenshots/OH.png">
+</details>
+
 
 CONTACT PAGE
 Feature/test |  Action | Pass
@@ -691,12 +845,19 @@ submit form| user only allowed to submit form if all fields are populated|&check
 contact success page| upon submitting form user is prompt with the success page|&check;
 click link 'new arrivals' on contact success page| user is redirected to product page on category 'new arrivals'|&check;
 
+<details><summary>Contact submitted</summary>
+<img src="readme_img/screenshots/contact_submitted.png">
+</details>
+
 BLOG PAGE
 Feature/test |  Action | Pass
 --- | --- | :--
 click on 'blog' in the navigation menu|user is redirected to the blog page|&check;
 .|pagination on the bottom of the page|&check;
 click on the title or excerpt|user is redirected to the blog detail page|&check;
+<details><summary>Blog</summary>
+<img src="readme_img/screenshots/blog_1.png">
+</details>
 
 BLOG DETAIL PAGE
 Feature/test |  Action | Pass
@@ -707,6 +868,11 @@ when icon clicked|counter next to the icon increase|&check;
 click again to unlike post|counter next to the icon decrease|&check;
 .|icon heart change state from full to empty|&check;
 number of likes|unregistered user can view number of likes|&check;
+<details><summary>Blog not liked</summary>
+<img src="readme_img/screenshots/blog_det_2.png">
+</details><details><summary>Blog liked</summary>
+<img src="readme_img/screenshots/blog_det_3.png">
+</details>
 
 FOOTER
 Feature/test |  Action | Pass
@@ -717,6 +883,9 @@ click on 'About us' link|user redirected to the about us page|&check;
 click on 'Shop now' link|user redirected to the products page|&check;
 click on 'Privacy policy' link|user redirected to the products page|&check;
 click on 'Shipping and returns' link|user redirected to the shipping & returns page|&check;
+</details><details><summary>Footer</summary>
+<img src="readme_img/screenshots/footer_paggination.png">
+</details>
 
 NEWSLETTER
 Feature/test |  Action | Pass
