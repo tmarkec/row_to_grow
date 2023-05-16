@@ -1,6 +1,6 @@
 # Row to grow
 
-Row to grow is a fictional e-commerce website(for educational purposes) that I created for my PP5. Website provides sports/rowing related products and have blog as well to give users more information about related topics.
+Row to grow is a fictional e-commerce website(for educational purposes) that I created for my PP5. The website is for the sale of sports/rowing related products and it also has a blog to give users more information about related topics.
  
 ![Am i responsive image](readme_img/responsive/resp.png)  
 
@@ -63,9 +63,11 @@ The application is primarily B2C focused, catering to individual customers who w
 <img src=readme_img/marketing/inst2.png>
 </details>
 
-- Newsletter: We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business. Upon subscription user receive our initial conformation email from us. First phase is just gather email address in our database then sign up with some provider to setup group emails for promotion of our products/business.
+#### Newsletter: 
+- We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business. Upon subscription user receive our initial conformation email from us. First phase is just gather email address in our database then sign up with some provider to setup group emails for promotion of our products/business.
 
-- Partnerships: We have established partnerships with local rowing club [Killorglin](https://killorglinrowing.wordpress.com/) to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.Also by sponsoring local athletes we extend our reach in marketing area in an old fashion way "Word of a mouth"
+#### Partnerships:
+- We have established partnerships with local rowing club [Killorglin](https://killorglinrowing.wordpress.com/) to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.Also by sponsoring local athletes we extend our reach in marketing area in an old fashion way "Word of a mouth"
 
 #### Future marketing strategies
 - usage of the google and facebook ads to promote and target our audience
@@ -83,20 +85,29 @@ The application is primarily B2C focused, catering to individual customers who w
 ### User Stories
 
 #### Site visitor
-- As a site visitor, I want be able to register for the account so that I can get more access to the website content and to store my profile information
-- As a site visitor, I want to be able to view list of the products so that I can select some to purchase
-- As a site visitor I want to be able to view my shoping bag, so I that can confirm my choices or simply update/remove quantity
-- As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product
-- As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product
-- As a site visitor I want to be able to chose products and select size and quantity of the product
-- As a site visitor I want to be able to pay for selected products so that I can complete my purchase option
-- As a site visitor, I want to be able to subscribe to newsletter so that I can receive promotions and informations about new products
-- As a site visitor, I want to be able to contact site owner so that I can get answers to any enquires that I have about the products or website
-- As a site visitor, I want to be able to view blog posts so that I can get more information and insights about row to grow business
+- As a site visitor, I want be able to register for an account so that I can get more access to the website content, and to store my profile information 
+
+- As a site visitor, I want to be able to view a list of the products so that I can select some to purchase 
+
+- As a site visitor, I want to be able to view my shoping bag, so I that can confirm my choices or simply update/remove items 
+
+- As a site visitor, I want to be able to search for a product by name or description so that I can easily find a specific product 
+
+- As a site visitor, I want to be able to view details of the products so that I can identify price, description, rating, image and available sizes of the product 
+
+- As a site visitor, I want to be able to chose products and select the size and quantity of the product 
+
+- As a site visitor, I want to be able to pay for selected products so that I can complete my purchase option 
+
+- As a site visitor, I want to be able to subscribe to a newsletter so that I can receive promotions and information about new products 
+
+- As a site visitor, I want to be able to contact the site owner so that I can get answers to any enquires that I may have about the products or website 
+
+- As a site visitor, I want to be able to view blog posts so that I can get more information and insights about the business: Row to Grow  
 #### Registered user
 - As a registered user, I want to be able to reset my password so that I can recover access to my account in case I forget my password
 - As a registered user, I want to be able to update my profile and delivery information
-- As a registered user, I want to be able to rate and review  product so I could leave feedback for other users and express my satisfaction or disatisfaction
+- As a registered user, I want to be able to rate and review  product so I could leave feedback for other users and express my satisfaction or disatisfaction with the product
 - As a registered user, I want to be able to update my rate and review of the product
 - As a registered user, I want to be able to delete my rate and review of the product
 - As a registered user, I want to be able to view my order history on the profile page so that I can have better insight of my previous purchases
@@ -447,7 +458,25 @@ For this project I picked Montserrat which is a widely used font known for it's 
 <img src="readme_img/responsive/wish_medium.png">
 </details>
 
-## Performance
+## Lighthouse and performance
+<details><summary>Index</summary>
+<img src="readme_img/lighth/light_dessk.png">
+</details>
+<details><summary>Index mobile</summary>
+<img src="readme_img/lighth/ligh_mob.png">
+</details>
+<details><summary>Blog desktop</summary>
+<img src="readme_img/lighth/blog_desk.png">
+</details>
+<details><summary>Blog mobile</summary>
+<img src="readme_img/lighth/blog_mob.png">
+</details>
+<details><summary>Product</summary>
+<img src="readme_img/lighth/prod_deskt.png">
+</details>
+<details><summary>About</summary>
+<img src="readme_img/lighth/about.png">
+</details>
 
 ## Code validation
 ### HTML
@@ -458,6 +487,9 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <details><summary>Add_product</summary>
 <img src="readme_img/validation/html/add_product.png">
 </details>
+
+- that code and functionality was coded along 'butique ado' video. I was going through the code to see if I can fix it but I couldn't find where that "id_name" is comming from.
+
 <details><summary>Blog detail</summary>
 <img src="readme_img/validation/html/blog_detail.png">
 </details>
@@ -1044,6 +1076,8 @@ click on sign up|user is logged in and redirected to the home page|&check;
 <img src="readme_img/screenshots/signup_test3.png">
 </details>
 
+## Automated testing
+- Unfortunately due to short time frame for this project I haven't got chance to write some automated tests
 # Bugs
 | **Bug** | **Fix** |
 | ----------- | ----------- |
@@ -1070,6 +1104,7 @@ click on sign up|user is logged in and redirected to the home page|&check;
 - user can't add product from wishlist to the shooping bag
 - pdf file to download receipt is not rendering from the template, it is manually coded in
 - user can delete number in qty in products page and press enter page 500 will be displayed
+- double id_tag in add to product template-html validation
 
 # Deployment
 ## Create an external database
