@@ -18,7 +18,9 @@ def subscribe(request):
             subject = "Row to grow subscription"
             message = (
                 "Thank you for subscribing to our newsletter,"
-                + " you will get latest updates on our new products and deals!"
+                + " you will get latest updates on our new products and deals in upcoming email!"
+                + " Now come along and join us on our journey and check our producst"
+                + " https://row-to-grow.herokuapp.com/."
 
             )
             from_email = "rowtogrow1@gmail.com"

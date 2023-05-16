@@ -1,10 +1,11 @@
 # Row to grow
 
-Row to grow is a fictional website(for educational purposes) for a rowing community. On this website site user can find and purchase products related to rowing, as well as read recent blog posts. Site user can also subscribe to our newsletter or simply contact us for further questions. Register user can leave comments on blog posts, rate our products and save his profile/delivery information for future purchase.
+Row to grow is a fictional e-commerce website(for educational purposes) that I created for my PP5. Website provides sports/rowing related products and have blog as well to give users more information about related topics.
  
-![Am i responsive image]()  
+![Am i responsive image](readme_img/responsive/resp.png)  
 
-[Click Here To Visit Live Site]()  
+[Click Here To Visit Live Site](https://row-to-grow.herokuapp.com/)
+[Github project board](https://github.com/users/tmarkec/projects/6)
 
 ## Table Of Contents:
 1. [Design & Planning](#design-&-planning)
@@ -54,7 +55,6 @@ The application is primarily B2C focused, catering to individual customers who w
 <img src=readme_img/marketing/fcb5.png>
 </details>
 
-
 <details><summary>Instagram1 page</summary>
 <img src=readme_img/marketing/inst1.png>
 </details>
@@ -65,11 +65,12 @@ The application is primarily B2C focused, catering to individual customers who w
 
 - Newsletter: We offer a newsletter subscription service to keep our customers up-to-date with our latest products and promotions. By offering exclusive deals and promotions to our subscribers, we aim to foster customer loyalty and encourage repeat business. Upon subscription user receive our initial conformation email from us. First phase is just gather email address in our database then sign up with some provider to setup group emails for promotion of our products/business.
 
-- Partnerships: We have established partnerships with local rowing clubs to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.Also by sponsoring local athletes we extend our reach in marketing area in an old fashion way "Word of a mouth"
+- Partnerships: We have established partnerships with local rowing club [Killorglin](https://killorglinrowing.wordpress.com/) to promote our products and build brand awareness within the local rowing community. By attending local events and sponsoring local athletes, we aim to establish ourselves as a trusted and respected brand within the community.Also by sponsoring local athletes we extend our reach in marketing area in an old fashion way "Word of a mouth"
 
 #### Future marketing strategies
 - usage of the google and facebook ads to promote and target our audience
 - usage of the social media influencer to promote our products
+- usaging one of marketing platforms such as mailchimp, salesforce or klaviyo
 
 ### SEO
 -  We understand the importance of effective SEO strategies to increase our website's visibility in search engines like Google 
@@ -168,13 +169,21 @@ During the development of this project, I implemented Agile development practice
    - To-Do- (all user stories were initially entered in the 'To Do' column)
    - In Progress- (then during the development phase and implementing functionality stories were moved into the 'In Progress' column)
    - Done- (and then finally they get moved into 'Done' once the development completes and functionality is implemented to cover that user story)
-
+<details><summary>Project board</summary>
+<img src="readme_img/screenshots/project_board.png.png">
+</details>
 - I've planned 3 iterations for this project. Two were completed as planned and the third one is for future development of the webiste, which is described more in feature features in this document
-
+<details><summary>Milestone</summary>
+<img src="readme_img/screenshots/milestones.png">
+</details>
 - Each milestone consists of user stories, which are displayed either open or closed depending on the progress. Each user story is labeled either as 'must-have', 'should-have', or 'could-have' depending on the needs of the project with estimated story points attached to it.
-
+<details><summary>User stories</summary>
+<img src="readme_img/screenshots/closed.png">
+</details>
 - Each user story has acceptance criteria and tasks that needed to be done to accomplish that criteria
-
+<details><summary>User story detail</summary>
+<img src="readme_img/screenshots/user story.png">
+</details>
 I do realize the importance of the agile approach and documenting all steps and procedures, but it is quite challenging when you are just a team of 1 and you have to write and do everything like multiple people are working on this project. I do think with time and practice better implementation of the methodology can be achieved.
 
 
@@ -182,7 +191,9 @@ I do realize the importance of the agile approach and documenting all steps and 
 For this project I picked Montserrat which is a widely used font known for it's clarity, and versatility. It's clean and modern design makes it suitable for a wide range of applications, including headings, body text, and branding. As a backdrop font I've used 'Sans-serif'.
 
 ### Color scheme
-
+<details><summary>Color pallete</summary>
+<img src=readme_img/screenshots/color.png>
+</details>
 ### Database 
 
 <details><summary>Database</summary>
@@ -197,12 +208,18 @@ For this project I picked Montserrat which is a widely used font known for it's 
   - when on medium to small screens the navigation menu changes to the burger menu which shows all the nav links when clicked on
 
 - Product page:
+<details><summary>Products</summary>
+<img src="readme_img/screenshots/products.png">
+</details>
   - products page is fully responsive to allow equal spacing between products regardless of screen width
   - each product consists of an image, title, price, category & rating, special fields are displayed for the superuser which will all be covered in features: "admin"
   - pagination is created to display only 8 products per page
   - products from 'deals' category have 2 prices displayed original and discounted price
 
 - Product detail page:
+<details><summary>Product detail</summary>
+<img src="readme_img/screenshots/product_detail.png">
+</details>
     - single product is displayed on a page with additional information and various option for the user such as a description of the product, an option to pick sizes, quantity and 'add to bag' button
     - additional features 'add to wishlist & 'add review' are displayed only for registered users
     - for both features, there is displayed paragraph text to indicate to the user that he needs to login in order to get more access to the website
@@ -210,6 +227,9 @@ For this project I picked Montserrat which is a widely used font known for it's 
     - once the superuser approves the review, the registered user has the option to update it or delete its review
     - products from 'deals' category have 2 prices displayed original and discounted price
 - The account page is only displayed to registered user
+<details><summary>Account</summary>
+<img src="readme_img/screenshots/account.png">
+</details>
     - Wishlist:
         - if there are products on the page user can delete a product or add a product to the bag
         - if there are no products text paragraph is displayed on the page, indicating user with the link that he can go to the product page to add products to a wishlist
@@ -238,6 +258,11 @@ For this project I picked Montserrat which is a widely used font known for it's 
 - Contact page
     - designed as a separate app and model to store data
     - standard contact form input fields are displayed for the user with a conformation toast message displayed after submission and a confirmation email sent to the user address
+<details><summary>Contact</summary>
+<img src="readme_img/screenshots/contact.png">
+</details><details><summary>Submitted</summary>
+<img src="readme_img/screenshots/contact_submitted.png">
+</details>
 - Blog page
     - posts are displayed in columns with 3 posts per row, each post contains of: image, author, created date and post excerpt
     - posts card are scaling up as the user hovers over them and clickable title and excerpt
@@ -245,32 +270,55 @@ For this project I picked Montserrat which is a widely used font known for it's 
 - Blog detail page
     - On this page, the user can read  description of the post that he clicked on and get all relevant information about it
     - Bellow post section register user can like or unlike the post
-    - next to the like icon user can see number of likes 
+    - next to the like icon user can see number of likes
+<details><summary>Blog</summary>
+<img src="readme_img/screenshots/blog_det_1.png">
+</details>
 - Footer
     - displayed on the bottom of every page, colors are matching footer display
     - divided into 3 sections
         - 1: Displayed name of the website with social icon links
         - 2: Quick links that lead a user to the other parts of the website which increases engagement and gives a feel of the more content/complexity of the website
         - 3: Subscription field, which allows users to subscribe to our newsletter and offers. Same as the contact form it is created as a separate model which will save the user's email address and toast messages and confirmation emails are sent to the user
+<details><summary>Subscription</summary>
+<img src="readme_img/screenshots/subscribe2.png">
+</details>
 - Additional pages were created to give more credibility to our business
     - About us
         - a page  which provides users with more information about us and our business
+<details><summary>About us</summary>
+<img src="readme_img/screenshots/about_us.png">
+</details>
     - Privacy policy
         - a page that explains how we handle any customer information gathered in its operations
+<details><summary>Privacy policy</summary>
+<img src="readme_img/screenshots/privacy.png">
+</details>
     - Shipping and return
         - a page that give the user information about delivery times/costs and steps to return product
+<details><summary>Shipping</summary>
+<img src="readme_img/screenshots/shipping.png">
+</details>
 - Admin-related permissions
     - as a superuser, you get more access to the website, 2 additional tabs are displayed in the navigation menu:'admin' which will lead the superuser to the admin panel, and 'add product' which will get a user to the new page which he can add a product directly from the website without using admin panel
     - as a superuser, you can also delete and update products on the website without having to access the admin panel
-
+<details><summary>Admin nav</summary>
+<img src="readme_img/screenshots/admin_nav.png">
+</details>
+<details><summary>Admin products</summary>
+<img src="readme_img/screenshots/admin_product.png">
+</details>
+<details><summary>Admin product</summary>
+<img src="readme_img/screenshots/admin_products.png">
+</details>
 
 # Future features
 - Profile image
-    - as a future feature a user would have option to upload his profile picture, which then would be displayed in the navigation bar and once the user submits review it will be displayed next to it
+    - as a future feature user I would have option to upload his profile picture, which then would be displayed in the navigation bar and once the user submits review it will be displayed next to it
 - Frequently bough items
-    - as a future feature a user would be able to see our frequently bought products as a list just before he checkout from the shooping bag
+    - as a future feature user I would be able to see our frequently bought products as a list just before he checkout from the shooping bag
 - Chat bot
-    -  as a future feature a user would be able to get answers to frequently asked questions such as shipping, returns, policies, products
+    -  as a future feature user I would be able to get answers to frequently asked questions such as shipping, returns, policies, products
 
 
 # Technologies used
@@ -389,6 +437,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
 
 ## Code validation
 ### HTML
+The W3C Markup Validation Service was used to validate the HTML of the website. Only profile page, I had to copy and paste code as I couldn't test as url page. One particular that is shown accrosss website is username as username is displayed on navigation bar upon user login
 <details><summary>About</summary>
 <img src="readme_img/validation/html/about.png">
 </details>
@@ -446,6 +495,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
 </details>
 
 ## CSS
+Jigsaw CSS validator was used for validating the CSS stylesheet. CSS file was tested by manually copying the CSS codes into the manual input option.
 <details><summary>base</summary>
 <img src="readme_img/validation/CSS/base.png">
 </details>
@@ -460,6 +510,7 @@ For this project I picked Montserrat which is a widely used font known for it's 
 </details>
 
 ## JS
+JS Hint was used to check javascript code.
 <details><summary>checkout</summary>
 <img src="readme_img/validation/JS/checkout.png">
 </details>
@@ -468,6 +519,8 @@ For this project I picked Montserrat which is a widely used font known for it's 
 </details>
 
 ## Python
+PEP8 CI Python Linter was used to check that the Python code meets PEP8 standards.
+Also in production I used Flake8 to display errors and styling issue.
 <details><summary>Blog model</summary>
 <img src="readme_img/validation/Python/blog_models.png">
 </details>
@@ -706,7 +759,7 @@ click basket icon| direct user to the shooping bag template|&check;
 click products & special offers in the navigation| display dropdown menu with more page options|&check;
 click navigation links | navigate user to the matching templates (contact:contact, account:account, add product:add product)|&check;
 <details><summary>Admin navigation menu</summary>
-<img src="readme_img/screenshots/admin_nav.png">
+<img src="readme_img/screenshots/sdd.png">
 </details>
 
 HOME
@@ -749,6 +802,9 @@ create new review on the template, click 'update review' |user redirected to the
 average rating|average score and ratin counts are reduced/removed depending on the previous reviews|&check;
 click delete review|modal is displayed to the user to confirm his actions|&check;
 click delete |review is deleted |&check;
+<details><summary>Quantity</summary>
+<img src="readme_img/screenshots/qty1.png">
+</details>
 <details><summary>Review update</summary>
 <img src="readme_img/screenshots/review_update.png">
 </details>
@@ -760,6 +816,9 @@ ACCOUNT
 Feature/test |  Action | Pass
 --- | --- | :--
 account link|only shown to the registered user|&check;
+<details><summary>Site user navigation</summary>
+<img src="readme_img/screenshots/navbar_site.png">
+</details>
 
 ORDER HISTORY
 Feature/test |  Action | Pass
@@ -818,7 +877,9 @@ user can update quantity or remove product| product quantity is updated or produ
 delivery costs| bottom of the page delivery and grand total are dispalyed to the user|&check;
 click on 'keep shooping' button |user is navigated to the products page|&check;
 click on 'secure checkout' button| user is navigated to the checkout page |&check;
-
+<details><summary>Shooping bag</summary>
+<img src="readme_img/responsive/shopping_med.png">
+</details>
 
 CHECKOUT PAGE
 Feature/test |  Action | Pass
@@ -826,6 +887,9 @@ Feature/test |  Action | Pass
 prepopulated fields with user delivery information from users account| only registered user have this option|&check;
 click 'adjust bag'| user redirected to the checkout page|&check;
 click 'complete order'|order purchase detail view displayed to the user and info message as well|&check;
+<details><summary>Populated fields</summary>
+<img src="readme_img/responsive/prepopulated.png">
+</details>
 
 PURCHASE INFO
 Feature/test |  Action | Pass
@@ -847,6 +911,9 @@ click link 'new arrivals' on contact success page| user is redirected to product
 
 <details><summary>Contact submitted</summary>
 <img src="readme_img/screenshots/contact_submitted.png">
+</details>
+<details><summary>Email missing</summary>
+<img src="readme_img/screenshots/email_test.png">
 </details>
 
 BLOG PAGE
@@ -893,11 +960,13 @@ Feature/test |  Action | Pass
 input email address in newsletter field click the button|user redirected to the home page|&check;
 .|info message displayed to the user|&check;
 .|user received conformation email about subscription|&check;
+</details><details><summary>Subscribe</summary>
+<img src="readme_img/screenshots/subscribe2.png">
+</details>
+</details><details><summary>Subscribe email</summary>
+<img src="readme_img/screenshots/subscribe_email.png">
+</details>
 
-PRIVACY POLICY
-Feature/test |  Action | Pass
---- | --- | :--
-click on the link contact us on the bottom of the page|user is redirected to the contact page|&check;
 
 SUPERUSER PERMISSIONS
 Feature/test |  Action | Pass
@@ -913,23 +982,53 @@ update form fields, click 'update'| the user is redirected to product detail pag
 delete product|'delete product' button on products and product detail page|&check;
 click 'delete product'|the user is shown a modal to confirm his actions|&check;
 click 'delete'|product is deleted|&check;
+</details><details><summary>Add product</summary>
+<img src="readme_img/screenshots/add_product.png">
+</details>
+</details><details><summary>Add product test no price</summary>
+<img src="readme_img/screenshots/add_product_test.png">
+</details></details><details><summary>Image selected</summary>
+<img src="readme_img/screenshots/add_product2.png">
+</details>
+</details><details><summary>Delete product</summary>
+<img src="readme_img/screenshots/delete_product.png">
+</details>
 
 PASSWORD RESET
 Feature/test |  Action | Pass
 --- | --- | :--
 click on forget password on the login page|user is redirected to provide his email address|&check;
 input email click 'reset password'|conformation email with reset password link has been sent to the provided email, password reset template displayed to the user with link |&check;
-click link 'deals' |user is redirected to the product templates category deals|&check;
 click link in email|user is redirected to the template to create new password|&check;
 input new password, click submit|user is redirected to confirmation page with link to 'go shopping'|&check;
 click on link 'go shopping'| user is redirected to the products page|&check;
+</details><details><summary>Step1</summary>
+<img src="readme_img/screenshots/reset1.png">
+</details>
+</details><details><summary>Step2</summary>
+<img src="readme_img/screenshots/reset2.png">
+</details>
+</details><details><summary>Step3</summary>
+<img src="readme_img/screenshots/reset4.png">
+</details>
+</details><details><summary>Step4</summary>
+<img src="readme_img/screenshots/reset3.png">
+</details>
 
 REGISTRATION
 Feature/test |  Action | Pass
 --- | --- | :--
 input form|user is required to populate all form fields|&check;
 click on sign up|user is logged in and redirected to the home page|&check;
-
+</details><details><summary>Test1</summary>
+<img src="readme_img/screenshots/signup_test1.png">
+</details>
+</details><details><summary>Test2</summary>
+<img src="readme_img/screenshots/signup_test2.png">
+</details>
+</details><details><summary>Test3</summary>
+<img src="readme_img/screenshots/signup_test3.png">
+</details>
 
 # Bugs
 | **Bug** | **Fix** |

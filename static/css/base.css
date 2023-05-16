@@ -430,13 +430,14 @@ a:hover {
     align-items: center;
   }
 .social-footer-ul li a {
-    font-size: 1.2rem;
-    color: #fde74c;
+    font-size: 1.6rem;
+    color: #fff;
     padding: 8px;
   }
 .social-footer-ul li:hover {
     transition: all 0.6s ease .1s;
     transform: scale(1.4);
+    color: #fde74c;
 }
 .social-footer-ul li i {
     width: 50px;
@@ -444,11 +445,12 @@ a:hover {
     text-align: center;
   }
 .quick-links{
-    color: #fde74c;
-    font-weight: 500;
+    /* color: #fde74c; */
+    color: #fff;
+    font-weight: 600;
 }
 .quick-links:hover {
-    color: #fff;
+    color: #fde74c;
 }
 .copyright {
     background-color: #000;
