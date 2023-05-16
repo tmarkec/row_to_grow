@@ -299,6 +299,215 @@ For this project I picked Montserrat which is a widely used font known for it's 
 
 # Testing
 
+## Browser Compatibility
+|  Browser | Links  | Pages  | Responsivnes  | Form fields  |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Mozila  | Works as expected| Loading pages no issue  |  Responsivness works as expected |  Works as expected |
+|  Chrome | Works as expected  |  Loading pages no issue | Responsivness works as expected  | Works as expected  |
+|  Edge |  Works as expected | Loading pages no issue  | Responsivness works as expected  |  Works as expected |
+
+## Responsiveness
+|   | Iphone SE  | Galaxy A51   | iPhone12pro  | iPad air  | desktop 1024px  |  desktop > 1200px | notes  |
+| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+|  site is responsive >= 700px |  n/a | n/a  |  n/a | Good  | Good  | Good  |   |
+| site is responsive < 700px  |  Good | Good  | Good  |  n/a | n/a  |  n/a |   |
+| Links/URLs work  | Yes  | Yes   | Yes   |  Yes  | Yes   | Yes   |   |
+|  Images work |  Yes  |  Yes  |  Yes  | Yes   | Yes   | Yes   |   |
+| Forms work  |  Yes  |  Yes  | Yes   | Yes   | Yes   | Yes   |   |
+
+### Smaller screen
+<details><summary>Home</summary>
+<img src="readme_img/responsive/index.png">
+</details>
+<details><summary>About</summary>
+<img src="readme_img/responsive/about.png">
+</details>
+<details><summary>Account</summary>
+<img src="readme_img/responsive/account.png">
+</details><details><summary>Add product</summary>
+<img src="readme_img/responsive/add_product.png">
+</details>
+<details><summary>Bag</summary>
+<img src="readme_img/responsive/bag.png">
+</details>
+<details><summary>Blog</summary>
+<img src="readme_img/responsive/blog.png">
+</details>
+<details><summary>Blog detail</summary>
+<img src="readme_img/responsive/blog_detail.png">
+</details>
+<details><summary>Checkout</summary>
+<img src="readme_img/responsive/checkout.png">
+</details>
+
+<details><summary>Contact</summary>
+<img src="readme_img/responsive/contact.png">
+</details>
+<details><summary>Footer</summary>
+<img src="readme_img/responsive/footer.png">
+</details>
+<details><summary>Navigation</summary>
+<img src="readme_img/responsive/navigation.png">
+</details>
+<details><summary>Order</summary>
+<img src="readme_img/responsive/order.png">
+
+</details><details><summary>Products</summary>
+<img src="readme_img/responsive/products.png">
+</details>
+
+<details><summary>Profile</summary>
+<img src="readme_img/responsive/profile.png">
+</details>
+<details><summary>Wishlist</summary>
+<img src="readme_img/responsive/wishlist.png">
+</details>
+
+### Medium screen 
+<details><summary>Account</summary>
+<img src="readme_img/responsive/account_medium.png">
+</details>
+<details><summary>Blog detail</summary>
+<img src="readme_img/responsive/blog_det_med.png">
+</details>
+<details><summary>Checkout</summary>
+<img src="readme_img/responsive/checkout_med.png">
+</details>
+<details><summary>Product detail</summary>
+<img src="readme_img/responsive/prod_det_medium.png">
+</details>
+
+<details><summary>Product</summary>
+<img src="readme_img/responsive/product_medium.png">
+</details>
+<details><summary>Shopping bag</summary>
+<img src="readme_img/responsive/shopping_med.png">
+</details>
+<details><summary>Wishlist</summary>
+<img src="readme_img/responsive/wish_medium.png">
+</details>
+
+## Code validation
+### HTML
+<details><summary>About</summary>
+<img src="readme_img/validation/html/about.png">
+</details>
+<details><summary>Add_product</summary>
+<img src="readme_img/validation/html/add_product.png">
+</details>
+<details><summary>Blog detail</summary>
+<img src="readme_img/validation/html/blog_detail.png">
+</details>
+<details><summary>Blog</summary>
+<img src="readme_img/validation/html/blog.png">
+</details>
+
+<details><summary>Checkout</summary>
+<img src="readme_img/validation/html/checkout.png">
+</details>
+<details><summary>Contact</summary>
+<img src="readme_img/validation/html/contact.png">
+</details>
+<details><summary>Delivery info</summary>
+<img src="readme_img/validation/html/delivery_info.png">
+</details>
+<details><summary>Login</summary>
+<img src="readme_img/validation/html/login.png">
+</details>
+<details><summary>Logout</summary>
+<img src="readme_img/validation/html/logout.png">
+</details>
+<details><summary>Order history</summary>
+<img src="readme_img/validation/html/order_history.png">
+</details>
+<details><summary>Personal info</summary>
+<img src="readme_img/validation/html/personal_info.png">
+</details>
+<details><summary>Privacy policy</summary>
+<img src="readme_img/validation/html/privacy.png">
+</details>
+<details><summary>Product page</summary>
+<img src="readme_img/validation/html/product page.png">
+</details>
+<details><summary>Product detail</summary>
+<img src="readme_img/validation/html/product_detail.png">
+</details>
+<details><summary>Shipping</summary>
+<img src="readme_img/validation/html/shipping.png">
+</details>
+<details><summary>Shopping bag</summary>
+<img src="readme_img/validation/html/shopping_bag.png">
+</details>
+<details><summary>Signup</summary>
+<img src="readme_img/validation/html/signup.png">
+</details>
+<details><summary>Wishlist</summary>
+<img src="readme_img/validation/html/wishlist.png">
+</details>
+
+## CSS
+<details><summary>base</summary>
+<img src="readme_img/validation/CSS/base.png">
+</details>
+<details><summary>blog</summary>
+<img src="readme_img/validation/CSS/blog.png">
+</details>
+<details><summary>checkout</summary>
+<img src="readme_img/validation/CSS/checkout.png">
+</details>
+<details><summary>profile</summary>
+<img src="readme_img/validation/CSS/profile.png">
+</details>
+
+## JS
+<details><summary>checkout</summary>
+<img src="readme_img/validation/JS/checkout.png">
+</details>
+<details><summary>widgets</summary>
+<img src="readme_img/validation/JS/widgets.png">
+</details>
+
+## Python
+<details><summary>Blog model</summary>
+<img src="readme_img/validation/Python/blog_models.png">
+</details>
+<details><summary>Blog views</summary>
+<img src="readme_img/validation/Python/blog_views.png">
+</details>
+<details><summary>Checkout view</summary>
+<img src="readme_img/validation/Python/checkout-view.png">
+</details>
+<details><summary>Contact view</summary>
+<img src="readme_img/validation/Python/contact-view.png">
+</details>
+<details><summary>Home view</summary>
+<img src="readme_img/validation/Python/home-view.png">
+</details>
+<details><summary>Product admin</summary>
+<img src="readme_img/validation/Python/product_admin.png">
+</details>
+<details><summary>Product form</summary>
+<img src="readme_img/validation/Python/product_form.png">
+</details>
+<details><summary>Profile model</summary>
+<img src="readme_img/validation/Python/profile_model.png">
+</details>
+<details><summary>Profile views</summary>
+<img src="readme_img/validation/Python/profile_views.png">
+</details>
+<details><summary>Subscription views</summary>
+<img src="readme_img/validation/Python/subscription_views.png">
+</details>
+<details><summary>Signup</summary>
+<img src="readme_img/validation/html/signup.png">
+</details>
+<details><summary>Webhook</summary>
+<img src="readme_img/validation/Python/webhook.png">
+</details>
+<details><summary>Context</summary>
+<img src="readme_img/validation/Python/context.png">
+</details>
+
 ## Testing purchase procedure
 Action |  Expected result | Pass
 --- | --- | :---:
@@ -319,13 +528,27 @@ Fill in all form details |  No errors displayed on the form | &check;
 In payment section input 42 and repeat all the way to the end & click complete order | Payment went through, preview of purchase is displayed | &check;
 Click on download pdf |  PDF receipt is downloaded  | &check;
 Check email |  Email comfirmation has been sent | &check;
-
+<details><summary>Order comfirmation</summary>
+<img src="readme_img/screenshots/order_comformation.png">
+</details>
+<details><summary>Stripe</summary>
+<img src="readme_img/screenshots/stripe.png">
+</details>
+<details><summary>Email comformation</summary>
+<img src="readme_img/screenshots/email_comfirmation.png">
+</details>
 ## Testing user stories
 
 User Story |  Test | Pass
 --- | --- | :---:
 As a site visitor, I want be able to register for the account so that I can get more access to the website content | Upon landing on the index page, I can see a navigation bar with login and register buttons, upon clicking either options forms are displayed for user to fill information, after login/registration new navigation tabs are shown to the user| &check;
+<details><summary>Navbar</summary>
+<img src="readme_img/screenshots/navbar_site.png">
+</details>
 As a site visitor, I want to be able to view list of the products so that I can select some to purchase| Navigating either to products or special offers, list of products are displayed to the user |&check;
+<details><summary>Product page</summary>
+<img src="readme_img/screenshots/products_page.png">
+</details>
 As a site visitor I want to be able to search for a product by name or description so that I can easily find specific product|Search bar is displayed on the top of the navigation menu, user can type words if there are matching words in product title/description those products will be display, otherwise message will be shown "o search results"|&check;
 As a site visitor, I want to be able to view details of the products so that I can identify, price, description, rating, image and available sizes of the product | By clicking on the image of the product, user is redirected to the separate page which show description, rating, gives option for user to put it in the bag or for registered user to save it in the wishlist| &check;
  As a site visitor I want to be able to chose products and select size and quantity of the product | If product has sizes option for user will be displayed, and under size option user can choose quantity | &check;
@@ -564,6 +787,8 @@ click on sign up|user is logged in and redirected to the home page|&check;
 - user can write review for the same product even if he already submitted one
 - user can't add product from wishlist to the shooping bag
 - pdf file to download receipt is not rendering from the template, it is manually coded in
+- user can delete number in qty in products page and press enter page 500 will be displayed
+
 # Deployment
 ## Create an external database
 
@@ -584,7 +809,7 @@ You can now create the database for the project.
 - Back in the ElephantSQL dashboard click the databse name you just created and copy URL
 
 
-## Create an app on Heroku
+### Create an app on Heroku
 
 Sign in or create an account with [Heroku](https://www.heroku.com/)
 
@@ -670,7 +895,7 @@ git push heroku main
 ```
 
 
-## Set up hosting of static and media files with AWS
+### Set up hosting of static and media files with AWS
 
 1.  Sign in or create an account with [Amazon Web Server](https://aws.amazon.com/)
 
@@ -752,7 +977,7 @@ and click "Save"
 
 - Accept the warning
 
-## Back in AWS services menu
+### Back in AWS services menu
 
 1. Select "IAM" from the AWS menu and then "User groups" from the menu on the left 
 hand side.
@@ -779,7 +1004,7 @@ hand side.
 
 12.  Click "Attach policy"
 
-# Add a user to the group
+### Add a user to the group
 
 1.  Select "Users" in the menu, then click "Add user"
 
@@ -798,7 +1023,7 @@ hand side.
 8. After they are created click on 'download.csv' file
 
 
-## Connect Django
+### Connect Django
 
 1. Install boto3 and django-storages:
 
@@ -843,7 +1068,7 @@ if 'USE_AWS' in os.environ:
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
 ```
 
-## Back in Heroku
+### Back in Heroku
 
 1.  Select "Reveal Config Vars" in the "Settings" tab
 
@@ -853,7 +1078,7 @@ values from the credentails.csv file from Step 6 in Add a user to the group abov
 3.  Add an additioanl "USE_AWS" variable with the key of "True"
 
 
-## In the root directory of the project
+### In the root directory of the project
 
 1.  Create a file named "custom_storages.py"
 
@@ -874,7 +1099,7 @@ class MediaStorage(S3Boto3Storage):
 3.  Add and commit then push the project to GitHub. If you haven't set up automatic deployment
 to Heroku, also deploy to Heroku.
 
- ## In AWS
+ ### In AWS
 
  1.  Add a folder named "media" in the S3 bucket page
 
@@ -887,7 +1112,7 @@ to Heroku, also deploy to Heroku.
 
  5.   Click "Upload"
 
-## Stripe
+### Stripe
 
 1.  Sign in or create an account with [Stripe](https://stripe.com/gb)
 
@@ -910,7 +1135,7 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 
 9.  Add the "Signing secret" to Heroku Config Vars as STRIPE_WH_SECRET
 
-## Steps to clone project
+### Steps to clone project
 - Click on the code tab under the repository name.
 - Then click on "Code" button to the right above the files listed.
 - Click on the clipboard icon to copy the URL.
@@ -926,7 +1151,7 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 - To run the project type python manage.py runserver into the terminal and open port 8000.
 - This will open the project locally for you to work on.
 
-## Forking repository on GitHub
+### Forking repository on GitHub
 - Login to github and find the repository
 - Under your profile photo on the right hand side you will see the fork button.
 - Click the fork button and github will create a copy to your account.
@@ -945,12 +1170,8 @@ https://'your-website-name'.herokuapp.com/checkout/wh/
 - how to create dynamic active classes [Yash Patel](https://www.youtube.com/watch?v=qLG6B6yWH58)
 - idea and guidance for business and marketing plan came from [hubspot](https://blog.hubspot.com/marketing/ecommerce-business-plan) and [big commerce](https://www.bigcommerce.com/articles/ecommerce/business-plan/)
 
-### Tutorials and inspiration
+# Acknowledgments
 
-* The project walkthrough Butique Ado from Code Institute
-# Acknowledgment
-
-## Acknowledgments:
 - I would like to thank my mentor ``Narander Singh`` for all his help throughout the project and guidance in general over the last 6 months. Narander was extremly proffesional and I would highly reccomend him to contionue to provide his guidance and support to the new students
 - I would like to thank Code Institute in general for providing me this opportunity then Slack Community, and tutor support which were amazing. I'm not sure if they are their real names but ``Sean, Oisin, Ed, Sarah`` were there when I needed them and got stuck on my project
 - I would also like to thank our cohort facilitator ``Irene Neville``, for beeing here with us for the last 6 months. Her guidance and advices made this whole experience so much better
